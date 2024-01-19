@@ -3,11 +3,6 @@
   import { readable } from "svelte/store";  
   import { Icon, FaceSmile } from "svelte-hero-icons";
   
-
-  export let supabase;
-  export let profile;
-  // console.log(profile);
-
   let loading = false;
   const weekdays = ["Neděle", "Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek", "Sobota"];
 

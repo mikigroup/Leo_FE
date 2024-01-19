@@ -3,4 +3,5 @@
   import Header from "../lib/component/Header.svelte";
   import Footer from "../lib/component/Footer.svelte";
  </script>
-<slot></slot>
+<Header />
+<slot />
