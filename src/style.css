@@ -60,6 +60,40 @@
 body {
   font-family:Nunito;
   font-weight:300;
+  background: url("./lib/bob.png") no-repeat;
+  background-size: 100%;
   /* font-size: 1.5em; */
+}
+
+header  {  
+  max-width: 80%;  
+  margin: 0 auto;
+  margin-top: 1.5em;
+  border: solid 1px white;
+  border-radius: 45px;    
+}
+
+.headerBanner {
+  max-width: 80%;
+  margin: 0 auto;  
+}
+
+.headerBanner01 {
+  margin-top: 8em;  
+  max-width: 50%;
+  border: solid 1px rgb(255, 255, 255);
+  border-radius: 45px;    
+  padding: 8em 4em;
+}
+
+
+.headerBanner01 p {
+  font-size: 1.6em;
+  color: rgb(255, 255, 255);
+  font-weight:400;  
+}
+nav ul {
+  padding: .5rem;
+  list-style-type: none;  
 }
 

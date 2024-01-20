@@ -4,10 +4,9 @@
   import logo from "../logo_leo_fe.svg";  
 </script>
 <header>  
-<nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+<nav class="">
   <div class="flex flex-col items-center md:flex-row">
-    <div class="flex w-full">
-      
+    <div class="flex w-full">      
       <div class="flex justify-end w-full md:justify-start">
         <a href="/" class="flex mr-4">
           <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Malý LEO</span>
