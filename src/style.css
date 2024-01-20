@@ -57,6 +57,7 @@ body {
 }
 
 header {
+  padding: 2em 0 2em 0;
   background: url("./lib/bob.png") no-repeat;
   background-size: 100%;
 }
@@ -85,10 +86,10 @@ header {
   margin-left: 4em;
 }
 
-nav {
-  margin-top: 1.5em;
+nav {  
   max-width: 80%;
   margin: 0 auto;
+  /* margin-top: 1.5em; */
   border: solid 1px white;
   border-radius: 45px;
 }

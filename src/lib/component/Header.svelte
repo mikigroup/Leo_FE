@@ -12,7 +12,7 @@
         <div class="flex md:justify-start">
           <a href="/" class="flex logo">
             <span class="self-center text-2xl font-semibold whitespace-nowrap">Malý LEO</span>
-            <img class="ml-5 rounded-full" src={logo} alt="Malý Leo" />
+            <img class="ml-2 rounded-full" src={logo} alt="Malý Leo" />
           </a>
         </div>
       </div>
