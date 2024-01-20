@@ -8,3 +8,6 @@ Zjednodušte své podnikání s naším inovativním eshopovým řešením. Bez 
 
 Eshop pro vaše podnikání, bez kompromisů:
 Malé eshopové řešení, které roste s vámi – od drobných řemeslníků až po menší firmy. S postavením na moderních technologiích a jednoduchým designem vám poskytujeme nástroj pro úspěšný online prodej, bez zbytečných složitostí.
+
+
+"svelte-hero-icons": "^5.0.0"
