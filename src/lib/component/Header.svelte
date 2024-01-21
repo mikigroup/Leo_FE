@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="flex items-center justify-center">
-        <button class="flex items-center w-64 gap-5 p-4 m-2 transition-transform transform bg-black poptavka hover:text-black rounded-3xl hover:bg-slate-400 hover:scale-105">
+        <button class="flex w-64 gap-5 p-5 transition-transform transform bg-black tlacitkoitems-center poptavka hover:text-black hover:bg-slate-400">
           <span>Objednat poptávku</span>
           <span class="ml-2"><ArrowLongRight class="" /></span>
         </button>
