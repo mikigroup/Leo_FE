@@ -4,7 +4,7 @@
       <p class="">Zjednodušte své podnikání s naším inovativním řešením. Bez ohledu na to, zda jste elektrikář nebo menší firma. Je to jen na Vás a vaší kreativitě. Malé webové řešení, které roste s Vámi.</p>
     </div>
     <div class="flex items-center w-1/2 p-16 rounded-2xl textyPrednosti02">
-      <p>Leo je postavený na moderních technologiích s jednoduchým designem. který Vám poskytujeme nástroj pro úspěšný online prodej, správu materiálu, projektové řízení, firemní web, blog... a bez zbytečných složitostí a cenového vypětí.</p>
+      <p>Leo je nátroj , který Vám poskytujeme úspěšný online prodej, správu materiálu, projektové řízení, firemní web, blog... a bez zbytečných složitostí a cenového vypětí.</p>
     </div>
   </div>
 </section>
@@ -22,6 +22,12 @@
 <section class="flex textTechnologie">
   <div class="flex w-1/2 my-10" id="">
     <p class="">Stále se vyvíjecí systém postavený na nejnovějších technologiích - Svelte a DB PostgreSQL. Řešení vhodné pro malé řemeslníky i firmy.</p>
+  </div>
+  <div>
+    <p>Vše co vidíte je ručně psaný kód, žádné šablony, žádné kopie, vše je originál.</p>
+  </div>
+  <div>
+    <p>Nasloucháme a ptáme se</p>
   </div>
 </section>
 <section class="cenik">
