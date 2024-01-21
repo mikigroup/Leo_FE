@@ -8,7 +8,7 @@
     </div>
   </div>
 </section>
-
+<hr class="mx-10 my-10">
 <section class="karty">
   <h2 class="my-10 font-medium">Jak probíhá spolupráce...</h2>
   <div class="flex w-full mt-24">
@@ -20,7 +20,7 @@
   </div>
 </section>
 <section class="flex textTechnologie">
-  <div class="flex w-1/2" id="">
+  <div class="flex w-1/2 my-10" id="">
     <p class="">Stále se vyvíjecí systém postavený na nejnovějších technologiích - Svelte a DB PostgreSQL. Řešení vhodné pro malé řemeslníky i firmy.</p>
   </div>
 </section>

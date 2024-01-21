@@ -145,7 +145,7 @@ nav ul {
 .karty {
   max-width: 80%;
   margin: 0 auto;
-  margin-top: 4em;
+  margin-top: 10em;
   margin-bottom: 8em;
   /* opacity: 0.8; */
   /* display: flex;  */
@@ -234,11 +234,12 @@ nav ul {
 .cenik {
   background-color: #768D93;
   padding: 1em;
+  margin: 5em 0em;
 }
 
 .cenikKarta {
   background-color: white;
-  margin: 15em 15em;
+  margin: 5em 15em;
   padding: 6em;  
 }
 
