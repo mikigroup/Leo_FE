@@ -26,7 +26,7 @@
 </section>
 <section class="cenik">
   <div class="flex gap-10 border rounded-xl cenikKarta">
-    <div class="flex flex-col w-1/2 levaStranaCenik">
+    <div class="flex flex-col w-1/2 gap-10 levaStranaCenik">
       <div class="flex w-full">
         <div class="flex text-3xl font-medium">Ceník</div>
         <div class="flex items-center justify-end w-full">
@@ -36,14 +36,18 @@
           </label>Zdarma
         </div>
       </div>
-      <div class="mt-10"><p>Výstup obdržíte do 48 hodin od potvrzení objednávky a dodání všech podkladů.</p></div>
-      <div>Cena: 899,-</div>
-      <div><button class="flex items-center w-64 gap-5 text-lg transition-transform transform bg-black poptavka hover:text-black rounded-3xl hover:bg-slate-400 hover:scale-105">
+      <div class="mt-10 text-lg"><p>Výstup obdržíte <strong class="font-medium">do 48 hodin</strong> od potvrzení objednávky a dodání všech podkladů.</p></div>
+      <div>899,-</div>
+      <div><button class="flex justify-center w-40 gap-5 text-lg transition-transform transform bg-black tlacitkoCenik hover:text-black rounded-3xl hover:bg-slate-400 hover:scale-105">
           <span>Objednat</span>          
         </button></div>
     </div>
-    <div class="flex w-1/2 pravaStranaCenik">
+    <div class="flex items-center w-1/2 pravaStranaCenik">
       <p>Získat svůj vlastní eshop s Malým Leem je snadné a cenově dostupné. Podívejte se na cenové plány a najděte tu pravou možnost pro Vaše podnikání.</p>
     </div>
   </div>
+</section>
+
+<section class="faq">
+  <div></div>
 </section>

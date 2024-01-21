@@ -102,6 +102,16 @@ nav ul {
   list-style-type: none;
 }
 
+.tlacitkoCenik {
+  color: white;
+  border-radius: 45px;
+  padding: 1em;
+}
+
+.poptavka:hover {
+  border: 1px solid black;    
+}
+
 .poptavka {
   color: white;
   border-radius: 45px;
@@ -223,12 +233,13 @@ nav ul {
 
 .cenik {
   background-color: #768D93;
+  padding: 1em;
 }
 
 .cenikKarta {
   background-color: white;
   margin: 15em 15em;
-  padding: 4em;
+  padding: 6em;  
 }
 
 .switch {
