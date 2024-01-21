@@ -56,6 +56,10 @@ body {
   /* font-size: 1.5em; */
 }
 
+h2 {
+  font-size: 2.5em;
+}
+
 header {
   padding: 2em 0 2em 0;
   background: url("./lib/bob.png") no-repeat;
@@ -130,8 +134,12 @@ nav ul {
   /* display: flex;  */ 
 }
 .karta1, .karta2, .karta3, .karta4, .karta5 {
-  width: 10em;
-  height: 10em;
+  width: 70em;
+  height: 15em;  
+}
+
+.karty p {
+font-size: 1.5em;
 }
 
 .karta1 {
@@ -170,4 +178,8 @@ nav ul {
   margin-left: -50px;
   margin-top: 2em;  
   z-index: 5;
+}
+
+.textTechnologie {
+  max-width: 80%;
 }

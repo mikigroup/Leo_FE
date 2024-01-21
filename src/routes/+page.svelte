@@ -10,17 +10,17 @@
 </section>
 
 <section class="karty">
-  <h2 class="my-10 text-3xl font-medium">Jak probíhá spolupráce...</h2>
-  <div class="flex w-full mt-24 ">
-    <div class="flex items-end p-8 rounded-xl karta1">Oslovení :)</div>
-    <div class="flex items-end p-8 rounded-xl karta2">Dodání podkladů</div>
-    <div class="flex items-end p-8 rounded-xl karta3">První ukázka a ucelení postupu</div>
-    <div class="flex items-end p-8 rounded-xl karta4">Postupný vývoj</div>
-    <div class="flex items-end p-8 rounded-xl karta5">Předání</div>
+  <h2 class="my-10 font-medium">Jak probíhá spolupráce...</h2>
+  <div class="flex w-full mt-24">
+    <div class="flex items-end p-8 rounded-xl karta1"><p>Oslovení :)</p></div>
+    <div class="flex items-end p-8 rounded-xl karta2"><p>Dodání podkladů</p></div>
+    <div class="flex items-end p-8 rounded-xl karta3"><p>První ukázka a ucelení postupu</p></div>
+    <div class="flex items-end p-8 rounded-xl karta4"><p>Postupný vývoj</p></div>
+    <div class="flex items-end p-8 rounded-xl karta5"><p>Předání</p></div>
   </div>
 </section>
-<!-- <section class="flex">
-  <div class="id" id="modry">Prostřední</div>
-  <div class="id" id="cerveny">Nejnižší</div>
-  <div class="id" id="zeleny">Nejvyšší</div>
-</section> -->
+<section class="flex">
+  <div class="textTechnologie" id="">
+    <p>Stále se vyvíjecí systém postavený na nejnovějších technologiích - Svelte a DB PostgreSQL. Řešení vhodné pro malé firmy.</p>
+  </div>
+</section>
