@@ -19,16 +19,13 @@
     <div class="flex items-end p-8 rounded-xl karta5"><p>Předání</p></div>
   </div>
 </section>
-<section class="flex textTechnologie">
-  <div class="flex w-1/2 my-10" id="">
-    <p class="">Stále se vyvíjecí systém postavený na nejnovějších technologiích - Svelte a DB PostgreSQL. Řešení vhodné pro malé řemeslníky i firmy.</p>
+<section class="textTechnologie">
+  <div class="flex w-1/2 my-10">
+    <p class="">Stále se vyvíjecí systém postavený na nejnovějších technologiích - Svelte a DB PostgreSQL. Pravidelné zálohy a reporting.</p>
   </div>
-  <div>
+  <div class="flex items-end justify-end w-1/2 my-10">
     <p>Vše co vidíte je ručně psaný kód, žádné šablony, žádné kopie, vše je originál.</p>
-  </div>
-  <div>
-    <p>Nasloucháme a ptáme se</p>
-  </div>
+  </div>  
 </section>
 <section class="cenik">
   <div class="flex gap-10 border rounded-xl cenikKarta">
@@ -36,7 +33,7 @@
       <div class="flex w-full">
         <div class="flex text-3xl font-medium">Ceník</div>
         <div class="flex items-center justify-end w-full">
-          <label class="mr-5 switch">
+          <label class="mr-5 prepinac">
             <input type="checkbox" />
             <span class="slider round"></span>
           </label>Zdarma
@@ -57,3 +54,6 @@
 <section class="faq">
   <div></div>
 </section>
+<!-- <div>
+    <p>Nasloucháme a ptáme se</p>
+  </div> -->
