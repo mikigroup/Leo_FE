@@ -1,3 +1,9 @@
+<script>
+  import { onMount } from "svelte";
+  onMount(() => {
+		new WOW().init();
+	}); 
+</script>
 <section>
   <div class="flex flex-row w-full p-10 pt-16 gap-28 textyPrednosti tems-center">
     <div class="flex items-center w-1/2 p-16 rounded-2xl textyPrednosti01">
@@ -23,7 +29,7 @@
   <div class="flex w-1/2 my-10">
     <p class="">Stále se vyvíjecí systém postavený na nejnovějších technologiích - Svelte a DB PostgreSQL. Pravidelné zálohy a reporting.</p>
   </div>
-  <div class="flex items-end justify-end w-1/2 my-10">
+  <div class="flex items-end justify-end w-1/2 my-10 textTechnologieBanner">
     <p>Vše co vidíte je ručně psaný kód, žádné šablony, žádné kopie, vše je originál.</p>
   </div>  
 </section>
@@ -50,7 +56,14 @@
     </div>
   </div>
 </section>
-
+ <div class="">
+        <div class="">
+            <p>Your scrolling text goes here...</p>
+        </div>
+        <h1 class="animate__animated animate__bounceInLeft">An animated element</h1>
+    </div>
+      <section class="wow slideInLeft">HALLEESASDSYAD </section>
+  <section class="wow slideInRight">nashjdjklsdfbk\jn</section>
 <section class="faq">
   <div></div>
 </section>

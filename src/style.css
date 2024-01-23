@@ -231,6 +231,10 @@ nav ul {
   font-size: 2em;
 }
 
+.textTechnologieBanner {
+  margin-left: auto;
+}
+
 .cenik {
   background-color: #768D93;
   padding: 1em;
