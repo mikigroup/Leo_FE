@@ -1,1 +1,2 @@
-export const ssr = false; // If both `ssr` and `csr` are `false`, nothing will be rendered!
+export const ssr = false; // nutné pro fungování onmount v +page.svelte
+

@@ -1,8 +1,21 @@
 <script>
   import { onMount } from "svelte";
+
+  let isVisible = false;
+  let animatedElement;
+
   onMount(() => {
-		new WOW().init();
-	}); 
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          isVisible = true;
+          observer.disconnect();
+        }
+      });
+    });
+
+    observer.observe(animatedElement);
+  });
 </script>
 <section>
   <div class="flex flex-row w-full p-10 pt-16 gap-28 textyPrednosti tems-center">
@@ -67,6 +80,13 @@
 <section class="faq">
   <div></div>
 </section>
+
+<section>
+  <div class={isVisible ? 'animated-element visible' : 'animated-element'} bind:this={animatedElement}>
+    <p>Your content goes here...</p>
+  </div>
+</section>
+
 <!-- <div>
     <p>Nasloucháme a ptáme se</p>
   </div> -->
