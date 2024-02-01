@@ -214,12 +214,12 @@ nav ul {
   margin-left: -50px;
   margin-top: 2em;
   z-index: 5;
-  transition: margin-top 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .karta5:hover {
-  margin-top: 0em;
-  z-index: 5
+  transform: translateY(-2em);
+  /* z-index: 5 */
 }
 
 .textTechnologie {
