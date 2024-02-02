@@ -19,7 +19,7 @@
 </script>
 
 <section>
-  <div class="flex flex-row w-full p-10 pt-16 gap-28 textyPrednosti tems-center">
+  <div class="flex flex-row w-full p-10 pt-16 gap-16 xl:gap-28 textyPrednosti tems-center">
     <div class="flex items-center w-1/2 p-16 rounded-2xl textyPrednosti01">
       <p class="">Zjednodušte své podnikání s naším inovativním řešením. Bez ohledu na to, zda jste elektrikář nebo menší firma. Je to jen na Vás a vaší kreativitě. Malé webové řešení, které roste s Vámi.</p>
     </div>
