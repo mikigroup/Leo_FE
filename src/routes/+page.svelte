@@ -5,8 +5,8 @@
   let animatedElement;
 
   onMount(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           isVisible = true;
           observer.disconnect();
@@ -17,6 +17,7 @@
     observer.observe(animatedElement);
   });
 </script>
+
 <section>
   <div class="flex flex-row w-full p-10 pt-16 gap-28 textyPrednosti tems-center">
     <div class="flex items-center w-1/2 p-16 rounded-2xl textyPrednosti01">
@@ -27,7 +28,7 @@
     </div>
   </div>
 </section>
-<hr class="mx-10 my-10">
+<hr class="mx-10 my-10" />
 <section class="karty">
   <h2 class="my-10 font-medium">Jak probíhá spolupráce...</h2>
   <div class="flex w-full mt-24">
@@ -39,12 +40,12 @@
   </div>
 </section>
 <section class="textTechnologie">
-  <div class="flex w-1/2 my-10">
+  <div class="flex lg:w-1/2 my-10">
     <p class="">Stále se vyvíjecí systém postavený na nejnovějších technologiích - Svelte a DB PostgreSQL. Pravidelné zálohy a reporting.</p>
   </div>
-  <div class="flex items-end justify-end w-1/2 my-10 textTechnologieBanner">
+  <div class="flex items-end justify-end lg:w-1/2 my-10 textTechnologieBanner">
     <p>Vše co vidíte je ručně psaný kód, žádné šablony, žádné kopie, vše je originál.</p>
-  </div>  
+  </div>
 </section>
 <section class="cenik">
   <div class="flex gap-10 border rounded-xl cenikKarta">
@@ -60,29 +61,39 @@
       </div>
       <div class="mt-10 text-lg"><p>Výstup obdržíte <strong class="font-medium">do 48 hodin</strong> od potvrzení objednávky a dodání všech podkladů.</p></div>
       <div>899,-</div>
-      <div><button class="flex justify-center w-40 gap-5 text-lg transition-transform transform bg-black tlacitkoCenik hover:text-black rounded-3xl hover:bg-slate-400 hover:scale-105">
-          <span>Objednat</span>          
-        </button></div>
+      <div>
+        <button class="flex justify-center w-40 gap-5 text-lg transition-transform transform bg-black tlacitkoCenik hover:text-black rounded-3xl hover:bg-slate-400 hover:scale-105">
+          <span>Objednat</span>
+        </button>
+      </div>
     </div>
     <div class="flex items-center w-1/2 pravaStranaCenik">
       <p>Získat svůj vlastní eshop s Malým Leem je snadné a cenově dostupné. Podívejte se na cenové plány a najděte tu pravou možnost pro Vaše podnikání.</p>
     </div>
   </div>
 </section>
- <div class="">
-        <div class="">
-            <p>Your scrolling text goes here...</p>
-        </div>
-        <h1 class="animate__animated animate__bounceInLeft">An animated element</h1>
-    </div>
-      <section class="wow slideInLeft">HALLEESASDSYAD </section>
-  <section class="wow slideInRight">nashjdjklsdfbk\jn</section>
+
+<section class="newsletterKarta">
+  <div class="flex border rounded-xl gap-4 newsletter">
+    <h3 class="flex w-64 items-center ">Odběr novivek</h3>
+    <input class="w-full border rounded-xl p-3" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="e-mail" data-required="true" required="" data-np-autofill-field-type="email" />
+  </div>
+</section>
+
+<div class="">
+  <div class="">
+    <p>Your scrolling text goes here...</p>
+  </div>
+  <h1 class="animate__animated animate__bounceInLeft">An animated element</h1>
+</div>
+<section class="wow slideInLeft">HALLEESASDSYAD</section>
+<section class="wow slideInRight">nashjdjklsdfbk\jn</section>
 <section class="faq">
   <div></div>
 </section>
 
 <section>
-  <div class={isVisible ? 'animated-element visible' : 'animated-element'} bind:this={animatedElement}>
+  <div class={isVisible ? "animated-element visible" : "animated-element"} bind:this={animatedElement}>
     <p>Your content goes here...</p>
   </div>
 </section>

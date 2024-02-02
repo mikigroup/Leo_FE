@@ -235,7 +235,7 @@ nav ul {
   margin-left: auto;
 }
 
-.cenik {
+.cenik, .newsletterKarta {
   background-color: #768D93;
   padding: 1em;
   margin: 5em 0em;
@@ -247,6 +247,12 @@ nav ul {
   padding: 6em;  
 }
 
+@media (max-width: 640px) {
+  .cenikKarta {
+    margin: 0em 0em;
+    padding: 2em;
+  }
+}
 .prepinac {
   position: relative;
   display: inline-block;
@@ -258,6 +264,19 @@ nav ul {
   opacity: 0;
   width: 0;
   height: 0;
+}
+
+ .newsletter {
+    background-color: white;
+    margin: 5em 15em;
+    padding: 6em;
+  }
+
+  @media (max-width: 640px) {
+  .newsletter {
+    margin: 0em 0em;
+    padding: 2em;
+  }
 }
 
 .slider {
@@ -316,3 +335,5 @@ input:checked + .slider:before {
     opacity: 1;
     transform: translateY(0);
   }
+
+ 
