@@ -51,7 +51,7 @@
   <div class="flex gap-10 border rounded-xl cenikKarta">
     <div class="flex flex-col w-1/2 gap-10 levaStranaCenik">
       <div class="flex w-full">
-        <div class="flex text-3xl font-medium">Ceník</div>
+        <h2 class="flex text-3xl font-medium">Ceník</h2>
         <div class="flex items-center justify-end w-full">
           <label class="mr-5 prepinac">
             <input type="checkbox" />
@@ -67,7 +67,7 @@
         </button>
       </div>
     </div>
-    <div class="flex items-center w-1/2 pravaStranaCenik">
+    <div class="flex items-center w-1/2 pravaStranaCenik p-10">
       <p>Získat svůj vlastní eshop s Malým Leem je snadné a cenově dostupné. Podívejte se na cenové plány a najděte tu pravou možnost pro Vaše podnikání.</p>
     </div>
   </div>
@@ -75,7 +75,7 @@
 
 <section class="newsletterKarta">
   <div class="flex border rounded-xl gap-4 newsletter">
-    <h3 class="flex w-64 items-center ">Odběr novivek</h3>
+    <h2 class="flex w-full text-3xl items-center ">Odběr novivek</h2>
     <input class="w-full border rounded-xl p-3" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="e-mail" data-required="true" required="" data-np-autofill-field-type="email" />
   </div>
 </section>
