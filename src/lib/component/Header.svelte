@@ -2,7 +2,7 @@
   import { page } from "$app/stores";
   /* import { Icon, FaceSmile } from "svelte-hero-icons"; */
   import { ArrowLongRight } from "svelte-heros-v2";
-  import logo from "../logo_leo_fe.svg";
+    import logo from "../logo_leo_fe.svg";
 </script>
 
 <header>
@@ -32,4 +32,5 @@
   </div>
 </div>
 </section>
+
 </header>

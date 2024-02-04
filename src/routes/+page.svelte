@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-
+    import logo from "$lib/logo_leo_fe.svg";
   let isVisible = false;
   let animatedElement;
 
@@ -13,11 +13,18 @@
         }
       });
     });
-
     observer.observe(animatedElement);
   });
-</script>
 
+  window.addEventListener('scroll', function() {
+  var element = document.getElementById('elementZviditelneni');
+  var position = element.getBoundingClientRect();
+  // Kontrola, zda je element ve viewportu
+  if(position.top < window.innerHeight && position.bottom >= 0) {
+    element.style.opacity = 1; // Element se stává viditelným
+  }
+});
+</script>
 <section>
   <div class="flex flex-row w-full p-10 pt-16 gap-16 xl:gap-28 textyPrednosti tems-center">
     <div class="flex items-center w-1/2 p-16 rounded-2xl textyPrednosti01">
@@ -73,21 +80,17 @@
   </div>
 </section>
 
-<section class="newsletterKarta">
+<section class="newsletterKarta" id="elementZviditelneni">
   <div class="flex border rounded-xl gap-4 newsletter">
-    <h2 class="flex w-full text-3xl items-center ">Odběr novivek</h2>
+    <h2 class="flex w-full text-3xl items-center text-white">Odběr novivek</h2>
     <input class="w-full border rounded-xl p-3" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="e-mail" data-required="true" required="" data-np-autofill-field-type="email" />
   </div>
 </section>
 
-<div class="">
-  <div class="">
-    <p>Your scrolling text goes here...</p>
-  </div>
-  <h1 class="animate__animated animate__bounceInLeft">An animated element</h1>
-</div>
-<section class="wow slideInLeft">HALLEESASDSYAD</section>
-<section class="wow slideInRight">nashjdjklsdfbk\jn</section>
+<section>
+  <p>Chcete se potkat a probrat projekt osobně?</p>
+</section>
+
 <section class="faq">
   <div></div>
 </section>

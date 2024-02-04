@@ -143,11 +143,13 @@ nav ul {
   font-weight: 300;
 }
 
-.textyPrednosti01, .textyPrednosti02 {
+.textyPrednosti01,
+.textyPrednosti02 {
   transition: transform 0.7s ease;
 }
 
-.textyPrednosti01:hover, .textyPrednosti02:hover {
+.textyPrednosti01:hover,
+.textyPrednosti02:hover {
   transform: scale(1.03);
 }
 
@@ -257,16 +259,16 @@ nav ul {
   margin-left: auto;
 }
 
-.cenik,
-.newsletterKarta {
-  padding: 1em;
-  margin: 5em 0em;
-}
-
 .cenikKarta {
   background-color: white;
   margin: 5em 5em;
   padding: 6em;
+}
+
+.cenik {
+  padding: 1em;
+  margin: 5em 0em;
+  background-color: #768D93;
 }
 
 @media (max-width: 640px) {
@@ -274,6 +276,23 @@ nav ul {
     margin: 0em 0em;
     padding: 2em;
   }
+}
+
+.newsletterKarta {
+  padding: 1em;
+  margin: 0em 0em;
+  background-color: white;
+}
+
+.newsletter {
+  margin: 0em 5em;
+  padding: 2em;
+  background-color: #43655a;
+}
+
+#elementZviditelneni {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
 }
 
 .prepinac {
@@ -289,11 +308,7 @@ nav ul {
   height: 0;
 }
 
-.newsletter {
-  margin: 0em 5em;
-  padding: 6em;
-  background-color: #768D93;
-}
+
 
 @media (max-width: 640px) {
   .newsletter {
