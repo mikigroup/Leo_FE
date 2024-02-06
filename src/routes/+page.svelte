@@ -26,7 +26,7 @@
 });
 </script>
 <section>
-  <div class="flex flex-row w-full p-10 pt-16 gap-16 xl:gap-28 textyPrednosti tems-center">
+  <div class="flex flex-row w-full gap-16 p-10 pt-16 xl:gap-28 textyPrednosti tems-center">
     <div class="flex items-center w-1/2 p-16 rounded-2xl textyPrednosti01">
       <p class="">Zjednodušte své podnikání s naším inovativním řešením. Bez ohledu na to, zda jste elektrikář nebo menší firma. Je to jen na Vás a vaší kreativitě. Malé webové řešení, které roste s Vámi.</p>
     </div>
@@ -47,15 +47,15 @@
   </div>
 </section>
 <section class="textTechnologie">
-  <div class="flex lg:w-1/2 my-10">
+  <div class="flex my-10 lg:w-1/2">
     <p class="">Stále se vyvíjecí systém postavený na nejnovějších technologiích - Svelte a DB PostgreSQL. Pravidelné zálohy a reporting.</p>
   </div>
-  <div class="flex items-end justify-end lg:w-1/2 my-10 textTechnologieBanner">
+  <div class="flex items-end justify-end my-10 lg:w-1/2 textTechnologieBanner">
     <p>Vše co vidíte je ručně psaný kód, žádné šablony, žádné kopie, vše je originál.</p>
   </div>
 </section>
 <section class="cenik">
-  <div class="flex gap-10 border rounded-xl cenikKarta">
+  <div class="flex max-w-screen-xl gap-10 border md:mx-auto rounded-xl cenikKarta">
     <div class="flex flex-col w-1/2 gap-10 levaStranaCenik">
       <div class="flex w-full">
         <h2 class="flex text-3xl font-medium">Ceník</h2>
@@ -74,16 +74,16 @@
         </button>
       </div>
     </div>
-    <div class="flex items-center w-1/2 pravaStranaCenik p-10">
+    <div class="flex items-center w-1/2 p-10 pravaStranaCenik">
       <p>Získat svůj vlastní eshop s Malým Leem je snadné a cenově dostupné. Podívejte se na cenové plány a najděte tu pravou možnost pro Vaše podnikání.</p>
     </div>
   </div>
 </section>
 
 <section class="newsletterKarta" id="elementZviditelneni">
-  <div class="flex border rounded-xl gap-4 newsletter">
-    <h2 class="flex w-full text-3xl items-center text-white">Odběr novivek</h2>
-    <input class="w-full border rounded-xl p-3" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="e-mail" data-required="true" required="" data-np-autofill-field-type="email" />
+  <div class="flex max-w-screen-xl border rounded-xl newsletter md:mx-auto">
+    <h2 class="flex items-center w-full text-3xl text-white">Odběr novivek</h2>
+    <input class="w-full p-3 border rounded-xl" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="e-mail" data-required="true" required="" data-np-autofill-field-type="email" />
   </div>
 </section>
 
