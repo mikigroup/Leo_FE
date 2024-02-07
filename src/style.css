@@ -159,19 +159,22 @@ nav ul {
   transition: transform 0.7s ease;
 }
 
-.pravaStranaCenik {
-  border-left: 1px solid #454545;
+@media (min-width: 768px) {
+  .pravaStranaCenik {
+    border-left: 1px solid #454545;
+  }
 }
 
 
+
 .textyPrednosti p {
-  font-size: 1.3em;
+  font-size: 1.4em;
   /* color: rgb(18, 18, 18); */
   color: snow;
   font-weight: 300;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .textyPrednosti {
     max-width: 80%;
     margin: 0 auto;
@@ -224,11 +227,12 @@ nav ul {
 }
 
 @media (max-width: 768px) {
+
   .karta1,
-    .karta2,
-    .karta3,
-    .karta4,
-    .karta5 {
+  .karta2,
+  .karta3,
+  .karta4,
+  .karta5 {
     width: auto;
     height: auto;
   }
@@ -316,8 +320,8 @@ nav ul {
 
 .cenikKarta {
   background-color: white;
-  margin: 5em 5em;
-  padding: 6em;
+  margin: 6em 0em;
+  padding: 2em;
 }
 
 .cenik {
@@ -326,10 +330,10 @@ nav ul {
   background-color: #768D93;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 768px) {
   .cenikKarta {
-    margin: 0em 0em;
-    padding: 2em;
+    margin: 6em 6em;
+    padding: 6em;
   }
 }
 
@@ -340,7 +344,7 @@ nav ul {
 }
 
 .newsletter {
-  margin: 0em 5em;
+  margin: 0em 0em;
   padding: 2em;
   background-color: #43655a;
 }
