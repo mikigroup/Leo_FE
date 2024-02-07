@@ -10,7 +10,7 @@
   let menuVisible = false;
 </script>
 
-<header class="px-2">
+<header class="px-10">
   <nav class="border-black md:border-white">
     <div class="flex flex-row items-center">
       <div class="flex w-full">
