@@ -21,6 +21,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@hapi/code": "^9.0.3",
 		"animate.css": "^4.1.1",
 		"wow.js": "^1.2.2"
 	}

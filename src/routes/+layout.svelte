@@ -1,17 +1,21 @@
 <script>
   import "../style.css";
+  import '../lib/component/gdpr/banner.css'
   import Header from "../lib/component/Header.svelte";
   import Footer from "../lib/component/Footer.svelte";
-  import "@beyonk/gdpr-cookie-consent-banner/banner.css"; // konfig designu
+  import Banner from "../lib/component/gdpr/Banner.svelte";
+ 
+  
+  /* import "@beyonk/gdpr-cookie-consent-banner/banner.css"; // konfig designu
   import GdprBanner from "@beyonk/gdpr-cookie-consent-banner";
-  import { onMount } from "svelte";
+  import { onMount } from "svelte"; */
   /* import 'animate.css'; */
   /* import 'wow.js'; */
 
-  function initAnalytics() {
+/*   function initAnalytics() {
     // marketingové analytiky
-  }
-  const props = {
+  } */
+ /*  const props = {
     cookieName: "beyonk_gdpr",
     visible: true,
     cookieConfig: {
@@ -20,17 +24,13 @@
     },
     heading: "GDPR Oznámení",
     description:
-       'Abychom poskytli co nejlepší služby, používáme k ukládání a/nebo přístupu k informacím o zařízení, technologie jako jsou soubory cookies. Souhlas s těmito technologiemi nám umožní zpracovávat údaje, jako je chování při procházení nebo jedinečná ID na tomto webu. Nesouhlas nebo odvolání souhlasu může nepříznivě ovlivnit určité vlastnosti a funkce. Zde jsou  <a href="/gdpr">zásady použítí</a>. ',
-     /* All the button labels and aria-label content. */
+       'Abychom poskytli co nejlepší služby, používáme k ukládání a/nebo přístupu k informacím o zařízení, technologie jako jsou soubory cookies. Souhlas s těmito technologiemi nám umožní zpracovávat údaje, jako je chování při procházení nebo jedinečná ID na tomto webu. Nesouhlas nebo odvolání souhlasu může nepříznivě ovlivnit určité vlastnosti a funkce. Zde jsou  <a href="/gdpr">zásady použítí</a>.',     
     acceptLabel: "Confirm all",
     rejectLabel: "Reject all",
     settingsLabel: "Preferences",
     closeLabel: "Zavři okno",
     editLabel: "Edit settings",
-/*   * These are the default opt-ins and their descriptions.
-     * When value is set to true, the option will automatically be checked on load.
-     *
-     * If you want to hide a category, simply set it to false, e.g. 'marketing: false' */
+  
     choices: {
       necessary: {
         label: "Nutné",
@@ -54,7 +54,7 @@
       },
     },
     showEditIcon: true,
-  };
+  }; */
 
 
 
@@ -84,7 +84,7 @@
     // možná budete muset přidat vlastní logiku pro získání volby uživatele
   });*/
 
-  let gdprBanner;
+  /* let gdprBanner;
 
   onMount(() => {
     // Funkce pro aktualizaci cookie s preferencemi uživatele
@@ -109,11 +109,12 @@
         updatePreferences(defaultPreferences);
       }
     });
-  });
+  }); */
 
 </script>
 
 <Header />
 <slot />
 <Footer />
-<GdprBanner bind:this={gdprBanner} cookieName="props.beyonk_gdpr" {...props} on:analytics={initAnalytics} />
+<Banner cookieName="test_gdpr" />
+<!-- <GdprBanner bind:this={gdprBanner} cookieName="props.beyonk_gdpr" {...props} on:analytics={initAnalytics} /> -->

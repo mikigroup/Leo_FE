@@ -8,7 +8,7 @@
 	}
 }; */
 
-export function load({ cookies }) {
+/* export function load({ cookies }) {
   // Předpokládejme, že cookie 'userPreferences' ukládá JSON s nastaveními
   let userPreferencesGDPR = cookies.get("userPreferences");
   if (userPreferencesGDPR) {
@@ -36,3 +36,4 @@ export function load({ cookies }) {
     userPreferencesGDPR,
   };
 }
+ */
