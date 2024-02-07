@@ -223,6 +223,17 @@ nav ul {
   height: 15em;
 }
 
+@media (max-width: 768px) {
+  .karta1,
+    .karta2,
+    .karta3,
+    .karta4,
+    .karta5 {
+    width: auto;
+    height: auto;
+  }
+}
+
 .karty p {
   font-size: 1.5em;
 }
