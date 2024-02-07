@@ -195,6 +195,9 @@
     console.log("Cookie byla nastavena.");
     execute(cookieChoices)
   }
+  function hideBanner() {
+  shown = false;
+}
 </script>
 
 {#if showEditIcon}
@@ -227,7 +230,7 @@
 {/if}
 
 {#if shown}
-<div class="cookieConsentWrapper" part="wrapper" transition:fade>
+<div class="cookieConsentWrapper" on:click={hideBanner} part="wrapper" transition:fade>
   <div class="cookieConsent" part="consent">
     <div class="cookieConsent__Left" part="consent--left">
       <div class="cookieConsent__Content" part="consent--content">
