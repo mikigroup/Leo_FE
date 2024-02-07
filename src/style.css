@@ -79,16 +79,21 @@ header {
 }
 
 .headerBanner {
-  max-width: 80%;
-  margin: 0 auto;
+  /* max-width: 60%; */
+  /* margin: 0 auto;0 */
+}
+
+@media (max-width: 768px) {
+  .headerBanner {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .headerBanner01 {
   margin-top: 8em;
-  max-width: 50%;
   border: solid 1px rgb(255, 255, 255);
   border-radius: 45px;
-  padding: 8em 4em;
   background-color: rgba(238, 238, 238, 0.462);
 }
 
@@ -98,21 +103,42 @@ header {
   font-weight: 400;
 }
 
+@media (max-width: 768px) {
+  .headerBanner01 p {
+    font-size: 1.4em;
+  }
+}
+
 .logo {
   margin-left: 4em;
 }
 
+@media (max-width: 768px) {
+  .logo {
+    margin-left: 2em;
+  }
+}
+
 nav {
-  max-width: 80%;
+  /* max-width: 80%; */
   margin: 0 auto;
   /* margin-top: 1.5em; */
-  border: solid 1px white;
+  border: solid 1px;
   border-radius: 45px;
 }
 
 nav ul {
   padding: 0.5rem;
   list-style-type: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    max-width: 100%;
+    margin: 0 auto;
+    border: solid 1px;
+    border-radius: 45px;
+  }
 }
 
 .tlacitkoCenik {
@@ -137,17 +163,21 @@ nav ul {
   border-left: 1px solid #454545;
 }
 
-.textyPrednosti {
-  max-width: 80%;
-  margin: 0 auto;
-
-}
 
 .textyPrednosti p {
-  font-size: 1.6em;
+  font-size: 1.3em;
   /* color: rgb(18, 18, 18); */
   color: snow;
   font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .textyPrednosti {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  
 }
 
 .textyPrednosti01,

@@ -25,12 +25,13 @@
   }
 });
 </script>
+
 <section>
-  <div class="flex flex-row w-full gap-16 p-10 pt-16 xl:gap-28 textyPrednosti tems-center">
-    <div class="flex items-center w-1/2 p-16 rounded-2xl textyPrednosti01">
+  <div class="flex flex-col gap-16 p-10 pt-16 md:flex-row xl:gap-28 textyPrednosti tems-center">
+    <div class="flex items-center p-16 md:w-1/2 rounded-2xl textyPrednosti01">
       <p class="">Zjednodušte své podnikání s naším inovativním řešením. Bez ohledu na to, zda jste elektrikář nebo menší firma. Je to jen na Vás a vaší kreativitě. Malé webové řešení, které roste s Vámi.</p>
     </div>
-    <div class="flex items-center w-1/2 p-16 rounded-2xl textyPrednosti02">
+    <div class="flex items-center p-16 md:w-1/2 rounded-2xl textyPrednosti02">
       <p>Leo je nátroj , který Vám poskytujeme úspěšný online prodej, správu materiálu, projektové řízení, firemní web, blog... a bez zbytečných složitostí a cenového vypětí.</p>
     </div>
   </div>
