@@ -176,8 +176,6 @@ nav ul {
     max-width: 80%;
     margin: 0 auto;
   }
-
-  
 }
 
 .textyPrednosti01,
@@ -205,6 +203,15 @@ nav ul {
   margin-bottom: 8em;
   /* opacity: 0.8; */
   /* display: flex;  */
+}
+
+@media (min-width: 768px) {
+  .karty {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 10em;
+    margin-bottom: 8em;
+  }
 }
 
 .karta1,

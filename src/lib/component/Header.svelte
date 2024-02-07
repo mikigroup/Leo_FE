@@ -4,18 +4,14 @@
   /* import { Icon, FaceSmile } from "svelte-hero-icons"; */
   import { ArrowLongRight } from "svelte-heros-v2";
   import logo from "../logo_leo_fe.svg";
-  onMount(() => {
-    const button = document.querySelector("#menu-button");
-    const menu = document.querySelector("#menu");
+  import { slide } from "svelte/transition";
 
-    button.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
-  });
+  // to je reaktivita menu, svelte :]
+  let menuVisible = false;
 </script>
 
-<header>
-  <nav class="border-black md:border-white ">
+<header class="px-2">
+  <nav class="border-black md:border-white">
     <div class="flex flex-row items-center">
       <div class="flex w-full">
         <div class="flex md:justify-start">
@@ -30,27 +26,31 @@
           <span>Objednat poptávku</span>
           <span class="ml-2"><ArrowLongRight class="" /></span>
         </button>
-        <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="block w-6 h-6 mr-5 cursor-pointer md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <!-- svelte-ignore a11y-no-static-element-interactions -->
+        <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" on:click={() => (menuVisible = !menuVisible)} class="block w-6 h-6 mr-5 cursor-pointer md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>   
+        </svg>
       </div>
     </div>
-         <div class="flex hidden w-full p-4 md:items-center md:w-auto" id="menu">
-          <ul class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
-            <li>
-              <a class="block py-2 md:p-4 hover:text-blue-500" href="#">O nás</a>
-            </li>
-            <li>
-              <a class="block py-2 md:p-4 hover:text-blue-500" href="#">Služby</a>
-            </li>
-            <li>
-              <a class="block py-2 md:p-4 hover:text-blue-500" href="#">Nevim</a>
-            </li>
-            <li>
-              <a class="block py-2 md:p-4 hover:text-blue-500" href="#">Nevim</a>
-            </li>
-          </ul>
-        </div>
+    {#if menuVisible}
+      <div id="menu" class="w-full md:flex md:items-center md:w-auto" transition:slide>
+        <ul class="p-10 pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
+          <li>
+            <a class="block py-2 md:p-4 hover:text-blue-500" href="#">O nás</a>
+          </li>
+          <li>
+            <a class="block py-2 md:p-4 hover:text-blue-500" href="#">Služby</a>
+          </li>
+          <li>
+            <a class="block py-2 md:p-4 hover:text-blue-500" href="#">Nevim</a>
+          </li>
+          <li>
+            <a class="block py-2 md:p-4 hover:text-blue-500" href="#">Nevim</a>
+          </li>
+        </ul>
+      </div>
+    {/if}
   </nav>
   <section class="">
     <div class="flex headerBanner">
@@ -63,5 +63,4 @@
 </header>
 
 <style>
-  
 </style>
