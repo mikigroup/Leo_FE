@@ -15,19 +15,20 @@
     });
     // observer.observe(animatedElement);
   });
-
-window.addEventListener('scroll', function() {
-  var elements = document.querySelectorAll('.elementZviditelneni');
-  elements.forEach(element => {
-    var position = element.getBoundingClientRect();
-    if(position.top < window.innerHeight && position.bottom >= 0) {
-      element.style.opacity = 1;
-    }
+  onMount(() => {
+    window.addEventListener("scroll", function () {
+      var elements = document.querySelectorAll(".elementZviditelneni");
+      elements.forEach((element) => {
+        var position = element.getBoundingClientRect();
+        if (position.top < window.innerHeight && position.bottom >= 0) {
+          element.style.opacity = 1;
+        }
+      });
+    });
   });
-});
-//Ecomail
+  //Ecomail
 </script>
-    
+
 <section>
   <div class="flex flex-col gap-16 p-10 pt-16 md:flex-row xl:gap-28 textyPrednosti elementZviditelneni">
     <div class="flex items-center p-6 md:p-16 md:w-1/2 rounded-2xl textyPrednosti01">
@@ -53,7 +54,7 @@ window.addEventListener('scroll', function() {
   <div class="flex my-10 lg:w-1/2">
     <p class="">Stále se vyvíjecí systém postavený na nejnovějších technologiích - Svelte a DB PostgreSQL. Pravidelné zálohy a reporting.</p>
   </div>
-  <hr class="lg:hidden">
+  <hr class="lg:hidden" />
   <div class="flex items-end justify-end my-10 lg:w-1/2 textTechnologieBanner">
     <p>Vše co vidíte je ručně psaný kód, žádné šablony, žádné kopie, vše je originál.</p>
   </div>
@@ -67,7 +68,8 @@ window.addEventListener('scroll', function() {
           <label class="mr-5 prepinac">
             <input type="checkbox" />
             <span class="slider round"></span>
-          </label><p>Zdarma</p>
+          </label>
+          <p>Zdarma</p>
         </div>
       </div>
       <div class="mt-10 text-lg"><p>Výstup obdržíte <strong class="font-medium">do 48 hodin</strong> od potvrzení objednávky a dodání všech podkladů.</p></div>
@@ -91,9 +93,7 @@ window.addEventListener('scroll', function() {
   </div>
 </section>
 
-<section>
-  Skóre stránek, sledování a analytika. Práce s verzemi, zálohy verzí, možnost zpětné verze.
-</section>
+<section>Skóre stránek, sledování a analytika. Práce s verzemi, zálohy verzí, možnost zpětné verze.</section>
 
 <!-- <section>
   <p>Chcete se potkat a probrat projekt osobně?</p>
