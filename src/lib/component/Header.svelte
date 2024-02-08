@@ -23,7 +23,7 @@
       </div>
       <div class="flex items-center justify-center">
         <button class="items-center hidden w-64 gap-5 p-5 transition-transform transform bg-black md:flex tlacitko poptavka hover:text-black hover:bg-slate-400">
-          <span>Objednat poptávku</span>
+          <span><a href="#cenik">Objednat poptávku</a></span>
           <span class="ml-2"><ArrowLongRight class="" /></span>
         </button>
         <!-- svelte-ignore a11y-click-events-have-key-events -->

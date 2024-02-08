@@ -58,7 +58,7 @@ window.addEventListener('scroll', function() {
     <p>Vše co vidíte je ručně psaný kód, žádné šablony, žádné kopie, vše je originál.</p>
   </div>
 </section>
-<section class="cenik">
+<section class="cenik" id="cenik">
   <div class="flex flex-col max-w-screen-xl gap-10 border md:flex-row md:mx-auto rounded-xl cenikKarta">
     <div class="flex flex-col gap-10 md:w-1/2 levaStranaCenik">
       <div class="flex w-full">
