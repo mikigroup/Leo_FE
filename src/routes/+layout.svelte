@@ -14,5 +14,5 @@
 <Header />
 <slot />
 <Footer />
-<Banner cookieName="test_gdpr" />
+<Banner cookieName="gdpr" />
 <!-- <GdprBanner bind:this={gdprBanner} cookieName="props.beyonk_gdpr" {...props} on:analytics={initAnalytics} /> -->

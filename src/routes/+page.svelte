@@ -91,6 +91,10 @@ window.addEventListener('scroll', function() {
   </div>
 </section>
 
+<section>
+  Skóre stránek, sledování a analytika. Práce s verzemi, zálohy verzí, možnost zpětné verze.
+</section>
+
 <!-- <section>
   <p>Chcete se potkat a probrat projekt osobně?</p>
 </section>
