@@ -1,6 +1,5 @@
 <script>
   import { page } from "$app/stores";
-  import { onMount } from "svelte";
   /* import { Icon, FaceSmile } from "svelte-hero-icons"; */
   import { ArrowLongRight } from "svelte-heros-v2";
   import logo from "../logo_leo_fe.svg";
@@ -13,13 +12,17 @@
 <header class="px-10">
   <nav class="border-black md:border-white">
     <div class="flex flex-row items-center">
-      <div class="flex w-full">
+      <div class="flex w-1/3">
         <div class="flex md:justify-start">
           <a href="/" class="flex logo">
             <span class="self-center text-2xl font-semibold whitespace-nowrap">Malý LEO</span>
             <img class="py-2 ml-2 rounded-full w-14" src={logo} alt="Malý Leo" />
           </a>
         </div>
+      </div>
+      <div class="flex-col hidden w-1/2 text-xl text-center lg:flex-row text-slate-800 sm:flex">
+        <div>info@malyleo.cz</div>
+        <div class="lg:pl-10">+420 733 362 418</div>        
       </div>
       <div class="flex items-center justify-center">
         <button class="items-center hidden w-64 gap-5 p-5 transition-transform transform bg-black md:flex tlacitko poptavka hover:text-black hover:bg-slate-400">
@@ -52,6 +55,7 @@
       </div>
     {/if}
   </nav>
+
   <section class="">
     <div class="flex headerBanner">
       <div class="p-8 mx-2 lg:basis-1/2 xl:p-20 headerBanner01">
