@@ -9,7 +9,7 @@
   let menuVisible = false;
 </script>
 
-<header class="px-10">
+<header class="px-2 md:px-10">
   <nav class="border-black md:border-white">
     <div class="flex flex-row items-center">
       <div class="flex w-1/3">
@@ -20,11 +20,11 @@
           </a>
         </div>
       </div>
-      <div class="flex-col hidden w-1/2 text-xl text-center lg:flex-row text-slate-800 md:flex">
+      <div class="flex-col justify-end hidden w-full text-xl text-center lg:flex-row text-slate-800 md:flex">
         <div>info@malyleo.cz</div>
         <div class="lg:pl-10">+420 733 362 418</div>        
       </div>
-      <div class="flex justify-end w-full md:w-auto">
+      <div class="flex justify-end w-full">
         <button class="items-center hidden w-64 gap-5 p-5 transition-transform transform bg-black md:flex tlacitko poptavka hover:text-black hover:bg-slate-400">
           <span><a href="#cenik">Objednat poptávku</a></span>
           <span class="ml-2"><ArrowLongRight class="" /></span>
@@ -37,7 +37,7 @@
       </div>
     </div>
     {#if menuVisible}
-      <div id="menu" class="w-full md:flex md:items-center md:w-auto" transition:slide>
+      <div id="menu" class="w-full mt-5 md:flex md:items-center md:w-auto" transition:slide>
         <ul class="p-10 pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
           <li>
             <a class="block py-2 md:p-4 hover:text-blue-500" href="#">O nás</a>

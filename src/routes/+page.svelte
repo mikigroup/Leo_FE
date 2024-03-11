@@ -1,8 +1,11 @@
 <script>
   import { onMount } from "svelte";
-  import logo from "$lib/logo_leo_fe.svg";
+  import Form from "$lib/component/Form.svelte";
+  import logo from "$lib/logo_leo_fe.svg";  
   let isVisible = false;
   let animatedElement;
+
+  export let data;
 
   onMount(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -30,7 +33,7 @@
 </script>
 
 <section>
-  <div class="flex flex-col gap-16 p-10 pt-16 md:flex-row xl:gap-28 textyPrednosti elementZviditelneni">
+  <div class="flex flex-col gap-16 p-2 pt-16 md:p-10 md:flex-row xl:gap-28 textyPrednosti elementZviditelneni">
     <div class="flex items-center p-6 md:p-16 md:w-1/2 rounded-2xl textyPrednosti01">
       <p class="">Zjednodušte své podnikání s naším inovativním řešením. Bez ohledu na to, zda jste elektrikář nebo menší firma. Je to jen na Vás a vaší kreativitě. Malé webové řešení, které roste s Vámi.</p>
     </div>
@@ -59,7 +62,7 @@
     <p>Vše co vidíte je ručně psaný kód, žádné šablony, žádné kopie, vše je originál.</p>
   </div>
 </section>
-<section class="cenik" id="cenik">
+<section class="!m-2 rounded-lg cenik" id="cenik">
   <div class="flex flex-col max-w-screen-xl gap-10 border md:flex-row md:mx-auto rounded-xl cenikKarta">
     <div class="flex flex-col gap-10 md:w-1/2 levaStranaCenik">
       <div class="flex w-full">
@@ -91,6 +94,10 @@
     <h2 class="flex items-center w-full text-3xl text-white">Odběr novivek</h2>
     <input class="w-full p-3 m-5 border rounded-xl" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="e-mail" data-required="true" required="" data-np-autofill-field-type="email" />
   </div>
+</section>
+
+<section class="flex justify-center">
+  <Form {data}  />
 </section>
 
 <section>Skóre stránek, sledování a analytika. Práce s verzemi, zálohy verzí, možnost zpětné verze.</section>
