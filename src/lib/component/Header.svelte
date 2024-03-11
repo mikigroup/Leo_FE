@@ -20,11 +20,11 @@
           </a>
         </div>
       </div>
-      <div class="flex-col hidden w-1/2 text-xl text-center lg:flex-row text-slate-800 sm:flex">
+      <div class="flex-col hidden w-1/2 text-xl text-center lg:flex-row text-slate-800 md:flex">
         <div>info@malyleo.cz</div>
         <div class="lg:pl-10">+420 733 362 418</div>        
       </div>
-      <div class="flex items-center justify-center">
+      <div class="flex justify-end w-full md:w-auto">
         <button class="items-center hidden w-64 gap-5 p-5 transition-transform transform bg-black md:flex tlacitko poptavka hover:text-black hover:bg-slate-400">
           <span><a href="#cenik">Objednat poptávku</a></span>
           <span class="ml-2"><ArrowLongRight class="" /></span>
