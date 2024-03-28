@@ -1,65 +1,85 @@
 <script>
-   import { page } from "$app/stores";
+  import { page } from "$app/stores";
   import { superForm } from "sveltekit-superforms";
   import SuperDebug from "sveltekit-superforms";
-  import { schemaStep1, schemaStep2, schemaStep3, schemaStep4 } from "./schemaFormular";
-  import { zod } from "sveltekit-superforms/adapters";
+  import { schema } from "./schemaForm";
   export let data;
 
+  const { form, errors, message, enhance, delayed, options } = superForm(data.form, {
+    resetForm: true,
+    validators: schema,
+    dataType: "json",
+  });
+
+  $: options.validators = schema;
 </script>
 
-<form class="w-full max-w-lg p-10 my-10">
+<form class="w-full max-w-lg p-10 my-10" method="POST" use:enhance>
   <div class="flex flex-wrap mb-6 -mx-3">
+
+         {#if $message}
+            <div class="status" class:error={$page.status >= 400} class:success={$page.status == 200}>
+              {$message}
+            </div>
+          {/if}
+
+        {#if form.error}
+          <div role="alert" class="alert alert-error">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-current shrink-0" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Error! Požadavek se nepovedl.</span>
+          </div>
+        {/if}
+        
+
     <div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
-      <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="grid-first-name">
+      <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="first_name">
         Jméno
       </label>
-      <input class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-red-500 rounded appearance-none focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jana">
+      <input class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-red-500 rounded appearance-none focus:outline-none focus:bg-white" id="first_name" type="text" placeholder="Jana" aria-invalid={$errors.first_name ? "true" : undefined} bind:value={$form.first_name}>
       <p class="text-xs italic text-red-500">Vyplň prosím</p>
     </div>
     <div class="w-full px-3 md:w-1/2">
-      <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="grid-last-name">
+      <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="last_name">
         Příjmení
       </label>
-      <input class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
+      <input class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="last_name" type="text" placeholder="Werichová" aria-invalid={$errors.last_name ? "true" : undefined} bind:value={$form.last_name}>
+    </div>
+  </div> 
+  <div class="flex flex-wrap mb-6 -mx-3">
+    <div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
+      <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="email">
+        Email
+      </label>
+      <input class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white" id="email" type="text" placeholder="jana.werichova@" aria-invalid={$errors.email ? "true" : undefined} bind:value={$form.email}>
+    </div>
+    <div class="w-full px-3 md:w-1/2"> 
+      <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="telephone">
+        Telefon 
+      </label>
+      <input class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="last_name" type="text" placeholder="777111222" aria-invalid={$errors.telephone ? "true" : undefined} bind:value={$form.telephone}>
     </div>
   </div>
   <div class="flex flex-wrap mb-6 -mx-3">
     <div class="w-full px-3">
-      <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="grid-password">
-        Heslo
+      <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="text">
+        Zpráva
       </label>
-      <input class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="******************">
-      <p class="text-xs italic text-gray-600">Dlouhé</p>
+      <textarea class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" cols="43" rows="10" id="text" type="text" placeholder="Mám zájem o..." aria-invalid={$errors.text ? "true" : undefined} bind:value={$form.text}></textarea>
     </div>
-  </div>
-  <div class="flex flex-wrap mb-2 -mx-3">
-    <div class="w-full px-3 mb-6 md:w-1/3 md:mb-0">
-      <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="grid-city">
-        City
-      </label>
-      <input class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="Albuquerque">
-    </div>
-    <div class="w-full px-3 mb-6 md:w-1/3 md:mb-0">
-      <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="grid-state">
-        State
-      </label>
-      <div class="relative">
-        <select class="block w-full px-4 py-3 pr-8 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-          <option>Mexiko</option>
-          <option>Jeseník</option>
-          <option>Brno</option>
-        </select>
-        <div class="absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 pointer-events-none">
-          <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+
+    <button class="mt-4 btn btn-primary border rounded-xl p-2 hover:bg-slate-100">Konec</button>
+          {#if $delayed}<div class="loading loading-dots loading-xs"></div>{/if}
+
+      <div class="text-red-700 rounded-lg py-4 text-sm" role="alert">
+          {#if $errors.first_name}<p>{$errors.first_name}</p>{/if}
+          {#if $errors.last_name}<p>{$errors.last_name}</p>{/if}
+          {#if $errors.email}<p>{$errors.email}</p>{/if}
+          {#if $errors.tel}<p>{$errors.tel}</p>{/if}
+          {#if $errors.text}<p>{$errors.text}</p>{/if}
         </div>
-      </div>
-    </div>
-    <div class="w-full px-3 mb-6 md:w-1/3 md:mb-0">
-      <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="grid-zip">
-        Zip
-      </label>
-      <input class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="90210">
-    </div>
   </div>
+  <SuperDebug data={$form} />
 </form>
+ 

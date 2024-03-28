@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
   font-family: Circular Std;
   font-style: italic;
   font-weight: 300;
@@ -53,10 +53,17 @@
   src: url(https://cdn.looka.com/fonts/circular/lineto-circular-bookitalic.eot#iefix) format("embedded-opentype"), url(https://cdn.looka.com/fonts/circular/lineto-circular-bookitalic.woff2) format("woff2"),
     url(https://cdn.looka.com/fonts/circular/lineto-circular-bookitalic.woff) format("woff");
 }
-
+ */
+ @font-face {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 400;
+  src: url('/Nunito/static/Nunito-Regular.ttf') format('truetype'); 
+ }
+ 
 body {
   font-family: Nunito;
-  font-weight: 300;
+  font-weight: 400;
 
   /* font-size: 1.5em; */
 }
