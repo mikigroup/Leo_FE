@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import Form from "$lib/component/Form.svelte";
-  import logo from "$lib/logo_leo_fe.svg";  
+  import logo from "$lib/logo_leo_fe.svg";
   let isVisible = false;
   let animatedElement;
 
@@ -29,6 +29,20 @@
       });
     });
   });
+
+  let cena = 899; // Počáteční cena
+  onMount(() => {  
+  const checkbox = document.getElementById("checkboxCenik");  
+
+  checkbox.addEventListener("change", function () {
+    if (checkbox.checked) {
+      cena = 0;
+    } else {
+      cena = 899;
+    }
+  });
+  });
+  // případně přes html : <input type="checkbox" on:change={() => cena = document.querySelector('#mojCheckbox').checked ? 0 : 899} id="mojCheckbox"/>
   //Ecomail
 </script>
 
@@ -55,13 +69,14 @@
 </section>
 <section class="textTechnologie">
   <div class="flex my-10 lg:w-1/2">
-    <p class="">Stále se vyvíjecí systém postavený na nejnovějších technologiích - Svelte a DB PostgreSQL. Pravidelné zálohy a reporting.</p>
+    <p class="">Měníme tradiční přístup a nabízíme přímější a efektivnější způsob tvorby webových aplikací.</p>
   </div>
   <hr class="lg:hidden" />
   <div class="flex items-end justify-end my-10 lg:w-1/2 textTechnologieBanner">
-    <p>Vše co vidíte je ručně psaný kód, žádné šablony, žádné kopie, vše je originál.</p>
+    <p>"Malý Leo" je vyvíjecí se systém postavený na nejnovějších technologiích - Svelte a DB PostgreSQL. Pravidelné zálohy a reporting.</p>
   </div>
 </section>
+
 <section class="!m-2 rounded-lg cenik" id="cenik">
   <div class="flex flex-col max-w-screen-xl gap-10 border md:flex-row md:mx-auto rounded-xl cenikKarta">
     <div class="flex flex-col gap-10 md:w-1/2 levaStranaCenik">
@@ -69,14 +84,14 @@
         <h2 class="flex text-3xl font-medium">Ceník</h2>
         <div class="flex items-center justify-end w-full">
           <label class="mr-5 prepinac">
-            <input type="checkbox" />
+            <input type="checkbox" id="checkboxCenik">
             <span class="slider round"></span>
           </label>
           <p>Zdarma</p>
         </div>
       </div>
-      <div class="mt-10 text-lg"><p>Výstup obdržíte <strong class="font-medium">do 48 hodin</strong> od potvrzení objednávky a dodání všech podkladů.</p></div>
-      <div class="flex justify-end"><p class="text-2xl">899,-</p></div>
+      <div class="mt-10 text-lg"><p>Výstup obdržíte <strong class="">do 48 hodin</strong> od potvrzení objednávky a dodání všech podkladů.</p></div>
+      <div class="flex justify-end"><p class="text-2xl">{cena} Kč</p></div>
       <div>
         <button class="flex justify-center w-40 gap-5 text-lg transition-transform transform bg-black tlacitkoCenik hover:text-black rounded-3xl hover:bg-slate-400 hover:scale-105">
           <span>Objednat</span>
@@ -84,7 +99,7 @@
       </div>
     </div>
     <div class="flex items-center text-lg md:p-10 md:w-1/2 pravaStranaCenik">
-      <p>Získat svůj vlastní eshop s Malým Leem je snadné a dostupné. Podívejte se na cenové plány a najděte tu pravou možnost pro Vaše podnikání.</p>
+      <p><strong>Získat</strong> svoje vlastní <strong>webové řešení</strong> nebo eshop s Malým Leem <strong>je snadné</strong>. Podívejte se na cenové plány a najděte tu pravou volbu pro Vaše podnikání.</p>
     </div>
   </div>
 </section>
@@ -97,7 +112,7 @@
 </section>
 
 <section class="flex justify-center">
-  <Form {data}  />
+  <Form {data} />
 </section>
 
 <section>Skóre stránek, sledování a analytika. Práce s verzemi, zálohy verzí, možnost zpětné verze.</section>

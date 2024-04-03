@@ -37,8 +37,8 @@
       <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="first_name">
         Jméno
       </label>
-      <input class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-red-500 rounded appearance-none focus:outline-none focus:bg-white" id="first_name" type="text" placeholder="Jana" aria-invalid={$errors.first_name ? "true" : undefined} bind:value={$form.first_name}>
-      <p class="text-xs italic text-red-500">Vyplň prosím</p>
+      <input class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="first_name" type="text" placeholder="Jana" aria-invalid={$errors.first_name ? "true" : undefined} bind:value={$form.first_name}>
+      <!-- <p class="text-xs italic text-red-500">Vyplň prosím</p> -->
     </div>
     <div class="w-full px-3 md:w-1/2">
       <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="last_name">
@@ -52,7 +52,7 @@
       <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="email">
         Email
       </label>
-      <input class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border rounded appearance-none focus:outline-none focus:bg-white" id="email" type="text" placeholder="jana.werichova@" aria-invalid={$errors.email ? "true" : undefined} bind:value={$form.email}>
+      <input class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="text" placeholder="jana.werichova@" aria-invalid={$errors.email ? "true" : undefined} bind:value={$form.email}>
     </div>
     <div class="w-full px-3 md:w-1/2"> 
       <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="telephone">
@@ -69,10 +69,10 @@
       <textarea class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" cols="43" rows="10" id="text" type="text" placeholder="Mám zájem o..." aria-invalid={$errors.text ? "true" : undefined} bind:value={$form.text}></textarea>
     </div>
 
-    <button class="mt-4 btn btn-primary border rounded-xl p-2 hover:bg-slate-100">Konec</button>
+    <button class="p-2 mt-4 border btn btn-primary rounded-xl hover:bg-slate-100">Konec</button>
           {#if $delayed}<div class="loading loading-dots loading-xs"></div>{/if}
 
-      <div class="text-red-700 rounded-lg py-4 text-sm" role="alert">
+      <div class="py-4 text-sm text-red-700 rounded-lg" role="alert">
           {#if $errors.first_name}<p>{$errors.first_name}</p>{/if}
           {#if $errors.last_name}<p>{$errors.last_name}</p>{/if}
           {#if $errors.email}<p>{$errors.email}</p>{/if}

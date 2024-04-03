@@ -25,8 +25,8 @@
         <div class="lg:pl-10">+420 733 362 418</div>        
       </div>
       <div class="flex justify-end w-full">
-        <button class="items-center hidden w-64 gap-5 p-5 transition-transform transform bg-black md:flex tlacitko poptavka hover:text-black hover:bg-slate-400">
-          <span><a href="#cenik">Objednat poptávku</a></span>
+        <button class="justify-end hidden gap-5 p-5 transition-transform transform bg-black w- md:flex tlacitko poptavka hover:text-black hover:bg-slate-400">
+          <span><a href="#cenik">Objednat</a></span>
           <span class="ml-2"><ArrowLongRight class="" /></span>
         </button>
         <!-- svelte-ignore a11y-click-events-have-key-events -->
