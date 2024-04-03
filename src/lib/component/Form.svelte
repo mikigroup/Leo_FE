@@ -1,6 +1,6 @@
 <script>
   import { page } from "$app/stores";
-  import { superForm } from "sveltekit-superforms";
+  import { superForm } from "sveltekit-superforms";    
   import SuperDebug from "sveltekit-superforms";
   import { schema } from "./schemaForm";
   export let data;
@@ -28,7 +28,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-current shrink-0" fill="none" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span>Error! Požadavek se nepovedl.</span>
+            <span>Chyba! Požadavek se nepovedl.</span>
           </div>
         {/if}
         
@@ -58,7 +58,7 @@
       <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="telephone">
         Telefon 
       </label>
-      <input class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="last_name" type="text" placeholder="777111222" aria-invalid={$errors.telephone ? "true" : undefined} bind:value={$form.telephone}>
+      <input class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="telephone" type="text" placeholder="777111222" aria-invalid={$errors.telephone ? "true" : undefined} bind:value={$form.telephone}>
     </div>
   </div>
   <div class="flex flex-wrap mb-6 -mx-3">
@@ -76,7 +76,7 @@
           {#if $errors.first_name}<p>{$errors.first_name}</p>{/if}
           {#if $errors.last_name}<p>{$errors.last_name}</p>{/if}
           {#if $errors.email}<p>{$errors.email}</p>{/if}
-          {#if $errors.tel}<p>{$errors.tel}</p>{/if}
+          {#if $errors.telephone}<p>{$errors.telephone}</p>{/if}
           {#if $errors.text}<p>{$errors.text}</p>{/if}
         </div>
   </div>

@@ -37,11 +37,11 @@
   /**
    * @type {string|undefined|null}
    */
-  export let acceptLabel = "Accept cookies";
-  export let rejectLabel = "Reject cookies";
-  export let settingsLabel = "Cookie settings";
-  export let closeLabel = "Close settings";
-  export let editLabel = "Edit cookie settings";
+  export let acceptLabel = "Ulož";
+  export let rejectLabel = "Nechci cookies";
+  export let settingsLabel = "Nastavení sušenek";
+  export let closeLabel = "Zavřít nastavení";
+  export let editLabel = "Editovat cookie";
 
   /**
    * Whether to show the cookie banner if the user has not yet accepted or rejected your choices.

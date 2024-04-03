@@ -46,7 +46,7 @@
   //Ecomail
 </script>
 
-<section>
+<section class="pt-10 ">
   <div class="flex flex-col gap-16 p-2 pt-16 md:p-10 md:flex-row xl:gap-28 textyPrednosti elementZviditelneni">
     <div class="flex items-center p-6 md:p-16 md:w-1/2 rounded-2xl textyPrednosti01">
       <p class="">Zjednodušte své podnikání s naším inovativním řešením. Bez ohledu na to, zda jste elektrikář nebo menší firma. Je to jen na Vás a vaší kreativitě. Malé webové řešení, které roste s Vámi.</p>
@@ -67,14 +67,16 @@
     <div class="flex items-end p-8 rounded-xl karta5"><p>Předání</p></div>
   </div>
 </section>
-<section class="textTechnologie">
+<section class="pb-10 textTechnologie">
+  <hr>
   <div class="flex my-10 lg:w-1/2">
     <p class="">Měníme tradiční přístup a nabízíme přímější a efektivnější způsob tvorby webových aplikací.</p>
   </div>
   <hr class="lg:hidden" />
   <div class="flex items-end justify-end my-10 lg:w-1/2 textTechnologieBanner">
-    <p>"Malý Leo" je vyvíjecí se systém postavený na nejnovějších technologiích - Svelte a DB PostgreSQL. Pravidelné zálohy a reporting.</p>
+    <p>"Malý Leo" je vyvíjecí se systém, postavený na nejnovějších technologiích - Svelte a DB PostgreSQL. Pravidelné zálohy a reporting.</p>
   </div>
+  <hr>
 </section>
 
 <section class="!m-2 rounded-lg cenik" id="cenik">
@@ -99,13 +101,13 @@
       </div>
     </div>
     <div class="flex items-center text-lg md:p-10 md:w-1/2 pravaStranaCenik">
-      <p><strong>Získat</strong> svoje vlastní <strong>webové řešení</strong> nebo eshop s Malým Leem <strong>je snadné</strong>. Podívejte se na cenové plány a najděte tu pravou volbu pro Vaše podnikání.</p>
+      <p><strong>Získat</strong> svoje vlastní <strong>webové řešení</strong> nebo eshop s Malým Leem <strong>je snadné</strong>. Podívejte se na cenové plány a najděme vhodnou volbu.</p>
     </div>
   </div>
 </section>
 
 <section class="newsletterKarta elementZviditelneni" id="">
-  <div class="flex flex-col max-w-screen-xl border md:flex-row rounded-xl newsletter md:mx-auto">
+  <div class="flex flex-col border md:flex-row rounded-xl newsletter md:mx-auto">
     <h2 class="flex items-center w-full text-3xl text-white">Odběr novivek</h2>
     <input class="w-full p-3 m-5 border rounded-xl" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="e-mail" data-required="true" required="" data-np-autofill-field-type="email" />
   </div>
