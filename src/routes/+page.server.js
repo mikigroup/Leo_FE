@@ -16,7 +16,8 @@ export const actions = {
     default: async ({ request }) => {
     const form = await superValidate(request, zod(schema));
     if (!form.valid) return fail(400, { form });
-    
+    console.log(PUBLIC_seznamKey);
+
     const transporter = nodemailer.createTransport({
       host: "smtp.seznam.cz",
       port: 465,
@@ -38,27 +39,3 @@ export const actions = {
     return message(form, "Formulář v pořádku odeslán!");
   },
 };
-
-/* import { zod } from "sveltekit-superforms/adapters";
-import { message, superValidate } from "sveltekit-superforms/server";
-import { schema } from "../lib/component/schemaForm";
-import { fail } from "@sveltejs/kit";
-
-export const load = async () => {
-  const form = await superValidate(zod(schema));
-  return { form };
-};
-
-export const actions = {
-  default: async ({ request }) => {
-    const formData = await request.formData();
-    console.log(formData);
-
-    const form = await superValidate(formData, zod(schema));
-    console.log(form);
-
-    if (!form.valid) return fail(400, { form });
-
-    return message(form, 'Posted OK!');
-  }
-}; */

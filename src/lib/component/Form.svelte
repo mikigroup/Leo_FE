@@ -6,21 +6,20 @@
   import { zod } from "sveltekit-superforms/adapters";
   export let data;
 
-  const { form, errors, message, enhance, delayed } = superForm(data.form, {
+  const { form, errors, message, enhance, delayed, options } = superForm(data.form, {
     resetForm: true,
      validators: zod(schema),
-    /* dataType: "json", */
+     dataType: "json",
  /*    async onSubmit({ cancel }) {
       const result = await validateForm({ update: true });
       if (result.valid) {
       } else {
       }
     },
-
     async onUpdated({ form }) {}, */
   });
 
-/* $: options.validators = schema; */
+$: options.validators = zod(schema);
 </script>
 
 <form class="w-full max-w-lg p-10 my-10 border rounded-xl" method="POST" use:enhance>
