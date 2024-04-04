@@ -172,8 +172,6 @@ nav ul {
   }
 }
 
-
-
 .textyPrednosti p {
   font-size: 1.4em;
   /* color: rgb(18, 18, 18); */
@@ -438,4 +436,14 @@ input:checked+.slider:before {
 .visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.formBG {
+  padding: 1em;
+  margin: 5em 0em;
+  background-color: #768D93;
+}
+
+form {
+  background-color: white;
 }

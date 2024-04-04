@@ -106,6 +106,10 @@
   </div>
 </section>
 
+<section class="flex justify-center formBG">
+  <Form {data} />
+</section>
+
 <section class="newsletterKarta elementZviditelneni" id="">
   <div class="flex flex-col border md:flex-row rounded-xl newsletter md:mx-auto">
     <h2 class="flex items-center w-full text-3xl text-white">Odběr novivek</h2>
@@ -113,12 +117,8 @@
   </div>
 </section>
 
-<section class="flex justify-center">
-  <Form {data} />
-</section>
-
-<section>Skóre stránek, sledování a analytika. Práce s verzemi, zálohy verzí, možnost zpětné verze.</section>
-<section>Vývoj probíhá na frameworku Svelte, který mění tradiční přístup a nabízí přímější a efektivnější způsob tvorby webových aplikací. Je to vynikající volba pro ty, kteří hledají moderní, inovativní a produktivní webé aplikace.</section>
+<!-- <section>Skóre stránek, sledování a analytika. Práce s verzemi, zálohy verzí, možnost zpětné verze.</section>
+<section>Vývoj probíhá na frameworku Svelte, který mění tradiční přístup a nabízí přímější a efektivnější způsob tvorby webových aplikací. Je to vynikající volba pro ty, kteří hledají moderní, inovativní a produktivní webé aplikace.</section> -->
 <!-- <section>
   <p>Chcete se potkat a probrat projekt osobně?</p>
 </section>
