@@ -43,7 +43,14 @@
   });
   });
   // případně přes html : <input type="checkbox" on:change={() => cena = document.querySelector('#mojCheckbox').checked ? 0 : 899} id="mojCheckbox"/>
-  //Ecomail
+  
+  //Ecomail - https://www.ecomail.cz
+  // api connection
+  /* function fetchData() {
+    fetch("https://api.ecomail.cz/ecomail/lead")
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  } */
 </script>
 
 <section class="pt-10 ">
