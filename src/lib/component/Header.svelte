@@ -7,10 +7,20 @@
 
   // to je reaktivita menu, svelte :]
   let menuVisible = false;
+  let scrolled = false;
+
+  function handleScroll() {
+    if (window.scrollY > 0) {
+      scrolled = true;
+    } else {
+      scrolled = false;
+    }
+  }
 </script>
+<svelte:window on:scroll={handleScroll} />
 
 <header class="px-2 md:px-10">
-  <nav class="border-black md:border-white">
+  <nav class="border-black md:border-white fixed top-0 left-0 right-0 z-50 m-2 transition-all duration-300 ease-in-out" class:bg-white={scrolled} class:shadow-md={scrolled}>
     <div class="flex flex-row items-center">
       <div class="flex w-1/3">
         <div class="flex md:justify-start">
@@ -22,7 +32,7 @@
       </div>
       <div class="flex-col justify-end hidden w-full text-xl text-center lg:flex-row text-slate-800 md:flex">
         <div>info@malyleo.cz</div>
-        <div class="lg:pl-10">+420 733 362 418</div>        
+        <div class="lg:pl-10">+420 733 362 418</div>
       </div>
       <div class="flex justify-end w-full">
         <a href="#cenik"><button class="justify-end hidden gap-5 p-5 transition-transform transform bg-black w- md:flex tlacitko poptavka hover:text-black hover:bg-slate-400">
@@ -55,16 +65,42 @@
       </div>
     {/if}
   </nav>
-
-  <section class="">
+  <section class="pb-16">
     <div class="flex headerBanner">
-      <div class="p-8 mx-2 lg:basis-1/2 xl:p-20 headerBanner01">
-        <h1>Malý Leo - 1st.</h1>
-        <p class="">Získejte konkurenční výhodu s naším webovým řešením, které se škáluje od drobných řemeslníků až po menší podniky. Postavený na nejnovějších technologiích, náš systém vyniká jednoduchým designem a flexibilitou.</p>
+      <div class="p-8 mx-2 lg:basis-1/2 xl:p-12 headerBanner01">
+        <h1 class="text-4xl font-bold mb-6">Malý Leo - Váš webový superhrdina!</h1>
+        <p class="mb-10 leading-7">
+          Unaveni z pomalých a ošklivých webů, které odrazují vaše zákazníky? Nechte Lea, ať to vezme za vás! S jeho
+          superschopnostmi získáte...
+        </p>
+        <ul class="list-inside flex flex-col xl:flex-row gap-5 leading-7 text-sm">
+          <li class="pl-2">
+            <span class="argumenty inline-block text-white rounded-full px-4 py-2 mr-2 text-xl">Rychlost</span>
+            <p class="mt-4">Bleskurychlé načítání, které udrží pozornost i těch nejnetrpělivějších návštěvníků</p>
+          </li>
+          <li class="">
+            <span class="argumenty1 inline-block bg-yellow-500 text-white rounded-full px-4 py-2 mr-2 text-xl">Funkčnost</span>
+            <p class="mt-4">Chytré funkce a intuitivní ovládání, se kterým si poradí i vaše babička</p>
+          </li>
+          <li class="">
+            <span class="argumenty2 inline-block bg-green-500 text-white rounded-full px-4 py-2 mr-2 text-xl">Moderní
+              design</span>
+            <p class="mt-4">Moderní a atraktivní vzhled, co vyrazí dech (v tom dobrém slova smyslu!)</p>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 </header>
-
 <style>
+  .argumenty {
+    background-color: #ad9e00;
+  }
+  .argumenty1 {
+    background-color: #709900;
+  }
+  .argumenty2 {
+    background-color: #008349;
+  }
+
 </style>
