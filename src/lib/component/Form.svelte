@@ -6,7 +6,7 @@
   import { zod } from "sveltekit-superforms/adapters";
   export let data;
 
-  const { form, errors, message, enhance, delayed, options } = superForm(data.form, {
+  const { form, errors, message, enhance, delayed, options } = superForm(data.form, {     
     resetForm: true,
     validators: zod(schema),
     dataType: "json",
@@ -22,7 +22,7 @@
   $: options.validators = zod(schema);
 </script>
 
-<form class="w-full max-w-lg p-10 my-10 border rounded-xl" method="POST" use:enhance>
+<form class="w-full max-w-lg p-10 my-10 border rounded-xl" method="POST">
   <div class="flex flex-wrap mb-6 -mx-3">
     <div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
       <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="first_name"> Jméno </label>
@@ -52,7 +52,7 @@
     </div>
   </div>
 
-  </div>
+  
   <div class="flex flex-wrap mb-6 -mx-3">
     <div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
       <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="email"> Email </label>
@@ -92,7 +92,7 @@
         bind:value={$form.text}></textarea>
     </div>
 
-    <button class="p-2 mt-4 border btn btn-primary rounded-xl hover:bg-slate-100">Odeslat</button>
+    <button class="p-2 mt-4 border btn btn-primary rounded-xl hover:bg-slate-100" type="submit">Odeslat</button>
     {#if $delayed}<div class="loading loading-dots loading-xs"></div>{/if}
 
     {#if $message}
@@ -118,5 +118,5 @@
       {#if $errors.text}<p>{$errors.text}</p>{/if}
     </div>
   </div>
-  <!-- <SuperDebug data={$form} /> -->
+<!--  <SuperDebug data={$form} /> -->
 </form>

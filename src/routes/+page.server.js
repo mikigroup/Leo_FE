@@ -12,8 +12,9 @@ export const load = async () => {
 };
 
 /** @type {import('./$types').Actions} */
-export const actions = {
+export const actions = {    
     default: async ({ request }) => {
+    console.log("ODESLAT")
     const form = await superValidate(request, zod(schema));
     if (!form.valid) return fail(400, { form });
     console.log(PUBLIC_seznamKey);

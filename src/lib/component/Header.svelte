@@ -25,10 +25,10 @@
         <div class="lg:pl-10">+420 733 362 418</div>        
       </div>
       <div class="flex justify-end w-full">
-        <button class="justify-end hidden gap-5 p-5 transition-transform transform bg-black w- md:flex tlacitko poptavka hover:text-black hover:bg-slate-400">
-          <span><a href="#cenik">Objednat</a></span>
+        <a href="#cenik"><button class="justify-end hidden gap-5 p-5 transition-transform transform bg-black w- md:flex tlacitko poptavka hover:text-black hover:bg-slate-400">
+          <span>Objednat</span>
           <span class="ml-2"><ArrowLongRight class="" /></span>
-        </button>
+        </button></a>
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <!-- svelte-ignore a11y-no-static-element-interactions -->
         <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" on:click={() => (menuVisible = !menuVisible)} class="block w-6 h-6 mr-5 cursor-pointer md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
