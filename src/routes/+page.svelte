@@ -59,7 +59,8 @@
       <p class="">Zjednodušte své podnikání s naším inovativním řešením. Bez ohledu na to, zda jste elektrikář nebo menší firma. Je to jen na Vás a vaší kreativitě. Malé webové řešení, které roste s Vámi.</p>
     </div>
     <div class="flex items-center p-6 md:p-16 md:w-1/2 rounded-2xl textyPrednosti02">
-      <p>Leo je nátroj , který Vám poskytujeme úspěšný online prodej, správu materiálu, projektové řízení, firemní web, blog... a bez zbytečných složitostí a cenového vypětí.</p>
+      <p>Leo je nástroj, který Vám poskytuje úspěšný online prodej, správu materiálu, projektové řízení, firemní
+        web, blog... a bez zbytečných složitostí a cenového vypětí.</p>
     </div>
   </div>
 </section>
@@ -86,7 +87,7 @@
   <hr />
 </section>
 
-<section class="!m-2 rounded-lg cenik" id="cenik">
+<section class="cenik" id="cenik">
   <div class="flex flex-col max-w-screen-xl gap-10 border md:flex-row md:mx-auto rounded-xl cenikKarta">
     <div class="flex flex-col gap-10 md:w-1/2 levaStranaCenik">
       <div class="flex w-full">
@@ -124,9 +125,9 @@
   <Form {data} />
 </section>
 
-<section class="newsletterKarta elementZviditelneni" id="">
-  <div class="flex flex-col border md:flex-row rounded-xl newsletter md:mx-auto">
-    <h2 class="flex items-center w-full text-3xl text-white">Odběr novivek</h2>
+<section class="rounded-xl  newsletterKarta elementZviditelneni" id="">
+  <div class="flex w-1/2 flex-col border md:flex-row rounded-xl newsletter md:mx-auto">
+    <h2 class="flex items-center w-full text-3xl ">Odběr novinek</h2>
     <input class="w-full p-3 m-5 border rounded-xl" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="e-mail" data-required="true" required="" data-np-autofill-field-type="email" />
   </div>
 </section>

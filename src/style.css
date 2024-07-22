@@ -105,9 +105,9 @@ header {
 }
 
 .headerBanner01 p {
-  font-size: 1.6em;
+  /*font-size: 1.6em;
   color: rgb(0, 0, 0);
-  font-weight: 400;
+  font-weight: 400;*/
 }
 
 @media (max-width: 768px) {
@@ -331,8 +331,8 @@ nav ul {
 
 .cenik {
   padding: 1em;
-  margin: 5em 0em;
-  background-color: #768D93;
+  /*margin: 5em 0em;*/
+  background-color: #00a092;
 }
 
 @media (min-width: 768px) {
@@ -343,15 +343,15 @@ nav ul {
 }
 
 .newsletterKarta {
-  padding: 0.5em;
+  /*padding: 0.5em;
   margin: 0em 0em;
-  background-color: white;
+  background-color: white;*/
 }
 
 .newsletter {
   margin: 0em 0em;
   padding: 2em;
-  background-color: #43655a;
+  /*background-color: #4ec28b;*/
 }
 
 #elementZviditelneni {
@@ -440,8 +440,8 @@ input:checked+.slider:before {
 
 .formBG {
   padding: 1em;
-  margin: 5em 0em;
-  background-color: #768D93;
+  /*margin: 5em 0em;*/
+  background-color: #007c8a;
 }
 
 form {
