@@ -53,7 +53,7 @@
   } */
 </script>
 
-<section class="pt-10">
+<!--<section class="pt-10">
   <div class="flex flex-col gap-16 p-2 pt-16 md:p-10 md:flex-row xl:gap-28 textyPrednosti elementZviditelneni">
     <div class="flex items-center p-6 md:p-16 md:w-1/2 rounded-2xl textyPrednosti01">
       <p class="">Zjednodušte své podnikání s naším inovativním řešením. Bez ohledu na to, zda jste elektrikář nebo menší firma. Je to jen na Vás a vaší kreativitě. Malé webové řešení, které roste s Vámi.</p>
@@ -63,7 +63,7 @@
         web, blog... a bez zbytečných složitostí a cenového vypětí.</p>
     </div>
   </div>
-</section>
+</section>-->
 <hr class="mx-10 my-10" />
 <section class="karty">
   <h2 class="my-10 font-medium">Jak probíhá spolupráce...</h2>
@@ -75,8 +75,8 @@
     <div class="flex items-end p-8 rounded-xl karta5"><p>Předání</p></div>
   </div>
 </section>
+<hr class="mx-10 my-10" />
 <section class="pb-10 textTechnologie">
-  <hr />
   <div class="flex my-10 lg:w-1/2">
     <p class="">Měníme tradiční přístup a nabízíme přímější a efektivnější způsob tvorby webových aplikací.</p>
   </div>

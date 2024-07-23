@@ -68,7 +68,8 @@
   <section class="pb-16">
     <div class="flex headerBanner">
       <div class="p-8 mx-2 xl:basis-1/2 xl:p-12 headerBanner01 mt-12 lg:mt-32">
-        <h1 class="text-2xl 2xl:text-3xl font-bold lg:mb-6">Malý Leo - Váš webový superhrdina!</h1>
+        <span class="flex"><h1 class="text-2xl 2xl:text-3xl font-bold lg:mb-6">Malý Leo - Váš webový
+          superhrdina!</h1><img src="/superdog.png" alt="LEO_superdog" id="superdog"></span>
         <p class="mb-5 lg:mb-10 text-xl 2xl:text-2xl leading-7">
           Unaveni z pomalých a ošklivých webů, které odrazují vaše zákazníky? Nechte Lea, ať to vezme za vás! S jeho
           superschopnostmi získáte...
@@ -91,7 +92,7 @@
               class="argumenty2 inline-block bg-green-500 text-white rounded-full px-4 py-2 mr-2 text-md 2xl:text-lg">Moderní
               design</span>
             <p class="lg:mt-4 text-lg 2xl:text-xl">Moderní a atraktivní vzhled, co vyrazí dech (v tom dobrém slova
-              smyslu!)</p>
+              smyslu)</p>
           </li>
         </ul>
       </div>
@@ -107,5 +108,12 @@
   }
   .argumenty2 {
     background-color: #008349;
+  }
+
+  #superdog {
+    margin-left: 1em;
+    width: 2em;
+    height: 2em;
+    object-fit: cover; /* zachová poměr stran */
   }
 </style>
