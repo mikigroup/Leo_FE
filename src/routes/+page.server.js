@@ -30,7 +30,7 @@ export const actions = {
     });
 
    const mailOptions = {
-     from: '"Forlumář MalýLeo" <info@malyleo.cz>',
+     from: '"Formulář MalýLeo" <info@malyleo.cz>',
      to: "info@malyleo.cz",
      cc: form.data.email,
      subject: "Nová zpráva z formuláře MalýLeo",

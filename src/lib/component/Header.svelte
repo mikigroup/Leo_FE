@@ -67,30 +67,30 @@
   </nav>
   <section class="pb-16">
     <div class="flex headerBanner">
-      <div class="p-8 mx-2 xl:basis-1/2 xl:p-12 headerBanner01">
-        <h1 class="text-2xl 2xl:text-3xl font-bold mb-6">Malý Leo - Váš webový superhrdina!</h1>
-        <p class="mb-10 text-xl 2xl:text-2xl leading-7">
+      <div class="p-8 mx-2 xl:basis-1/2 xl:p-12 headerBanner01 mt-12 lg:mt-32">
+        <h1 class="text-2xl 2xl:text-3xl font-bold lg:mb-6">Malý Leo - Váš webový superhrdina!</h1>
+        <p class="mb-5 lg:mb-10 text-xl 2xl:text-2xl leading-7">
           Unaveni z pomalých a ošklivých webů, které odrazují vaše zákazníky? Nechte Lea, ať to vezme za vás! S jeho
           superschopnostmi získáte...
         </p>
-        <ul class="list-inside flex flex-col lg:flex-row gap-5 leading-7 text-sm">
+        <ul class="list-inside flex flex-col lg:flex-row gap-5 lg:gap-5 leading-7 text-sm">
           <li class="pl-2">
             <span class="argumenty inline-block text-white rounded-full px-4 py-2 mr-2 text-md 2xl:text-lg">Rychlost
             </span>
-            <p class="mt-4 text-lg 2xl:text-xl">Bleskurychlé načítání, které udrží pozornost i těch
+            <p class="lg:mt-4 text-lg 2xl:text-xl">Bleskurychlé načítání, které udrží pozornost i těch
               nejnetrpělivějších návštěvníků</p>
           </li>
-          <li class="">
+          <li class="pl-2">
             <span
               class="argumenty1 inline-block bg-yellow-500 text-white rounded-full px-4 py-2 mr-2 text-md 2xl:text-lg">Funkčnost</span>
-            <p class="mt-4 text-lg 2xl:text-xl">Chytré funkce a intuitivní ovládání, se kterým si poradí i vaše
+            <p class="lg:mt-4 text-lg 2xl:text-xl">Chytré funkce a intuitivní ovládání, se kterým si poradí i vaše
               babička</p>
           </li>
-          <li class="">
+          <li class="pl-2">
             <span
               class="argumenty2 inline-block bg-green-500 text-white rounded-full px-4 py-2 mr-2 text-md 2xl:text-lg">Moderní
               design</span>
-            <p class="mt-4 text-lg 2xl:text-xl">Moderní a atraktivní vzhled, co vyrazí dech (v tom dobrém slova
+            <p class="lg:mt-4 text-lg 2xl:text-xl">Moderní a atraktivní vzhled, co vyrazí dech (v tom dobrém slova
               smyslu!)</p>
           </li>
         </ul>
