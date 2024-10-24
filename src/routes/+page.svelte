@@ -70,10 +70,10 @@
 <section class="bg-gray-300/75 rounded-lg p-10 mt-10">
   <h2 class="my-10 font-medium">Jak probíhá spolupráce...</h2>
   <div class="flex flex-col w-full p-5 mt-24 md:flex-row">
-    <div class="flex items-end p-8 rounded-xl karta1"><p class="text-2xl">Oslovení :)</p></div>
-    <div class="flex items-end p-8 rounded-xl karta2"><p class="text-2xl">Dodání podkladů</p></div>
-    <div class="flex items-end p-8 rounded-xl karta3"><p class="text-2xl">První ukázka a ucelení postupu</p></div>
-    <div class="flex items-end p-8 rounded-xl karta4"><p class="text-2xl">Postupný vývoj</p></div>
+    <div class="flex items-end p-8 rounded-xl karta1"><p class="text-2xl">První kontakt</p></div>
+    <div class="flex items-end p-8 rounded-xl karta2"><p class="text-2xl">Ucelení projektu, podklady</p></div>
+    <div class="flex items-end p-8 rounded-xl karta3"><p class="text-2xl">Vývoj</p></div>
+    <div class="flex items-end p-8 rounded-xl karta4"><p class="text-2xl">Testování</p></div>
     <div class="flex items-end p-8 rounded-xl karta5"><p class="text-2xl">Předání</p></div>
   </div>
 </section>
@@ -93,7 +93,7 @@
   <div class="flex flex-col max-w-screen-xl gap-10 border md:flex-row md:mx-auto rounded-xl cenikKarta">
     <div class="flex flex-col gap-10 md:w-1/2 levaStranaCenik">
       <div class="flex w-full">
-        <h2 class="flex text-3xl font-medium">Ceník</h2>
+        <h2 class="flex text-3xl font-medium">Startovací balíček</h2>
         <!-- <div class="flex items-center justify-end w-full">
           <label class="mr-5 prepinac">
             <input type="checkbox" id="checkboxCenik">
@@ -102,7 +102,15 @@
           <p>Zdarma</p>
         </div> -->
       </div>
-      <div class="mt-10 text-lg"><p>Výstup obdržíte <strong class="">do 48 hodin</strong> od potvrzení objednávky a dodání všech podkladů.</p></div>
+      <div class="mt-10 text-lg"><p>Odpověď obdržíte <strong class="">do 48 hodin</strong></p></div>
+      <div>
+        <ul>
+        <li></li>
+        <li>Zajištění domény</li>
+        <li>SEO optimalizace</li>
+        <li>3 měsíce rozšířené podpory</li>
+        </ul>
+      </div>
       <div class="flex flex-col items-end">
         <div>
           <p class="text-2xl line-through decoration-red-500">4999 Kč</p>

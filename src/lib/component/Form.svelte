@@ -26,7 +26,7 @@
   <div class="p-5">
   <div class="flex flex-wrap mb-6 -mx-3">
     <div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
-      <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="first_name"> Jméno </label>
+      <label class="block mb-2 text-xs font-bold tacking-wide uppercase" for="first_name"> Jméno </label>
       <input
         class={`block w-full px-4 py-3 leading-tight text-gray-700 border rounded appearance-none focus:outline-none focus:bg-white ${$errors.first_name ? "bg-red-100 border-red-500" : "bg-gray-200 border-gray-200"}`}
         id="first_name"
@@ -39,7 +39,7 @@
       {/if}
     </div>
  <div class="w-full px-3 md:w-1/2">
-      <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="last_name"> Příjmení </label>
+      <label class="block mb-2 text-xs font-bold tacking-wide uppercase" for="last_name"> Příjmení </label>
       <input
         class={`block w-full px-4 py-3 leading-tight text-gray-700 border rounded appearance-none focus:outline-none focus:bg-white ${$errors.last_name ? 'bg-red-100 border-red-500' : 'bg-gray-200 border-gray-200'}`}
         id="last_name"
@@ -56,7 +56,7 @@
   
   <div class="flex flex-wrap mb-6 -mx-3">
     <div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
-      <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="email"> Email </label>
+      <label class="block mb-2 text-xs font-bold tacking-wide uppercase" for="email"> Email </label>
       <input
         class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
         id="email"
@@ -69,7 +69,7 @@
         {/if}
     </div>
     <div class="w-full px-3 md:w-1/2">
-      <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="telephone"> Telefon </label>
+      <label class="block mb-2 text-xs font-bold tacking-wide uppercase" for="telephone"> Telefon </label>
       <input
         class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
         id="telephone"
@@ -81,7 +81,7 @@
   </div>
   <div class="flex flex-wrap mb-6 -mx-3">
     <div class="w-full px-3">
-      <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="text"> Zpráva </label>
+      <label class="block mb-2 text-xs font-bold tacking-wide uppercase" for="text"> Zpráva </label>
       <textarea
         class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
         cols="43"
@@ -93,7 +93,8 @@
         bind:value={$form.text}></textarea>
     </div>
 
-    <button class="p-2 mx-2 mt-10 border btn btn-primary rounded-xl hover:bg-slate-100 w-full" type="submit">Odeslat
+    <button class="p-2 mx-2 mt-10 border border-black btn btn-primary rounded-xl hover:bg-black hover:text-white  w-full"
+            type="submit">Odeslat
     </button>
     {#if $delayed}<div class="loading loading-dots loading-xs"></div>{/if}
 

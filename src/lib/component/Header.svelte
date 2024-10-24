@@ -70,13 +70,14 @@
       <div class="p-8 mx-2 xl:basis-1/2 xl:p-12 headerBanner01 mt-12 lg:mt-32">
   <span class="flex">
     <h1 class="text-2xl 2xl:text-3xl font-bold lg:mb-6">
-      Malý Leo - Profesionální webové řešení pro váš byznys
+      Malý Leo - webové řešení pro váš byznys
     </h1>
     <!--<img src="/superdog.png" alt="LEO_superdog" id="superdog">-->
   </span>
         <p class="mb-5 lg:mb-10 text-xl 2xl:text-2xl leading-7">
-          Hledáte moderní, rychlé a spolehlivé webové řešení? Svěřte svůj projekt do rukou odborníků. S námi získáte...
+          Potřebujete rychlý, moderní a spolehlivý web? Nabízíme...
         </p>
+        <p class="text-lg">Tři hlavní benefity</p>
         <div class="border border-black rounded-xl p-10">
         <ul class="list-inside flex flex-col lg:flex-row gap-5 lg:gap-5 leading-7 text-sm">
           <li class="pl-2">
@@ -92,7 +93,7 @@
         Spolehlivost
       </span>
             <p class="lg:mt-4 text-lg 2xl:text-xl">
-              Bezpečný provoz, pravidelné zálohy a profesionální podpora
+              Bezpečný provoz s pravidelnými zálohami dat
             </p>
           </li>
           <li class="pl-2">
@@ -100,7 +101,7 @@
         Design
       </span>
             <p class="lg:mt-4 text-lg 2xl:text-xl">
-              Responzivní design optimalizovaný pro všechna zařízení
+              Přizpůsobitelný Vašim potřebám
             </p>
           </li>
         </ul>
@@ -109,6 +110,7 @@
     </div>
   </section>
 </header>
+
 <style>
   .argumenty {
     background-color: #ad9e00;
