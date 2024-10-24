@@ -23,6 +23,7 @@
 </script>
 
 <form class="w-full max-w-lg p-10 my-10 border rounded-xl" method="POST">
+  <div class="p-5">
   <div class="flex flex-wrap mb-6 -mx-3">
     <div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
       <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="first_name"> Jméno </label>
@@ -30,7 +31,7 @@
         class={`block w-full px-4 py-3 leading-tight text-gray-700 border rounded appearance-none focus:outline-none focus:bg-white ${$errors.first_name ? "bg-red-100 border-red-500" : "bg-gray-200 border-gray-200"}`}
         id="first_name"
         type="text"
-        placeholder="Jana"
+        placeholder=""
         aria-invalid={$errors.first_name ? "true" : "false"}
         bind:value={$form.first_name} />
       {#if $errors.first_name}
@@ -43,7 +44,7 @@
         class={`block w-full px-4 py-3 leading-tight text-gray-700 border rounded appearance-none focus:outline-none focus:bg-white ${$errors.last_name ? 'bg-red-100 border-red-500' : 'bg-gray-200 border-gray-200'}`}
         id="last_name"
         type="text"
-        placeholder="Werichová"
+        placeholder=""
         aria-invalid={$errors.last_name ? "true" : "false"}
         bind:value={$form.last_name} />
       {#if $errors.last_name}
@@ -60,7 +61,7 @@
         class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
         id="email"
         type="text"
-        placeholder="jana.werichova@"
+        placeholder=""
         aria-invalid={$errors.email ? "true" : "false"}
         bind:value={$form.email} />
          {#if $errors.email}
@@ -73,7 +74,7 @@
         class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
         id="telephone"
         type="text"
-        placeholder="777111222"
+        placeholder=""
         aria-invalid={$errors.telephone ? "true" : "false"}
         bind:value={$form.telephone} />
     </div>
@@ -87,12 +88,13 @@
         rows="10"
         id="text"
         type="text"
-        placeholder="Mám zájem o..."
+        placeholder=""
         aria-invalid={$errors.text ? "true" : "false"}
         bind:value={$form.text}></textarea>
     </div>
 
-    <button class="p-2 mt-4 border btn btn-primary rounded-xl hover:bg-slate-100" type="submit">Odeslat</button>
+    <button class="p-2 mx-2 mt-10 border btn btn-primary rounded-xl hover:bg-slate-100 w-full" type="submit">Odeslat
+    </button>
     {#if $delayed}<div class="loading loading-dots loading-xs"></div>{/if}
 
     {#if $message}
@@ -117,6 +119,7 @@
       {#if $errors.telephone}<p>{$errors.telephone}</p>{/if}
       {#if $errors.text}<p>{$errors.text}</p>{/if}
     </div>
+  </div>
   </div>
 <!--  <SuperDebug data={$form} /> -->
 </form>

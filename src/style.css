@@ -100,7 +100,7 @@ header {
 .headerBanner01 {
   border: solid 1px rgb(255, 255, 255);
   border-radius: 45px;
-  background-color: rgba(238, 238, 238, 0.462);
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .headerBanner01 p {
@@ -331,7 +331,9 @@ nav ul {
 .cenik {
   padding: 1em;
   /*margin: 5em 0em;*/
-  background-color: #00a092;
+  /*background-color: #00a092;*/
+  /*background-color: #709900;*/
+  background-color: #007ba0;
 }
 
 @media (min-width: 768px) {
@@ -441,6 +443,8 @@ input:checked+.slider:before {
   padding: 1em;
   /*margin: 5em 0em;*/
   background-color: #007c8a;
+  /*background-color: #20902c;*/
+  /*background-color: rgb(173, 128, 56);*/
 }
 
 form {
