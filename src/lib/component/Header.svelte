@@ -72,7 +72,7 @@
   .argumenty1, .argumenty2, .argumenty3 {
 		width: 100%;
 		padding: 1.5rem;
-		font-size: 1.2rem;
+		font-size: 1.3rem;
     text-align: center;
 		color: white;
 		border: 1px solid white;
