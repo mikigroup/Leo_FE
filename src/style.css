@@ -45,16 +45,6 @@ header {
   }
 }
 
-.headerBanner01 {
-  background-color: rgba(255, 255, 255, 0.85);
-}
-
-.headerBanner01 p {
-  /*font-size: 1.6em;
-  color: rgb(0, 0, 0);
-  font-weight: 400;*/
-}
-
 @media (max-width: 768px) {
   .headerBanner01 p {
     font-size: 1.4em;

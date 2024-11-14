@@ -30,6 +30,7 @@
 		"@vercel/speed-insights": "^1.0.9",
 		"animate.css": "^4.1.1",
 		"nodemailer": "^6.9.13",
+		"prettier-plugin-svelte": "^3.2.8",
 		"wow.js": "^1.2.2"
 	}
 }

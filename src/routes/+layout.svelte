@@ -29,5 +29,6 @@
 <!-- <GdprBanner bind:this={gdprBanner} cookieName="props.beyonk_gdpr" {...props} on:analytics={initAnalytics} /> -->
 
 <style lang="scss">
-
+	@use "$lib/styles/_mixins.scss";
+  @use "$lib/styles/_variables.scss";
 </style>

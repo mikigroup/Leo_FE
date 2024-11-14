@@ -6,7 +6,7 @@ let menuVisible = false;
 let scrolled = false;
 </script>
 
-<nav class="bg-white w-full px-10 pb-5 pt-3">
+<nav class="bg-white w-full px-10 pb-5 pt-3 shadow-2xl relative">
     <div class="flex flex-row">
       <div class="basis-1/3">
         <div class="flex md:justify-start">
@@ -16,10 +16,10 @@ let scrolled = false;
         </div>
       </div>
       <div class="flex-col hidden w-full text-2xl font-bold text-center pt-10 md:flex basis-1/3 ">
-        <div>info@malyleo.cz</div>
-        <div>+420 733 362 418</div>
+        <div class="mail">info@malyleo.cz</div>
+        <div class="tel">+420 733 362 418</div>
       </div>
-      <div class="flex justify-end basis-1/3 items-center">
+      <div class="flex justify-end basis-1/3 items-center pt-5">
         <ul class="flex gap-4">
         	<li> TEST</li>
         	<li>TEST</li>
@@ -51,3 +51,17 @@ let scrolled = false;
       </div>
     {/if}
   </nav>
+
+<style lang="scss">
+  @use "$lib/styles/_mixins.scss" as mixins;
+  @use "$lib/styles/_variables.scss" as vars;
+
+  .mail {
+    color: vars.$font-main-color;
+  }
+
+  .tel {
+    color: vars.$color3;
+  }
+
+</style>
