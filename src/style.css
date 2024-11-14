@@ -2,63 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: Circular Std;
-  font-style: italic;
-  font-weight: 300;
-  src: url(https://cdn.looka.com/fonts/circular-std/CircularSpotifyText-LightItalic.woff2) format("woff2"), url(https://cdn.looka.com/fonts/circular-std/CircularSpotifyText-LightItalic.woff) format("woff");
-}
-
-@font-face {
-  font-family: Circular Std;
-  font-style: normal;
-  font-weight: 300;
-  src: url(https://cdn.looka.com/fonts/circular-std/CircularSpotifyText-Light.woff2) format("woff2"), url(https://cdn.looka.com/fonts/circular-std/CircularSpotifyText-Light.woff) format("woff");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: Circular;
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://cdn.looka.com/fonts/circular/lineto-circular-bold.eot);
-  src: url(https://cdn.looka.com/fonts/circular/lineto-circular-bold.eot#iefix) format("embedded-opentype"), url(https://cdn.looka.com/fonts/circular/lineto-circular-bold.woff2) format("woff2"), url(https://cdn.looka.com/fonts/circular/lineto-circular-bold.woff) format("woff");
-}
-
-@font-face {
-  font-display: auto;
-  font-family: Circular;
-  font-style: italic;
-  font-weight: 700;
-  src: url(https://cdn.looka.com/fonts/circular/lineto-circular-bolditalic.eot);
-  src: url(https://cdn.looka.com/fonts/circular/lineto-circular-bolditalic.eot#iefix) format("embedded-opentype"), url(https://cdn.looka.com/fonts/circular/lineto-circular-bolditalic.woff2) format("woff2"),
-    url(https://cdn.looka.com/fonts/circular/lineto-circular-bolditalic.woff) format("woff");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: Circular;
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://cdn.looka.com/fonts/circular/lineto-circular-book.eot);
-  src: url(https://cdn.looka.com/fonts/circular/lineto-circular-book.eot#iefix) format("embedded-opentype"), url(https://cdn.looka.com/fonts/circular/lineto-circular-book.woff2) format("woff2"), url(https://cdn.looka.com/fonts/circular/lineto-circular-book.woff) format("woff");
-}
-
-@font-face {
-  font-display: auto;
-  font-family: Circular;
-  font-style: italic;
-  font-weight: 400;
-  src: url(https://cdn.looka.com/fonts/circular/lineto-circular-bookitalic.eot);
-  src: url(https://cdn.looka.com/fonts/circular/lineto-circular-bookitalic.eot#iefix) format("embedded-opentype"), url(https://cdn.looka.com/fonts/circular/lineto-circular-bookitalic.woff2) format("woff2"),
-    url(https://cdn.looka.com/fonts/circular/lineto-circular-bookitalic.woff) format("woff");
-}
- */
  @font-face {
   font-family: Nunito;
   font-style: normal;
   font-weight: 400;
-  src: url('/Nunito/static/Nunito-Regular.ttf') format('truetype'); 
+  src: url('/nunito/static/Nunito-Regular.ttf') format('truetype');
  }
  
 body {
@@ -113,22 +61,10 @@ header {
   }
 }
 
-.logo {
-  margin-left: 4em;
-}
-
 @media (max-width: 768px) {
   .logo {
     margin-left: 2em;
   }
-}
-
-nav {
-  /* max-width: 80%; */
-  margin: 0 auto;
-  /* margin-top: 1.5em; */
-  border: solid 1px;
-  border-radius: 45px;
 }
 
 nav ul {
