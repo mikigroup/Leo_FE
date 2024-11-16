@@ -21,9 +21,9 @@ let scrolled = false;
       </div>
       <div class="flex justify-end basis-1/3 items-center pt-5">
         <ul class="flex gap-4">
-        	<li> TEST</li>
-        	<li>TEST</li>
-        	<li>Napište nám</li>
+        	<li><a href=""></a></li>
+        	<li><a href=""></a></li>
+        	<li><a href="#form">Kontakt</a>
         </ul>
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <!-- svelte-ignore a11y-no-static-element-interactions -->

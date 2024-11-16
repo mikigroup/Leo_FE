@@ -26,7 +26,7 @@
 	$: options.validators = zod(schema);
 </script>
 
-<form class="w-full p-10 my-10 flex justify-center" method="POST">
+<form class="w-full p-10 my-10 flex justify-center shadow-xl" method="POST" id="form">
 	<div class="flex flex-col space-y-6">
 		<h2 class="font-bold pb-10">Zeptejte se</h2>
 		<div class="flex">
