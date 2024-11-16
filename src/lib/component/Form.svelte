@@ -4,6 +4,7 @@
 	import SuperDebug from "sveltekit-superforms";
 	import { schema } from "./schemaForm";
 	import { zod } from "sveltekit-superforms/adapters";
+	import CheckBox from "$lib/component/CheckBox.svelte";
 	export let data;
 
 	const { form, errors, message, enhance, delayed, options } = superForm(
@@ -26,135 +27,148 @@
 </script>
 
 <form class="w-full p-10 my-10 flex justify-center" method="POST">
-  <div class="flex flex-col space-y-6">
-  <h2 class="font-bold pb-10">Zeptejte se</h2>
-	<div class="flex">
+	<div class="flex flex-col space-y-6">
+		<h2 class="font-bold pb-10">Zeptejte se</h2>
 		<div class="flex">
-			<div>
-				<div class="flex mb-6 -mx-3">
-					<div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
-						<label class="block mb-2 text-xs" for="first_name"> Jméno </label>
-						<input
-							class={`block w-full px-4 py-3 leading-tight border rounded appearance-none focus:outline-none focus:bg-white ${$errors.first_name ? "bg-red-100 border-red-500" : "bg-gray-200 border-gray-200"}`}
-							id="first_name"
-							type="text"
-							placeholder=""
-							aria-invalid={$errors.first_name ? "true" : "false"}
-							bind:value={$form.first_name} />
-						{#if $errors.first_name}
-							<p class="text-xs italic text-red-500">{$errors.first_name}</p>
-						{/if}
+			<div class="flex">
+				<div>
+					<div class="flex mb-6 -mx-3">
+						<div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
+							<label class="block mb-2 text-xs" for="first_name"> Jméno </label>
+							<input
+								class="block w-full px-4 py-3"
+								id="first_name"
+								type="text"
+								placeholder=""
+								aria-invalid={$errors.first_name ? "true" : "false"}
+								bind:value={$form.first_name} />
+							{#if $errors.first_name}
+								<p class="text-xs italic text-red-500">{$errors.first_name}</p>
+							{/if}
+						</div>
+						<div class="w-full px-3 md:w-1/2">
+							<label class="block mb-2 text-xs" for="last_name">
+								Příjmení
+							</label>
+							<input
+								class="block w-full px-4 py-3"
+								id="last_name"
+								type="text"
+								placeholder=""
+								aria-invalid={$errors.last_name ? "true" : "false"}
+								bind:value={$form.last_name} />
+							{#if $errors.last_name}
+								<p class="text-xs italic text-red-500">{$errors.last_name}</p>
+							{/if}
+						</div>
 					</div>
-					<div class="w-full px-3 md:w-1/2">
-						<label class="block mb-2 text-xs" for="last_name"> Příjmení </label>
-						<input
-							class={`block w-full px-4 py-3 leading-tight border rounded appearance-none focus:outline-none focus:bg-white ${$errors.last_name ? "bg-red-100 border-red-500" : "bg-gray-200 border-gray-200"}`}
-							id="last_name"
-							type="text"
-							placeholder=""
-							aria-invalid={$errors.last_name ? "true" : "false"}
-							bind:value={$form.last_name} />
-						{#if $errors.last_name}
-							<p class="text-xs italic text-red-500">{$errors.last_name}</p>
-						{/if}
+
+					<div class="flex mb-6 -mx-3">
+						<div class="w-full px-3 mb-6 md:w-1/2 md:mb-0 mt-5">
+							<label class="block mb-2 text-xs" for="email"> Email </label>
+							<input
+								class="block w-full px-4 py-3"
+								id="email"
+								type="text"
+								placeholder=""
+								aria-invalid={$errors.email ? "true" : "false"}
+								bind:value={$form.email} />
+							{#if $errors.email}
+								<p class="text-xs italic text-red-500">{$errors.email}</p>
+							{/if}
+						</div>
+						<div class="w-full px-3 md:w-1/2 mt-5">
+							<label class="block mb-2 text-xs" for="telephone">
+								Telefon
+							</label>
+							<input
+								class="block w-full px-4 py-3"
+								id="telephone"
+								type="text"
+								placeholder=""
+								aria-invalid={$errors.telephone ? "true" : "false"}
+								bind:value={$form.telephone} />
+						</div>
 					</div>
 				</div>
-
-				<div class="flex mb-6 -mx-3">
-					<div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
-						<label class="block mb-2 text-xs" for="email"> Email </label>
-						<input
+				<div>
+					<div class="w-full px-3">
+						<label class="block mb-2 text-xs" for="text"> Zpráva </label>
+						<textarea
 							class="block w-full px-4 py-3"
-							id="email"
+							cols="70"
+							rows="6"
+							id="text"
 							type="text"
 							placeholder=""
-							aria-invalid={$errors.email ? "true" : "false"}
-							bind:value={$form.email} />
-						{#if $errors.email}
-							<p class="text-xs italic text-red-500">{$errors.email}</p>
-						{/if}
-					</div>
-					<div class="w-full px-3 md:w-1/2">
-						<label class="block mb-2 text-xs" for="telephone"> Telefon </label>
-						<input
-							class="block w-full px-4 py-3 leading-tight bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500"
-							id="telephone"
-							type="text"
-							placeholder=""
-							aria-invalid={$errors.telephone ? "true" : "false"}
-							bind:value={$form.telephone} />
+							aria-invalid={$errors.text ? "true" : "false"}
+							bind:value={$form.text}></textarea>
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="flex justify-between items-center mb-6 -mx-3 w-full ml-1">
+			<div class="flex flex-row gap-10 py-5">
+				<span>
+				<CheckBox /></span> <span class="">Zaškrtněte pole pro odebírání newsletteru.</span>
+			</div>
+			<div class="flex">
+				<button
+					class="p-2 hover:bg-gray-800 text-2xl font-bold mr-4"
+					type="submit"
+				>ODESLAT
+				</button>
+			</div>
+		</div>
+
+
+		<div>
 			<div>
-				<div class="w-full px-3">
-					<label class="block mb-2 text-xs" for="text"> Zpráva </label>
-					<textarea
-						class="block w-full px-4 py-3"
-						cols="60"
-						rows="5"
-						id="text"
-						type="text"
-						placeholder=""
-						aria-invalid={$errors.text ? "true" : "false"}
-						bind:value={$form.text}></textarea>
-				</div>
+				{#if $delayed}<div class="loading loading-dots loading-xs"></div>{/if}
+
+				{#if $message}
+					<div
+						class="status"
+						class:error={$page.status >= 400}
+						class:success={$page.status == 200}>
+						{$message}
+					</div>
+				{/if}
+
+				{#if form.error}
+					<div role="alert" class="alert alert-error">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="w-6 h-6 stroke-current shrink-0"
+							fill="none"
+							viewBox="0 0 24 24">
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+						</svg>
+						<span>Chyba! Požadavek se nepovedl.</span>
+					</div>
+				{/if}
+			</div>
+			<!-- Errors -->
+			<div class="py-4 text-sm text-red-700 rounded-lg" role="alert">
+				{#if $errors.first_name}<p>{$errors.first_name}</p>{/if}
+				{#if $errors.last_name}<p>{$errors.last_name}</p>{/if}
+				{#if $errors.email}<p>{$errors.email}</p>{/if}
+				{#if $errors.telephone}<p>{$errors.telephone}</p>{/if}
+				{#if $errors.text}<p>{$errors.text}</p>{/if}
 			</div>
 		</div>
 	</div>
-
-	<div class="flex flex-wrap mb-6 -mx-3">
-    <label>
-      <input type="checkbox" checked> Browser default
-    </label>
-		<button
-			class="p-2 mx-2 mt-10 border border-black btn btn-primary rounded-xl hover:bg-black hover:text-white w-full"
-			type="submit"
-			>Odeslat
-		</button>
-		{#if $delayed}<div class="loading loading-dots loading-xs"></div>{/if}
-
-		{#if $message}
-			<div
-				class="status"
-				class:error={$page.status >= 400}
-				class:success={$page.status == 200}>
-				{$message}
-			</div>
-		{/if}
-
-		{#if form.error}
-			<div role="alert" class="alert alert-error">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="w-6 h-6 stroke-current shrink-0"
-					fill="none"
-					viewBox="0 0 24 24">
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-				</svg>
-				<span>Chyba! Požadavek se nepovedl.</span>
-			</div>
-		{/if}
-
-		<!-- Errors -->
-		<div class="py-4 text-sm text-red-700 rounded-lg" role="alert">
-			{#if $errors.first_name}<p>{$errors.first_name}</p>{/if}
-			{#if $errors.last_name}<p>{$errors.last_name}</p>{/if}
-			{#if $errors.email}<p>{$errors.email}</p>{/if}
-			{#if $errors.telephone}<p>{$errors.telephone}</p>{/if}
-			{#if $errors.text}<p>{$errors.text}</p>{/if}
-		</div>
-	</div>
-</div>
 	<!--  <SuperDebug data={$form} /> -->
 </form>
 
 <style lang="scss">
 	@use "$lib/styles/variables" as vars;
+  @use "$lib/styles/mixins" as mixs;
+
 	form {
 		color: vars.$font-main-color;
 	}
@@ -171,4 +185,25 @@
 	label {
 		font-size: larger;
 	}
+
+  button {
+    padding: 1rem 3rem 1.1rem 3rem;
+    background-color: vars.$button-bg-main;
+    color: white;
+    border: 1px solid white;
+    border-radius: 1rem;
+
+    text-decoration: underline;
+    text-underline-offset: 5px;           // vzdálenost od textu
+    text-decoration-thickness: 1px;        // tloušťka čáry
+    text-decoration-color: currentColor;   // barva čáry (stejná jako text)
+
+    // Volitelné vlastnosti
+    text-decoration-style: solid;         // styl čáry (může být dotted, dashed, atd.)
+
+    // Hover efekt
+    &:hover {
+
+    }
+  }
 </style>
