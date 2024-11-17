@@ -12,7 +12,7 @@
 		{
 			resetForm: true,
 			validators: zod(schema),
-			dataType: "json"
+			dataType: "json",
 			/*    async onSubmit({ cancel }) {
       const result = await validateForm({ update: true });
       if (result.valid) {
@@ -22,8 +22,36 @@
     async onUpdated({ form }) {}, */
 		}
 	);
-
 	$: options.validators = zod(schema);
+
+	function formatPhoneNumber(value) {
+		// Odstranit mezery a nečíselné znaky
+		const numbers = value.replace(/\D/g, '');
+		// Omezit na prvních 9 číslic
+		const truncated = numbers.slice(0, 9);
+		// Rozdělit po třech
+		return truncated.replace(/(\d{3})(?=\d)/g, '$1 ').trim();
+	}
+
+	function handlePhoneInput(e) {
+		const formatted = formatPhoneNumber(e.target.value);
+		e.target.value = formatted;
+		// Uložit do formuláře bez mezer
+		$form.telephone = formatted.replace(/\s/g, '');
+	}
+
+
+	function handleEmailInput(e) {
+		let value = e.target.value;
+		// Zajistíme @ na začátku
+		if (!value.startsWith('@')) {
+			value = '@' + value.replace('@', '');
+		}
+		// Omezíme délku na 50 znaků
+		value = value.slice(0, 50);
+		// Aktualizujeme hodnotu
+		$form.email = value;
+	}
 </script>
 
 <form class="w-full p-10 my-10 flex justify-center shadow-xl" method="POST" id="form">
@@ -70,9 +98,11 @@
 								class="block w-full px-4 py-3"
 								id="email"
 								type="text"
+								maxlength="40"
 								placeholder=""
+								value="@"
 								aria-invalid={$errors.email ? "true" : "false"}
-								bind:value={$form.email} />
+							/>
 							{#if $errors.email}
 								<p class="text-xs italic text-red-500">{$errors.email}</p>
 							{/if}
@@ -85,9 +115,13 @@
 								class="block w-full px-4 py-3"
 								id="telephone"
 								type="text"
-								placeholder=""
-								aria-invalid={$errors.telephone ? "true" : "false"}
-								bind:value={$form.telephone} />
+								inputmode="numeric"
+							pattern="\d*"
+							placeholder="123 456 789"
+							aria-invalid={$errors.telephone ? "true" : "false"}
+							value={formatPhoneNumber($form.telephone)}
+							on:input={handlePhoneInput}
+							/>
 						</div>
 					</div>
 				</div>
@@ -98,6 +132,7 @@
 							class="block w-full px-4 py-3"
 							cols="70"
 							rows="6"
+							maxlength="250"
 							id="text"
 							type="text"
 							placeholder=""
