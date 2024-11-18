@@ -247,15 +247,3 @@ input:checked+.slider:before {
   opacity: 1;
   transform: translateY(0);
 }
-
-.formBG {
-  padding: 1em;
-  /*margin: 5em 0em;*/
-  background-color: #007c8a;
-  /*background-color: #20902c;*/
-  /*background-color: rgb(173, 128, 56);*/
-}
-
-form {
-  background-color: white;
-}

@@ -20,10 +20,10 @@ let scrolled = false;
         <div class="tel">+420 733 362 418</div>
       </div>
       <div class="flex justify-end basis-1/3 items-center pt-5">
-        <ul class="flex gap-4">
-        	<li> TEST</li>
-        	<li>TEST</li>
-        	<li>Napište nám</li>
+        <ul class="flex gap-4 font-bold">
+        	<li><a href=""></a></li>
+        	<li><a href="">Objednat</a></li>
+        	<li><a href="#form">Kontakt</a>
         </ul>
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -63,5 +63,8 @@ let scrolled = false;
   .tel {
     color: vars.$color3;
   }
-
+ li {
+   font-size: 1.2rem;
+   color: vars.$font-main-color;
+ }
 </style>
