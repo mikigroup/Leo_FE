@@ -145,35 +145,6 @@ nav ul {
   }
 }
 
-
-
-.textTechnologie {
-  max-width: 80%;
-  margin: 0 auto;
-}
-
-.textTechnologie p {
-  font-size: 2em;
-}
-
-.textTechnologieBanner {
-  margin-left: auto;
-}
-
-.cenikKarta {
-  background-color: white;
-  margin: 6em 0em;
-  padding: 2em;
-}
-
-.cenik {
-  padding: 1em;
-  /*margin: 5em 0em;*/
-  /*background-color: #00a092;*/
-  /*background-color: #709900;*/
-  background-color: #007ba0;
-}
-
 @media (min-width: 768px) {
   .cenikKarta {
     margin: 6em 6em;

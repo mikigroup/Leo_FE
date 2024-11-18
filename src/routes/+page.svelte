@@ -129,10 +129,8 @@
 		</div>
 	</section>
 
-	<hr class="mx-10 my-10" />
-
-	<section class="textTechnologie">
-		<div class="flex my-10 lg:w-1/2">
+	<section class="textTechnologie flex md:flex-row items-center">
+		<div class="my-10 lg:w-1/2 flex justify-center">
 			<p class="">
 				Měníme tradiční přístup a nabízíme přímější a efektivnější způsob tvorby
 				webových aplikací.
@@ -143,13 +141,11 @@
 		<div
 			class="flex items-end justify-end my-10 lg:w-1/2 textTechnologieBanner">
 			<p>
-				"Malý Leo" je vyvíjecí se systém, postavený na nejnovějších
+				Malý Leo je vyvíjecí se systém, postavený na nejnovějších
 				technologiích - Svelte a PostgreSQL. Pravidelné zálohy.
 			</p>
 		</div>
 	</section>
-
-	<hr class="mx-10 my-10" />
 
 	<section class="cenik rounded-lg" id="cenik">
 		<div
@@ -248,7 +244,25 @@
 	@use "$lib/styles/_mixins.scss" as mixins;
 	@use "$lib/styles/_variables.scss" as vars;
 
-	.karta1,
+  .textTechnologie {
+	background-color: vars.$color2;
+	}
+
+  .cenikKarta {
+    background-color: white;
+    margin: 6em 0em;
+    padding: 2em;
+  }
+
+  .cenik {
+    padding: 1em;
+    /*margin: 5em 0em;*/
+    /*background-color: #00a092;*/
+    /*background-color: #709900;*/
+    background-color: #007ba0;
+  }
+
+  .karta1,
 	.karta2,
 	.karta3,
 	.karta4,
