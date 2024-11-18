@@ -232,11 +232,8 @@
     text-underline-offset: 5px;           // vzdálenost od textu
     text-decoration-thickness: 1px;        // tloušťka čáry
     text-decoration-color: currentColor;   // barva čáry (stejná jako text)
+    text-decoration-style: solid;
 
-    // Volitelné vlastnosti
-    text-decoration-style: solid;         // styl čáry (může být dotted, dashed, atd.)
-
-    // Hover efekt
     &:hover {
 
     }

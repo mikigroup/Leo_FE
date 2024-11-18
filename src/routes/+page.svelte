@@ -49,9 +49,8 @@
   } */
 </script>
 
-<div class="">
-	<section class="p-10 shadow-xl">
-		<h2 class="px-10 my-10 font-medium">Jak probíhá spolupráce?</h2>
+<section class="p-10 shadow-xl relative z-10">
+		<h2 class="text-4xl px-10 my-10 font-medium">Jak probíhá spolupráce?</h2>
 		<div class="flex flex-col w-full p-10 mt-24 md:flex-row uppercase gap-5">
 			<div class="flex items-end rounded-xl karta1 w-full justify-center">
 				<p class="text-2xl text-nowrap">První kontakt</p>
@@ -129,56 +128,46 @@
 		</div>
 	</section>
 
-	<section class="textTechnologie flex md:flex-row items-center">
-		<div class="my-10 lg:w-1/2 flex justify-center">
-			<p class="">
-				Měníme tradiční přístup a nabízíme přímější a efektivnější způsob tvorby
-				webových aplikací.
+<section class="textTechnologie py-20 min-h-80 items-center flex font-bold">
+	<div class="max-w-screen-xl flex flex-col lg:flex-row mx-auto w-full px-4">
+		<div class="basis-1/2 flex justify-center items-center">
+			<p class="text-3xl w-full lg:max-w-md">
+				Měníme tradiční přístup, nabízíme přímější a efektivnější způsob
+				tvorby webových aplikací.
 			</p>
 		</div>
-		<hr class="" />
-		<!--<hr class="hidden lg:block lg:mx-10 lg:my-10" />-->
-		<div
-			class="flex items-end justify-end my-10 lg:w-1/2 textTechnologieBanner">
-			<p>
-				Malý Leo je vyvíjecí se systém, postavený na nejnovějších
-				technologiích - Svelte a PostgreSQL. Pravidelné zálohy.
+		<div class="w-px bg-gray-300 mx-4 hidden lg:block"></div>
+		<div class="basis-1/2 flex justify-center items-center lg:pl-20 mt-8 lg:mt-0">
+			<p class="text-3xl w-full lg:max-w-2xl">
+				MALÝ LEO je vyvíjecí se systém, postavený na nejnovějších
+				technologiích - Svelte a PostgreSQL.<br>
+				Pravidelné zálohy.
 			</p>
 		</div>
-	</section>
+	</div>
+</section>
 
-	<section class="cenik rounded-lg" id="cenik">
+	<section class="cenik py-20" id="cenik">
 		<div
-			class="flex flex-col max-w-screen-xl gap-10 border md:flex-row md:mx-auto rounded-xl cenikKarta">
+			class="flex flex-col max-w-screen-xl gap-10 md:flex-row md:mx-auto text-white">
 			<div class="flex flex-col gap-10 md:w-1/2 levaStranaCenik">
 				<div class="flex w-full">
-					<h2 class="flex text-3xl font-medium">Startovací balíček</h2>
-					<!-- <div class="flex items-center justify-end w-full">
-          <label class="mr-5 prepinac">
-            <input type="checkbox" id="checkboxCenik">
-            <span class="slider round"></span>
-          </label>
-          <p>Zdarma</p>
-        </div> -->
+					<h2 class="flex text-4xl font-bold">Startovací balíček</h2>
 				</div>
-				<div class="mt-10 text-lg">
-					<p>Odpověď obdržíte <strong class="">do 48 hodin</strong></p>
+				<div class="mt-10 text-xl">
+					<p><strong>Získejte</strong> své vlastní webové řešení nebo e-shop s
+						Malým Leem zcela <strong>ZDARMA!</strong> Využijte speciální zaváděcí nabídku
+						a kontaktujte nás ještě dnes.</p>
+					<p class="pt-5"><strong>Zeptejte se na cokoliv, společně najdeme
+						ideální řešení pro váš byznys</strong></p>
 				</div>
 				<div>
-					<ul>
+					<ul class="text-xl">
 						<li></li>
 						<li>Zajištění domény</li>
 						<li>SEO optimalizace</li>
 						<li>3 měsíce rozšířené podpory</li>
 					</ul>
-				</div>
-				<div class="flex flex-col items-end">
-					<div>
-						<p class="text-2xl line-through decoration-red-500">4999 Kč</p>
-					</div>
-					<div>
-						<p class="text-2xl">0 Kč</p>
-					</div>
 				</div>
 				<div>
 					<button
@@ -187,7 +176,7 @@
 					</button>
 				</div>
 			</div>
-			<div class="flex items-center text-lg md:p-10 md:w-1/2 pravaStranaCenik">
+			<div class="flex items-center md:p-10 md:w-1/2 pravaStranaCenik text-xl">
 				<p>
 					<strong>Získejte</strong> své vlastní webové řešení nebo e-shop s
 					Malým Leem zcela <strong>ZDARMA!</strong> Využijte speciální zaváděcí nabídku
@@ -218,7 +207,7 @@
 				data-np-autofill-field-type="email" />
 		</div>
 	</section>
-</div>
+
 
 <!-- <section>Skóre stránek, sledování a analytika. Práce s verzemi, zálohy verzí, možnost zpětné verze.</section>
 <section>Vývoj probíhá na frameworku Svelte, který mění tradiční přístup a nabízí přímější a efektivnější způsob tvorby webových aplikací. Je to vynikající volba pro ty, kteří hledají moderní, inovativní a produktivní webé aplikace.</section> -->
@@ -244,25 +233,19 @@
 	@use "$lib/styles/_mixins.scss" as mixins;
 	@use "$lib/styles/_variables.scss" as vars;
 
-  .textTechnologie {
-	background-color: vars.$color2;
+  .cenik {
+    background: linear-gradient(to right, vars.$button-bg-main 30%, vars.$color3 80%);
 	}
 
-  .cenikKarta {
-    background-color: white;
-    margin: 6em 0em;
-    padding: 2em;
+  .textTechnologie p {
+    color: vars.$button-bg-main;
   }
 
-  .cenik {
-    padding: 1em;
-    /*margin: 5em 0em;*/
-    /*background-color: #00a092;*/
-    /*background-color: #709900;*/
-    background-color: #007ba0;
-  }
+	.textTechnologie {
+		background-color: vars.$color5;
+	}
 
-  .karta1,
+	.karta1,
 	.karta2,
 	.karta3,
 	.karta4,

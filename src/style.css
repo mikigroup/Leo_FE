@@ -16,10 +16,6 @@ body {
   /* font-size: 1.5em; */
 }
 
-h2 {
-  font-size: 2.5em;
-}
-
 header {
   padding: 2em 0 2em 0;
   background: url("./lib/bob.avif") no-repeat;
@@ -51,112 +47,6 @@ header {
   }
 }
 
-@media (max-width: 768px) {
-  .logo {
-    margin-left: 2em;
-  }
-}
-
-nav ul {
-  padding: 0.5rem;
-  list-style-type: none;
-}
-
-@media (max-width: 768px) {
-  nav {
-    max-width: 100%;
-    margin: 0 auto;
-    border: solid 1px;
-    border-radius: 45px;
-  }
-}
-
-.tlacitkoCenik {
-  color: white;
-  border-radius: 45px;
-  padding: 1em;
-}
-
-.poptavka:hover {
-  border-left: 1px solid black;
-  transform: translateX(30px);
-}
-
-.poptavka {
-  color: white;
-  border-radius: 45px;
-  padding: 1.25em;
-  transition: transform 0.7s ease;
-}
-
-@media (min-width: 768px) {
-  .pravaStranaCenik {
-    border-left: 1px solid #454545;
-  }
-}
-
-.textyPrednosti p {
-  font-size: 1.4em;
-  /* color: rgb(18, 18, 18); */
-  color: snow;
-  font-weight: 300;
-}
-
-@media (min-width: 1024px) {
-  .textyPrednosti {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-}
-
-.textyPrednosti01,
-.textyPrednosti02 {
-  transition: transform 0.7s ease;
-}
-
-.textyPrednosti01:hover,
-.textyPrednosti02:hover {
-  transform: scale(1.03);
-}
-
-.textyPrednosti01 {
-  background-color: #43655a;
-}
-
-.textyPrednosti02 {
-  background-color: #768d93;
-}
-
-.karty {
-  max-width: 80%;
-  margin: 0 auto;
-  margin-top: 10em;
-  margin-bottom: 8em;
-  /* opacity: 0.8; */
-  /* display: flex;  */
-}
-
-@media (min-width: 768px) {
-  .karty {
-    max-width: 80%;
-    margin: 0 auto;
-    margin-top: 10em;
-    margin-bottom: 8em;
-  }
-}
-
-@media (min-width: 768px) {
-  .cenikKarta {
-    margin: 6em 6em;
-    padding: 6em;
-  }
-}
-
-.newsletterKarta {
-  /*padding: 0.5em;
-  margin: 0em 0em;
-  background-color: white;*/
-}
 
 .newsletter {
   margin: 0em 0em;
