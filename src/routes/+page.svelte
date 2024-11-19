@@ -16,7 +16,7 @@
 
 <Spoluprace />
 
-<section class="textTechnologie py-20 min-h-80 items-center flex font-bold">
+<section class="textTechnologie py-20 min-h-80 items-center flex font-bold px-4">
 	<div class="max-w-screen-xl flex flex-col lg:flex-row mx-auto w-full px-4">
 		<div class="basis-1/2 flex justify-center items-center">
 			<p class="text-3xl w-full lg:max-w-md">
@@ -38,7 +38,7 @@
 
 <section class="cenik py-20 px-5" id="cenik">
 	<div
-		class="flex flex-col max-w-screen-2xl gap-20 lg:flex-row md:mx-auto text-white">
+		class="flex flex-col max-w-screen-2xl gap-20 lg:flex-row md:mx-auto text-white px-4">
 		<div class="flex flex-col lg:w-1/2">
 			<div class="flex w-full">
 				<h2 class="flex text-4xl font-bold">Startovací balíček</h2>

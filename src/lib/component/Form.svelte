@@ -54,8 +54,8 @@
 	}
 </script>
 
-<form class="w-full p-4 mt-10 flex justify-center shadow-xl" method="POST" id="form">
-	<div class="flex flex-col space-y-6">
+<form class="w-full p-4 mt-10 flex justify-center shadow-xl px-4" method="POST" id="form">
+	<div class="flex flex-col space-y-6 px-3">
 		<h2 class="font-bold pb-10 text-4xl">Zeptejte se</h2>
 		<div class="flex">
 			<div class="flex flex-col lg:flex-row">
@@ -142,7 +142,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex flex-col lg:flex-row justify-between items-center mb-6 mx-3 w-full ml-1">
+		<div class="flex flex-col lg:flex-row justify-between items-center mb-6 mx-3 w-full ml-1 px-4">
 			<div class="flex flex-row gap-10 py-5">
 				<span>
 				<CheckBox /></span> <span class="">Zaškrtněte pole pro odebírání newsletteru.</span>

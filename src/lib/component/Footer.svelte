@@ -7,7 +7,7 @@
     <div class="wave"></div>
     <div class="wave"></div>
   </div>
-  <div class="w-full max-w-screen-xl md:mx-auto md:py-8 relative">
+  <div class="w-full max-w-screen-xl md:mx-auto md:py-8 relative px-5">
     <div class="flex md:justify-end">
       <ul class="flex flex-col items-center w-full text-sm font-medium text-center text-white md:flex-row sm:mb-0 md:w-auto">
         <li>
