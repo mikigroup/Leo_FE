@@ -54,14 +54,14 @@
 	}
 </script>
 
-<form class="w-full p-10 mt-10 flex justify-center shadow-xl" method="POST" id="form">
+<form class="w-full p-4 mt-10 flex justify-center shadow-xl" method="POST" id="form">
 	<div class="flex flex-col space-y-6">
 		<h2 class="font-bold pb-10 text-4xl">Zeptejte se</h2>
 		<div class="flex">
-			<div class="flex">
-				<div>
-					<div class="flex mb-6 -mx-3">
-						<div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
+			<div class="flex flex-col lg:flex-row">
+				<div class="">
+					<div class="flex flex-col md:flex-row mb-6 mx-3 gap-6">
+						<div class="w-full mb-6 md:w-1/2 md:mb-0">
 							<label class="block mb-2 text-xs" for="first_name"> Jméno </label>
 							<input
 								class="block w-full px-4 py-3"
@@ -74,7 +74,7 @@
 								<p class="text-xs italic text-red-500">{$errors.first_name}</p>
 							{/if}
 						</div>
-						<div class="w-full px-3 md:w-1/2">
+						<div class="w-full md:w-1/2">
 							<label class="block mb-2 text-xs" for="last_name">
 								Příjmení
 							</label>
@@ -91,8 +91,8 @@
 						</div>
 					</div>
 
-					<div class="flex mb-6 -mx-3">
-						<div class="w-full px-3 mb-6 md:w-1/2 md:mb-0 mt-5">
+					<div class="flex flex-col md:flex-row mb-6 mx-3 gap-6">
+						<div class="w-full mb-6 md:w-1/2 md:mb-0 mt-5">
 							<label class="block mb-2 text-xs" for="email"> Email </label>
 							<input
 								class="block w-full px-4 py-3"
@@ -107,7 +107,7 @@
 								<p class="text-xs italic text-red-500">{$errors.email}</p>
 							{/if}
 						</div>
-						<div class="w-full px-3 md:w-1/2 mt-5">
+						<div class="w-full md:w-1/2 mt-5">
 							<label class="block mb-2 text-xs" for="telephone">
 								Telefon
 							</label>
@@ -142,7 +142,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex justify-between items-center mb-6 -mx-3 w-full ml-1">
+		<div class="flex flex-col lg:flex-row justify-between items-center mb-6 mx-3 w-full ml-1">
 			<div class="flex flex-row gap-10 py-5">
 				<span>
 				<CheckBox /></span> <span class="">Zaškrtněte pole pro odebírání newsletteru.</span>
