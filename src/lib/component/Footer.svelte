@@ -29,10 +29,13 @@
   </div>
 </footer>
 
-<style>
+<style lang="scss">
+  @use "$lib/styles/variables" as vars;
+  @use "$lib/styles/mixins" as mixs;
+
   footer {
     padding-top: 30px;
-    background-color: #015871;
+    background-color: vars.$button-bg-main;
   }
 
   .wave-container {
