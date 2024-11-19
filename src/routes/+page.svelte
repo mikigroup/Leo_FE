@@ -236,10 +236,6 @@
     text-decoration-thickness: 1px;        // tloušťka čáry
     text-decoration-color: currentColor;   // barva čáry (stejná jako text)
     text-decoration-style: solid;
-
-    &:hover {
-
-    }
   }
 
   .cenik {
