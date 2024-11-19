@@ -147,51 +147,43 @@
 	</div>
 </section>
 
-	<section class="cenik py-20" id="cenik">
+	<section class="cenik py-20 px-5" id="cenik">
 		<div
-			class="flex flex-col max-w-screen-xl gap-10 md:flex-row md:mx-auto text-white">
-			<div class="flex flex-col gap-10 md:w-1/2 levaStranaCenik">
+			class="flex flex-col max-w-screen-2xl gap-10 lg:flex-row md:mx-auto text-white">
+			<div class="flex flex-col gap-10 md:w-1/2">
 				<div class="flex w-full">
 					<h2 class="flex text-4xl font-bold">Startovací balíček</h2>
 				</div>
 				<div class="mt-10 text-xl">
-					<p><strong>Získejte</strong> své vlastní webové řešení nebo e-shop s
-						Malým Leem zcela <strong>ZDARMA!</strong> Využijte speciální zaváděcí nabídku
-						a kontaktujte nás ještě dnes.</p>
+					<p><strong>Získejte</strong> svůj objednávkový systém s
+						Malým Leem zcela <strong>ZDARMA!</strong> Využijte speciální zaváděcí nabídku.
+						</p>
 					<p class="pt-5"><strong>Zeptejte se na cokoliv, společně najdeme
-						ideální řešení pro váš byznys</strong></p>
+						ideální řešení pro Vaše podnikání.</strong></p>
 				</div>
-				<div>
-					<ul class="text-xl">
-						<li></li>
-						<li>Zajištění domény</li>
+			</div>
+			<div class="text-xl mt-auto">
+					<h5><strong>Balíček obsahuje:</strong></h5>
+					<ul class="">
+					<li>Zajištění domény</li>
 						<li>SEO optimalizace</li>
 						<li>3 měsíce rozšířené podpory</li>
 					</ul>
 				</div>
-				<div>
-					<button
-						class="flex justify-center w-40 gap-5 text-lg transition-transform transform bg-black tlacitkoCenik hover:text-black rounded-3xl hover:bg-slate-400 hover:scale-105">
-						<span>Objednat</span>
-					</button>
-				</div>
-			</div>
-			<div class="flex items-center md:p-10 md:w-1/2 pravaStranaCenik text-xl">
-				<p>
-					<strong>Získejte</strong> své vlastní webové řešení nebo e-shop s
-					Malým Leem zcela <strong>ZDARMA!</strong> Využijte speciální zaváděcí nabídku
-					a kontaktujte nás ještě dnes. Zeptejte se na cokoliv, společně najdeme
-					ideální řešení pro váš byznys
-				</p>
+			<div class="mt-auto">
+				<button
+					class="p-2 hover:bg-gray-800 text-2xl font-bold mr-4 transform transition-transform hover:scale-110">
+					<span>Objednat</span>
+				</button>
 			</div>
 		</div>
 	</section>
 
-	<section class="flex justify-center formBG rounded-lg my-5">
+	<section class="flex justify-center">
 		<Form {data} />
 	</section>
 
-	<section class="rounded-xl my-10 newsletterKarta elementZviditelneni" id="">
+<!--	<section class="rounded-xl my-10 newsletterKarta elementZviditelneni" id="">
 		<div
 			class="flex w-1/2 flex-col border md:flex-row rounded-xl newsletter md:mx-auto">
 			<h2 class="flex items-center w-full text-3xl">Odběr novinek</h2>
@@ -206,7 +198,7 @@
 				required=""
 				data-np-autofill-field-type="email" />
 		</div>
-	</section>
+	</section>-->
 
 
 <!-- <section>Skóre stránek, sledování a analytika. Práce s verzemi, zálohy verzí, možnost zpětné verze.</section>
@@ -232,6 +224,23 @@
 <style lang="scss">
 	@use "$lib/styles/_mixins.scss" as mixins;
 	@use "$lib/styles/_variables.scss" as vars;
+
+  button {
+    padding: 1rem 3rem 1.1rem 3rem;
+    background-color: vars.$button-bg-main;
+    color: white;
+    border-radius: 1rem;
+
+    text-decoration: underline;
+    text-underline-offset: 5px;           // vzdálenost od textu
+    text-decoration-thickness: 1px;        // tloušťka čáry
+    text-decoration-color: currentColor;   // barva čáry (stejná jako text)
+    text-decoration-style: solid;
+
+    &:hover {
+
+    }
+  }
 
   .cenik {
     background: linear-gradient(to right, vars.$button-bg-main 30%, vars.$color3 80%);

@@ -2,7 +2,7 @@
   import { page } from '$app/stores';
 </script>
 
-<footer class="rounded-lg shadow relative overflow-hidden">
+<footer class="relative overflow-hidden">
   <div class="wave-container">
     <div class="wave"></div>
     <div class="wave"></div>
