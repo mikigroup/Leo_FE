@@ -1,7 +1,7 @@
 
-<section class="p-10 shadow-xl relative z-10">
+<section class="p-4 lg:p-10 shadow-xl relative z-10">
 	<h2 class="text-4xl lg:px-10 my-10 font-medium">Jak probíhá spolupráce?</h2>
-	<div class="flex flex-col w-full lg:p-10 mt-10 lg:mt-24 lg:flex-row uppercase gap-5">
+	<div class="flex flex-col w-full lg:p-10 mt-24 lg:flex-row uppercase gap-5">
 		<div class="flex items-end rounded-xl karta1 w-full justify-center">
 			<p class="text-2xl text-nowrap">První kontakt</p>
 		</div>

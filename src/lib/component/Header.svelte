@@ -10,7 +10,7 @@
 	<section class="lg:pb-16">
 		<div class="flex headerBanner">
 			<div
-				class="p-8 mx-2 xl:basis-1/2 xl:p-12 headerBanner01 mt-12 lg:mt-16 rounded-2xl">
+				class="lg:p-8 mx-2 xl:basis-1/2 xl:p-12 headerBanner01 mt-12 lg:mt-16 rounded-2xl">
 				<h1 class="text-4xl font-bold lg:mb-6">
 					Malý Leo - webové řešení pro váš byznys
 				</h1>

@@ -5,7 +5,7 @@
 	let scrolled = false;
 </script>
 
-<nav class="bg-white w-full px-10 pb-5 pt-3 shadow-2xl relative">
+<nav class="bg-white w-full px-5 lg:px-10 pb-5 pt-3 shadow-2xl relative">
 	<!-- První část zůstává stejná -->
 	<div class="flex flex-row">
 		<div class="basis-1/3 mt-auto">
@@ -19,9 +19,9 @@
 			</div>
 		</div>
 		<div
-			class="flex-col hidden w-full text-2xl font-bold text-center pt-10 md:flex basis-1/3">
+			class="flex-col w-full text-center pt-10 md:flex basis-1/3">
 			<div class="mail">
-				<p>
+				<p class="text-sm lg:text-2xl font-bold">
 					<a
 						href="mailto:info@malyleo.cz"
 						title="Napište nám email..."
@@ -32,10 +32,10 @@
 				</p>
 			</div>
 			<div class="tel">
-				<a href="" title="...nebo zavolejte.">+420 733 362 418</a>
+				<a class="text-nowrap" href="" title="...nebo zavolejte.">+420 733 362 418</a>
 			</div>
 		</div>
-		<div class="flex justify-end basis-1/3 items-center pt-5">
+		<div class="flex justify-end basis-1/5 items-center pt-5">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				id="menu-button"

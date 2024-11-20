@@ -27,8 +27,9 @@
 			</p>
 		</div>
 		<div class="w-px bg-gray-300 mx-4 hidden lg:block"></div>
+		<div class="h-px bg-gray-300 my-10 block"></div>
 		<div
-			class="basis-1/2 flex justify-center items-center lg:pl-20 mt-8 lg:mt-0">
+			class="basis-1/2 flex justify-center items-center lg:pl-20 lg:mt-0">
 			<p class="text-3xl w-full lg:max-w-2xl">
 				MALÝ LEO je vyvíjecí se systém, postavený na nejnovějších technologiích
 				- Svelte a PostgreSQL.<br />
@@ -66,8 +67,7 @@
 			</ul>
 		</div>
 		<div class="mt-auto flex justify-end lg:justify-normal">
-			<button
-				class="hover:bg-gray-800 text-2xl font-bold mr-4 transform transition-transform hover:scale-110 w-52">
+			<button class="hover:bg-gray-800 text-2xl font-bold mr-4 transform transition-transform hover:scale-110 w-52 flex justify-center items-center">
 				<span>OBJEDNAT</span>
 			</button>
 		</div>
