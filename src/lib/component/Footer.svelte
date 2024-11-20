@@ -11,16 +11,10 @@
     <div class="flex md:justify-end">
       <ul class="flex flex-col items-center w-full text-sm font-medium text-center text-white md:flex-row sm:mb-0 md:w-auto">
         <li>
-          <a href="#" class="hover:underline md:mr-6">FAQ</a>
+          <a href="/faq" class="hover:underline md:mr-6">FAQ</a>
         </li>
         <li>
-          <a href="podminky" class="hover:underline md:mr-6" aria-current={$page.url.pathname === "/podminky"}>Zasedající podmínky</a>
-        </li>
-        <li>
-          <a href="/ver" class="hover:underline md:mr-6" aria-current={$page.url.pathname === "/ver"}>Verze</a>
-        </li>
-        <li>
-          <a href="#" class="hover:underline">Kontaktis</a>
+          <a href="/gdpr" class="hover:underline md:mr-6">GDPR</a>
         </li>
       </ul>
     </div>

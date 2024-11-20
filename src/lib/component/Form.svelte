@@ -54,8 +54,10 @@
 	}
 </script>
 
-<form class="w-full p-4 mt-10 flex justify-center shadow-xl px-4 scroll-mt-16 lg:scroll-mt-32 xl:scroll-mt-56" method="POST" id="form">
-	<div class="flex flex-col space-y-6 px-3">
+<section class="max-w-screen-2xl md:mx-auto scroll-mt-16 lg:scroll-mt-32 xl:scroll-mt-56">
+<form class="p-4 mt-10 flex px-4"
+			method="POST" id="form">
+	<div class="flex flex-col space-y-6">
 		<h2 class="font-bold pb-10 text-4xl">Zeptejte se</h2>
 		<div class="flex">
 			<div class="flex flex-col lg:flex-row">
@@ -130,7 +132,7 @@
 						<label class="block mb-2 text-xs" for="text"> Zpráva </label>
 						<textarea
 							class="block w-full px-4 py-3"
-							cols="70"
+							cols="90"
 							rows="6"
 							maxlength="250"
 							id="text"
@@ -149,7 +151,7 @@
 			</div>
 			<div class="flex">
 				<button
-					class=" hover:bg-gray-800 text-2xl font-bold mr-4 transform transition-transform hover:scale-110 w-52"
+					class=" hover:bg-gray-800 text-2xl font-bold transform transition-transform hover:scale-110 w-52"
 					type="submit"
 				>ODESLAT
 				</button>
@@ -199,6 +201,8 @@
 	</div>
 	<!--  <SuperDebug data={$form} /> -->
 </form>
+</section>
+
 
 <style lang="scss">
 	@use "$lib/styles/variables" as vars;

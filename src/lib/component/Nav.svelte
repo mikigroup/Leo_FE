@@ -8,7 +8,7 @@
 <nav class="bg-white w-full px-5 lg:px-10 pb-5 pt-3 shadow-2xl relative">
 	<!-- První část zůstává stejná -->
 	<div class="flex flex-row">
-		<div class="basis-1/3 mt-auto">
+		<div class="lg:basis-1/3 mt-auto">
 			<div class="flex md:justify-start">
 				<a href="/" class="flex logo">
 					<img
@@ -19,9 +19,9 @@
 			</div>
 		</div>
 		<div
-			class="flex-col w-full text-center pt-10 md:flex basis-1/3">
+			class="flex-col w-full text-center pt-10 md:flex lg:basis-1/3 basis-3/5">
 			<div class="mail">
-				<p class="text-sm lg:text-2xl font-bold">
+				<p class="text-lg md:text-2xl font-bold">
 					<a
 						href="mailto:info@malyleo.cz"
 						title="Napište nám email..."
@@ -35,7 +35,7 @@
 				<a class="text-nowrap" href="" title="...nebo zavolejte.">+420 733 362 418</a>
 			</div>
 		</div>
-		<div class="flex justify-end basis-1/5 items-center pt-5">
+		<div class="flex justify-end lg:basis-1/3 basis-1/5 items-center pt-5">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				id="menu-button"

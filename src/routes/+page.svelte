@@ -67,16 +67,17 @@
 			</ul>
 		</div>
 		<div class="mt-auto flex justify-end lg:justify-normal">
-			<button class="hover:bg-gray-800 text-2xl font-bold mr-4 transform transition-transform hover:scale-110 w-52 flex justify-center items-center">
+			<button
+				class="hover:bg-gray-800 text-2xl font-bold ml-12 transform transition-transform hover:scale-110 w-52 flex justify-center items-center">
 				<span>OBJEDNAT</span>
 			</button>
 		</div>
 	</div>
 </section>
 
-<section class="flex justify-center">
+
 	<Form {data} />
-</section>
+
 
 <style lang="scss">
 	@use "$lib/styles/_mixins.scss" as mixins;
