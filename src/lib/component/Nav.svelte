@@ -16,8 +16,18 @@ let scrolled = false;
         </div>
       </div>
       <div class="flex-col hidden w-full text-2xl font-bold text-center pt-10 md:flex basis-1/3">
-        <div class="mail">info@malyleo.cz</div>
-        <div class="tel">+420 733 362 418</div>
+        <div class="mail">
+          <p>
+            <a
+              href="mailto:info@malyleo.cz"
+              title="Napište nám email..."
+              rel="noopener"
+              class="hover:underline transition-all duration-300">
+              info@malyleo.cz
+            </a>
+          </p>
+        </div>
+        <div class="tel"><a href="" title="...nebo zavolejte.">+420 733 362 418</a></div>
       </div>
       <div class="flex justify-end basis-1/3 items-center pt-5">
         <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" on:click={() => (menuVisible = !menuVisible)}
@@ -40,10 +50,10 @@ let scrolled = false;
              <a class="block py-2 md:p-4" href="/faq">FAQ</a>
           </li>
           <li>
-            <a class="block py-2 md:p-4" href="#">Služby</a>
+            <a class="block py-2 md:p-4" href="#">Objednat</a>
           </li>
           <li>
-            <a class="block py-2 md:p-4" href="#">Nevim</a>
+            <a class="block py-2 md:p-4" href="#">Zeptejte se</a>
           </li>
           <li>
             <a class="block py-2 md:p-4" href="#">Nevim</a>
