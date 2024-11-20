@@ -54,7 +54,7 @@
 	}
 </script>
 
-<form class="w-full p-4 mt-10 flex justify-center shadow-xl px-4" method="POST" id="form">
+<form class="w-full p-4 mt-10 flex justify-center shadow-xl px-4 scroll-mt-16 lg:scroll-mt-32 xl:scroll-mt-56" method="POST" id="form">
 	<div class="flex flex-col space-y-6 px-3">
 		<h2 class="font-bold pb-10 text-4xl">Zeptejte se</h2>
 		<div class="flex">
@@ -149,7 +149,7 @@
 			</div>
 			<div class="flex">
 				<button
-					class="p-2 hover:bg-gray-800 text-2xl font-bold mr-4 transform transition-transform hover:scale-110"
+					class=" hover:bg-gray-800 text-2xl font-bold mr-4 transform transition-transform hover:scale-110 w-52"
 					type="submit"
 				>ODESLAT
 				</button>

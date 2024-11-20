@@ -1,7 +1,6 @@
 <script>
   import "../style.css";
   import "$lib/component/gdpr/banner.css"
-  import Header from "$lib/component/Header.svelte";
   import Footer from "$lib/component/Footer.svelte";
   import Banner from "$lib/component/gdpr/Banner.svelte";
 	import { onMount } from "svelte";
@@ -22,7 +21,6 @@
 </script>
 
 <Nav />
-<Header />
 <slot />
 <Footer />
 <Banner cookieName="gdpr" />

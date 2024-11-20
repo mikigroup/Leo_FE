@@ -2,6 +2,7 @@
 	import { onMount } from "svelte";
 	import Form from "$lib/component/Form.svelte";
 	import Spoluprace from "$lib/component/Spoluprace.svelte";
+	import Header from "$lib/component/Header.svelte";
 
 	export let data;
 
@@ -14,6 +15,7 @@
   } */
 </script>
 
+<Header />
 <Spoluprace />
 
 <section class="textTechnologie py-20 min-h-80 items-center flex font-bold px-4">
@@ -36,7 +38,7 @@
 	</div>
 </section>
 
-<section class="cenik py-20 px-5" id="cenik">
+<section class="cenik py-20 px-5 scroll-mt-16 lg:scroll-mt-32 xl:scroll-mt-56" id="cenik">
 	<div
 		class="flex flex-col max-w-screen-2xl gap-20 lg:flex-row md:mx-auto text-white px-4">
 		<div class="flex flex-col lg:w-1/2">
@@ -65,7 +67,7 @@
 		</div>
 		<div class="mt-auto flex justify-end lg:justify-normal">
 			<button
-				class="p-2 hover:bg-gray-800 text-2xl font-bold mr-4 transform transition-transform hover:scale-110">
+				class="hover:bg-gray-800 text-2xl font-bold mr-4 transform transition-transform hover:scale-110 w-52">
 				<span>OBJEDNAT</span>
 			</button>
 		</div>
