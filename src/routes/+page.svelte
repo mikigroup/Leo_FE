@@ -66,7 +66,7 @@
 		<div class="mt-auto flex justify-end lg:justify-normal">
 			<button
 				class="p-2 hover:bg-gray-800 text-2xl font-bold mr-4 transform transition-transform hover:scale-110">
-				<span>Objednat</span>
+				<span>OBJEDNAT</span>
 			</button>
 		</div>
 	</div>
