@@ -2,7 +2,6 @@
 	import { slide } from "svelte/transition";
 
 	let menuVisible = false;
-	let scrolled = false;
 </script>
 
 <nav class="bg-white w-full px-5 lg:px-10 pb-5 pt-3 shadow-2xl relative">
@@ -12,7 +11,7 @@
 			<div class="flex md:justify-start">
 				<a href="/" class="flex logo">
 					<img
-						class="w-40 md:w-44 xl:w-64"
+						class="w-40 md:w-44 xl:w-52"
 						src="/maly_leo_logo.svg"
 						alt="Malý Leo" />
 				</a>
@@ -21,7 +20,7 @@
 		<div
 			class="flex-col w-full text-center pt-10 md:flex lg:basis-1/3 basis-3/5">
 			<div class="mail">
-				<p class="text-lg md:text-2xl font-bold">
+				<p class="text-lg md:text-2xl xl:text-3xl font-bold">
 					<a
 						href="mailto:info@malyleo.cz"
 						title="Napište nám email..."
@@ -60,7 +59,7 @@
             w-full md:w-1/4 lg:w-1/5
             shadow-lg rounded-xl
             border border-gray-200
-            mx-auto md:mx-0"
+            mx-auto md:mx-0 p-5"
 			transition:slide>
 			<ul
 				class="pt-4 text-base text-black flex flex-col md:justify-between md:pt-0 text-center">
