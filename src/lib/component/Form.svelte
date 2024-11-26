@@ -5,14 +5,21 @@
 	import { schema } from "./schemaForm";
 	import { zod } from "sveltekit-superforms/adapters";
 	import CheckBox from "$lib/component/CheckBox.svelte";
+	import { onMount } from "svelte";
 	export let data;
+
+
+	$: options.validators = zod(schema);
+	onMount(() => {
+		$form.telephone = "+420";
+	});
 
 	const { form, errors, message, enhance, delayed, options } = superForm(
 		data.form,
 		{
 			resetForm: true,
 			validators: zod(schema),
-			dataType: "json"
+			dataType: "json",
 			/*    async onSubmit({ cancel }) {
       const result = await validateForm({ update: true });
       if (result.valid) {
@@ -22,13 +29,13 @@
     async onUpdated({ form }) {}, */
 		}
 	);
-	$: options.validators = zod(schema);
 
-	function formatPhoneNumber(value) {
-		// Odstranit mezery a nečíselné znaky
-		const numbers = value.replace(/\D/g, "");
-		// Omezit na prvních 9 číslic
-		const truncated = numbers.slice(0, 9);
+
+	function formatPhoneNumber(value="+420") {
+		// Odstranit mezery a nečíselné znaky kromě +
+		const numbers = value.replace(/[^\d+]/g, "");
+		// Omezit na prvních 9 číslic (ale zachovat +420)
+		const truncated = numbers.slice(0, 13); // +420 + 9 číslic
 		// Rozdělit po třech
 		return truncated.replace(/(\d{3})(?=\d)/g, "$1 ").trim();
 	}
@@ -110,7 +117,7 @@
 									inputmode="numeric"
 									placeholder="+420 123 456 789"
 									aria-invalid={$errors.telephone ? "true" : "false"}
-									value={formatPhoneNumber($form.telephoneS)}
+									value={formatPhoneNumber($form.telephone)}
 									on:input={handlePhoneInput}
 								/>
 								{#if $errors.telephone}
