@@ -162,7 +162,7 @@
 			</div>
 		</div>
 	</form>
-	<div><SuperDebug data={$form} /></div>
+	<!--<div><SuperDebug data={$form} /></div>-->
 </section>
 
 <style lang="scss">

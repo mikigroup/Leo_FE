@@ -19,7 +19,162 @@
   }}
 />
 
-<script>
+
+<script lang="ts">
+  import Cookies from "js-cookie";
+  import { validate } from "./util";
+  import { fade } from "svelte/transition";
+  import { onMount, createEventDispatcher } from "svelte";
+  import type { CookieChoices, CookieConfig, CookieChoice } from "$lib/types/type";
+
+  const dispatch = createEventDispatcher();
+
+  // Props
+  export let cookieName: string | null = null;
+  export let canRejectCookies: boolean = false;
+  export let showEditIcon: boolean = true;
+  export let acceptLabel: string = "Ulož";
+  export let rejectLabel: string = "Nechci cookies";
+  export let settingsLabel: string = "Nastavení sušenek";
+  export let closeLabel: string = "Zavřít nastavení";
+  export let editLabel: string = "Editovat cookie";
+  export let visible: boolean = true;
+  export let heading: string = "GDPR Oznámení";
+  export let description: string = "Váš komfort je pro nás prioritou. Využíváme cookies a další technologie, které nám pomáhají zlepšovat naše služby a personalizovat váš zážitek. Používáním webu souhlasíte s našimi <a href='/gdpr'>zásadami zpracování osobních údajů</a>.";
+
+  // State
+  let shown = false;
+  let settingsShown = false;
+
+  // Config
+  export let cookieConfig: CookieConfig = {
+    path: "/",
+  };
+
+  const defaults: CookieConfig = {
+    sameSite: "strict"
+  };
+
+  export let choices: Partial<CookieChoices> = {};
+
+  const choicesDefaults: CookieChoices = {
+    necessary: {
+      label: "Nutné",
+      description: "Tyto šušenky jsou nutné pro základní fungování webu",
+      value: true,
+    },
+    tracking: {
+      label: "Sledovací",
+      description: "Používá se pro reklamní systémy",
+      value: true,
+    },
+    analytics: {
+      label: "Analytické",
+      description: "Google Analytics a další analytické nástroje 3.stran",
+      value: true,
+    },
+    marketing: {
+      label: "Marketingové",
+      description: "Použítí pro marketingové data",
+      value: true,
+    }
+  };
+
+  $: choicesMerged = { ...choicesDefaults, ...choices };
+
+  $: choicesArr = Object.entries(choicesMerged).map(([id, item]) => ({
+    ...item,
+    id
+  }));
+
+  $: cookieChoices = choicesArr.reduce<Record<string, boolean>>((result, item) => {
+    result[item.id] = item.value ?? false;
+    return result;
+  }, {});
+
+  $: necessaryCookieChoices = choicesArr.reduce<Record<string, boolean>>((result, item) => {
+    result[item.id] = item.id === "necessary";
+    return result;
+  }, {});
+
+  export function show(): void {
+    shown = visible;
+  }
+
+  onMount(() => {
+    if (!cookieName) {
+      throw new Error("You must set gdpr cookie name");
+    }
+
+    const cookie = Cookies.get(cookieName);
+    if (!cookie) {
+      show();
+      return;
+    }
+
+    try {
+      const { choices } = JSON.parse(cookie) as { choices: Record<string, boolean> };
+      const valid = validate(cookieChoices, choices);
+
+      if (!valid) {
+        throw new Error("cookie consent has changed");
+      }
+
+      execute(choices);
+    } catch (e) {
+      removeCookie();
+      show();
+    }
+  });
+
+  function setCookie(choices: Record<string, boolean>): void {
+    const expires = new Date();
+    expires.setDate(expires.getDate() + 365);
+
+    const options = { ...defaults, ...cookieConfig, expires };
+    Cookies.set(cookieName!, JSON.stringify({ choices }), options);
+  }
+
+  function removeCookie(): void {
+    const { path } = cookieConfig;
+    Cookies.remove(cookieName!, path ? { path } : {});
+  }
+
+  function execute(chosen: Record<string, boolean>): void {
+    const types = Object.keys(cookieChoices);
+
+    for (const t of types) {
+      const agreed = chosen[t];
+      if (choicesMerged[t]) {
+        choicesMerged[t].value = agreed;
+      }
+      if (agreed) {
+        dispatch(t);
+        window.dispatchEvent(
+          new CustomEvent(`consent:${t}`)
+        );
+      }
+    }
+
+    shown = false;
+  }
+
+  function reject(): void {
+    setCookie(necessaryCookieChoices);
+    execute(necessaryCookieChoices);
+  }
+
+  function choose(): void {
+    setCookie(cookieChoices);
+    execute(cookieChoices);
+  }
+
+  function hideBanner(): void {
+    shown = false;
+  }
+</script>
+
+<!--<script>
   import Cookies from "js-cookie";
   import { validate } from "./util.js";
   import { fade } from "svelte/transition";
@@ -198,7 +353,7 @@
   function hideBanner() {
   shown = false;
 }
-</script>
+</script>-->
 
 {#if showEditIcon}
   <button

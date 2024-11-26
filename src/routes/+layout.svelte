@@ -6,7 +6,7 @@
 	import { onMount } from "svelte";
 	import Nav from "$lib/component/Nav.svelte";
 
-	// Koncovky nekonči na konci řádku
+	// Koncovky nekončily na konci řádku
 	onMount(() => {
 	function preventWidows(selector) {
 		const elements = document.querySelectorAll(selector);

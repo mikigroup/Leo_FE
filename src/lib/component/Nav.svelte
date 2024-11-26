@@ -1,6 +1,29 @@
-<script>
+<script lang="ts">
 	import { slide } from "svelte/transition";
-	let menuVisible = false;
+	import { onMount } from "svelte";
+
+	let menuVisible: boolean = false;
+	let menuElement: HTMLDivElement;
+	let menuButton: HTMLDivElement;
+
+	onMount(() => {
+		const handleClickOutside = (event: MouseEvent): void => {
+			const target = event.target as Node;
+
+			if (
+				menuVisible &&
+				menuElement &&
+				!menuElement.contains(target) &&
+				!menuButton.contains(target)
+			) {
+				menuVisible = false;
+			}
+		};
+		window.addEventListener('click', handleClickOutside);
+		return () => {
+			window.removeEventListener('click', handleClickOutside);
+		};
+	});
 </script>
 
 <nav class="bg-white w-full px-5 lg:px-10 pb-5 pt-3 shadow-2xl relative">
@@ -34,7 +57,7 @@
 			</div>
 		</div>
 		<div class="flex justify-end lg:basis-1/3 basis-1/5 items-center pt-5">
-			<div class="p-2 rounded-3xl cursor-pointer transition-colors duration-300 svgNav">
+			<div bind:this={menuButton} class="p-2 rounded-3xl cursor-pointer transition-colors duration-300 svgNav">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					id="menu-button"
@@ -55,6 +78,7 @@
 
 	{#if menuVisible}
 		<div
+			bind:this={menuElement}
 			id="menu"
 			class="absolute right-0 top-full bg-white z-50
             w-full md:w-1/4 lg:w-1/5
@@ -89,10 +113,39 @@
 	.tel {
 		color: vars.$color3;
 	}
-	li {
-		font-size: 1.2rem;
-		color: vars.$font-main-color;
-	}
+
+  li {
+    font-size: 1.2rem;
+    color: vars.$font-main-color;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: vars.$color3;
+      transform: scaleX(0);  // začíná s nulovou šířkou
+      transition: transform 0.3s ease;  // animace trvá 300ms
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &:hover {
+      &::before,
+      &::after {
+        transform: scaleX(1);  // roztáhne se na plnou šířku
+      }
+    }
+  }
 
 	.svgNav:hover {
     background-color: vars.$color3;
