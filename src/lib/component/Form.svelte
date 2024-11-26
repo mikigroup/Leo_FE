@@ -40,18 +40,6 @@
 		$form.telephone = formatted.replace(/\s/g, '');
 	}
 
-
-	function handleEmailInput(e) {
-		let value = e.target.value;
-		// Zajistíme @ na začátku
-		if (!value.startsWith('@')) {
-			value = '@' + value.replace('@', '');
-		}
-		// Omezíme délku na 50 znaků
-		value = value.slice(0, 50);
-		// Aktualizujeme hodnotu
-		$form.email = value;
-	}
 </script>
 
 <section class="max-w-screen-2xl md:mx-auto scroll-mt-16 lg:scroll-mt-32 xl:scroll-mt-56">
