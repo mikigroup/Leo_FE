@@ -34,20 +34,22 @@
 			</div>
 		</div>
 		<div class="flex justify-end lg:basis-1/3 basis-1/5 items-center pt-5">
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				id="menu-button"
-				on:click={() => (menuVisible = !menuVisible)}
-				class="w-8 cursor-pointer"
-				fill="none"
-				viewBox="0 0 24 24"
-				stroke="currentColor">
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					d="M4 6h16M4 12h16M4 18h16" />
-			</svg>
+			<div class="p-2 rounded-3xl cursor-pointer transition-colors duration-300 svgNav">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					id="menu-button"
+					on:click={() => (menuVisible = !menuVisible)}
+					class="w-8"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor">
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M4 6h16M4 12h16M4 18h16" />
+				</svg>
+			</div>
 		</div>
 	</div>
 
@@ -90,5 +92,9 @@
 	li {
 		font-size: 1.2rem;
 		color: vars.$font-main-color;
+	}
+
+	.svgNav:hover {
+    background-color: vars.$color3;
 	}
 </style>
