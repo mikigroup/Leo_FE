@@ -1,6 +1,5 @@
 <script>
 	import { slide } from "svelte/transition";
-
 	let menuVisible = false;
 </script>
 
