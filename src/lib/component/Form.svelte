@@ -12,21 +12,15 @@
 	$: options.validators = zod(schema);
 	onMount(() => {
 		$form.telephone = "+420";
+		$form.email ="@"
 	});
 
-	const { form, errors, message, enhance, delayed, options } = superForm(
+	const { form, errors, message, enhance, delayed, options, constraints } = superForm(
 		data.form,
 		{
 			resetForm: true,
 			validators: zod(schema),
 			dataType: "json",
-			/*    async onSubmit({ cancel }) {
-      const result = await validateForm({ update: true });
-      if (result.valid) {
-      } else {
-      }
-    },
-    async onUpdated({ form }) {}, */
 		}
 	);
 
@@ -48,9 +42,8 @@
 	}
 </script>
 
-<section
-	class="max-w-screen-2xl md:mx-auto scroll-mt-16 lg:scroll-mt-32 xl:scroll-mt-56">
-	<form class="p-4 mt-10 flex px-4" method="POST" id="form">
+<section class="max-w-screen-2xl md:mx-auto scroll-mt-16 lg:scroll-mt-32 xl:scroll-mt-56">
+	<form class="p-4 mt-10 flex px-4" method="POST" id="form" use:enhance>
 		<div class="flex flex-col space-y-6">
 			<h2 class="font-bold pb-10 text-4xl">Zeptejte se</h2>
 			<div class="flex">
@@ -58,117 +51,98 @@
 					<div class="">
 						<div class="flex flex-col md:flex-row mb-6 mx-3 gap-6">
 							<div class="w-full mb-6 md:w-1/2 md:mb-0">
-								<label class="block mb-2 text-xs" for="first_name">
-									Jméno
-								</label>
+								<label class="block mb-2 text-xs" for="first_name">Jméno {#if $errors.first_name}
+									<span class="text-xs italic text-red-500">{$errors.first_name}</span>{/if}</label>
 								<input
 									class="block w-full px-4 py-3"
 									id="first_name"
 									type="text"
+									name="first_name"
 									placeholder=""
-									aria-invalid={$errors.first_name ? "true" : "false"}
-									bind:value={$form.first_name} />
-								{#if $errors.first_name}
-									<p class="text-xs italic text-red-500">
-										{$errors.first_name}
-									</p>
-								{/if}
+									aria-invalid={$errors.first_name ? "true" : undefined}
+									bind:value={$form.first_name}
+									{...$constraints.first_name} />
 							</div>
 							<div class="w-full md:w-1/2">
-								<label class="block mb-2 text-xs" for="last_name">
-									Příjmení
-								</label>
+								<label class="block mb-2 text-xs" for="last_name">Příjmení	{#if $errors.last_name}
+									<span class="text-xs italic text-red-500">{$errors.last_name}</span>
+								{/if}</label>
 								<input
 									class="block w-full px-4 py-3"
 									id="last_name"
 									type="text"
+									name="last_name"
 									placeholder=""
-									aria-invalid={$errors.last_name ? "true" : "false"}
-									bind:value={$form.last_name} />
-								{#if $errors.last_name}
-									<p class="text-xs italic text-red-500">{$errors.last_name}</p>
-								{/if}
+									aria-invalid={$errors.last_name ? "true" : undefined}
+									bind:value={$form.last_name}
+									{...$constraints.last_name} />
 							</div>
 						</div>
 
 						<div class="flex flex-col md:flex-row mb-6 mx-3 gap-6">
 							<div class="w-full mb-6 md:w-1/2 md:mb-0 mt-5">
-								<label class="block mb-2 text-xs" for="email"> Email </label>
+								<label class="block mb-2 text-xs" for="email">Email	{#if $errors.email}
+									<span class="text-xs italic text-red-500">{$errors.email}</span>
+								{/if}</label>
 								<input
 									class="block w-full px-4 py-3"
 									id="email"
 									type="text"
+									name="email"
 									maxlength="40"
 									placeholder=""
-									value="@"
-									aria-invalid={$errors.email ? "true" : "false"} />
-								{#if $errors.email}
-									<p class="text-xs italic text-red-500">{$errors.email}</p>
-								{/if}
+									bind:value={$form.email}
+									aria-invalid={$errors.email ? "true" : undefined}
+									{...$constraints.email} />
 							</div>
 							<div class="w-full md:w-1/2 mt-5">
-								<label class="block mb-2 text-xs" for="telephone">
-									Telefon
-								</label>
+								<label class="block mb-2 text-xs" for="telephone">Telefon 	{#if $errors.telephone}
+									<span class="text-xs italic text-red-500">{$errors.telephone}</span>
+								{/if}</label>
 								<input
-									class="block w-full px-4 py-3 {$errors.telephone ? 'border-red-500' : ''}"
+									class="block w-full px-4 py-3"
 									id="telephone"
 									type="text"
+									name="telephone"
 									inputmode="numeric"
 									placeholder="+420 123 456 789"
-									aria-invalid={$errors.telephone ? "true" : "false"}
+									aria-invalid={$errors.telephone ? "true" : undefined}
 									value={formatPhoneNumber($form.telephone)}
 									on:input={handlePhoneInput}
-								/>
-								{#if $errors.telephone}
-									<p class="text-xs italic text-red-500">{$errors.telephone}</p>
-								{/if}
+									{...$constraints.telephone} />
 							</div>
 						</div>
 					</div>
 					<div>
 						<div class="w-full px-3">
-							<label class="block mb-2 text-xs" for="text"> Zpráva </label>
+							<label class="block mb-2 text-xs" for="text">Zpráva{#if $errors.text}
+								<span class="text-xs italic text-red-500">{$errors.text}</span>
+							{/if}</label>
 							<textarea
 								class="block w-full px-4 py-3"
+								id="text"
+								name="text"
 								cols="90"
 								rows="6"
 								maxlength="250"
-								id="text"
 								placeholder=""
-								aria-invalid={$errors.text ? "true" : "false"}
-								bind:value={$form.text}></textarea>
+								aria-invalid={$errors.text ? "true" : undefined}
+								bind:value={$form.text}
+								{...$constraints.text}></textarea>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div
-				class="flex flex-col lg:flex-row justify-between items-center mb-6 mx-3 w-full ml-1 px-4">
+			<div class="flex flex-col lg:flex-row justify-between items-center mb-6 mx-3 w-full ml-1 px-4">
 				<div class="flex flex-row gap-10 py-5">
-					<span> <CheckBox /></span>
+					<span><CheckBox {form} {errors} {constraints} /></span>
 					<span class="">Zaškrtněte pole pro odebírání newsletteru.</span>
 				</div>
-				{#if errors}
-					<div role="alert" class="alert alert-error">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							class="w-6 h-6 stroke-current shrink-0"
-							fill="none"
-							viewBox="0 0 24 24">
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-						</svg>
-						<span>Chyba! Požadavek se nepovedl.</span>
-					</div>
-				{/if}
 				<div class="flex">
 					<button
-						class=" hover:bg-gray-800 text-2xl font-bold transform transition-transform hover:scale-110 w-52"
+						class="hover:bg-gray-800 text-2xl font-bold transform transition-transform hover:scale-110 w-52"
 						type="submit"
-						>ODESLAT
+					>ODESLAT
 					</button>
 				</div>
 			</div>
