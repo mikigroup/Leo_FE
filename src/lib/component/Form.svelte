@@ -6,8 +6,15 @@
 	import { zod } from "sveltekit-superforms/adapters";
 	import CheckBox from "$lib/component/CheckBox.svelte";
 	import { onMount } from "svelte";
+	import { textStore } from "$lib/stores/formStore";
+
 	export let data;
 
+	$: if ($textStore) {
+		$form.text = $textStore;
+		// Po vložení textu vyčistit store, aby další úpravy už šly jen přes form
+		$textStore = '';
+	}
 
 	$: options.validators = zod(schema);
 	onMount(() => {
@@ -21,9 +28,10 @@
 			resetForm: true,
 			validators: zod(schema),
 			dataType: "json",
+			applyAction: true,
+			taintedMessage: null,
 		}
 	);
-
 
 	function formatPhoneNumber(value="+420") {
 		// Odstranit mezery a nečíselné znaky kromě +

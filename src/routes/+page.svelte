@@ -1,8 +1,8 @@
-<script>
-	import { onMount } from "svelte";
+<script lang="ts">
 	import Form from "$lib/component/Form.svelte";
 	import Spoluprace from "$lib/component/Spoluprace.svelte";
 	import Header from "$lib/component/Header.svelte";
+	import StartBalicek from "$lib/component/StartBalicek.svelte";
 
 	export let data;
 
@@ -39,38 +39,7 @@
 	</div>
 </section>
 
-<section class="cenik py-20 px-5 scroll-mt-16 lg:scroll-mt-32 xl:scroll-mt-56" id="cenik">
-  <div class="flex flex-col max-w-screen-2xl gap-20 lg:flex-row md:mx-auto text-white px-4">
-    <div class="flex flex-col lg:w-1/2 flex-shrink-0">
-      <div class="flex w-full">
-        <h2 class="flex text-4xl font-bold">Startovací balíček</h2>
-      </div>
-      <div class="mt-10 text-xl">
-        <p>
-          <strong>Získejte</strong> svůj objednávkový systém s Malým Leem zcela
-          <strong>ZDARMA!</strong> Využijte speciální zaváděcí nabídku.
-        </p>
-        <p class="pt-5">
-          <strong>Zeptejte se na cokoliv, společně najdeme ideální řešení pro Vaše
-          podnikání.</strong>
-        </p>
-      </div>
-    </div>
-    <div class="text-xl mt-auto flex-shrink-0">
-      <h5 class="pb-5"><strong>Balíček obsahuje:</strong></h5>
-      <ul>
-        <li>- Zajištění domény</li>
-        <li>- SEO optimalizace</li>
-        <li>- 3 měsíce rozšířené podpory</li>
-      </ul>
-    </div>
-    <div class="mt-auto flex justify-end w-full pr-3">
-      <button class="hover:bg-gray-800 text-2xl font-bold ml-12 transform transition-transform hover:scale-110 w-52 flex justify-center items-center">
-        <span>OBJEDNAT</span>
-      </button>
-    </div>
-  </div>
-</section>
+<StartBalicek />
 
 
 <Form {data} />
@@ -80,32 +49,14 @@
 	@use "$lib/styles/_mixins.scss" as mixins;
 	@use "$lib/styles/_variables.scss" as vars;
 
-	button {
-		padding: 1rem 3rem 1.1rem 3rem;
-		background-color: vars.$button-bg-main;
-		color: white;
-		border-radius: 1rem;
 
-		text-decoration: underline;
-		text-underline-offset: 5px; // vzdálenost od textu
-		text-decoration-thickness: 1px; // tloušťka čáry
-		text-decoration-color: currentColor; // barva čáry (stejná jako text)
-		text-decoration-style: solid;
-	}
 
-	.cenik {
-		background: linear-gradient(
-			to right,
-			vars.$button-bg-main 30%,
-			vars.$color3 80%
-		);
-	}
+  .textTechnologie p {
+    color: vars.$button-bg-main;
+  }
 
-	.textTechnologie p {
-		color: vars.$button-bg-main;
-	}
+  .textTechnologie {
+    background-color: vars.$color5;
+  }
 
-	.textTechnologie {
-		background-color: vars.$color5;
-	}
 </style>
