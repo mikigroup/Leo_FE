@@ -1,6 +1,6 @@
 {
 	"name": "leo-fe",
-	"version": "0.9a",
+	"version": "1.0a",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
@@ -36,7 +36,6 @@
 		"animate.css": "^4.1.1",
 		"js-cookie": "^3.0.5",
 		"nodemailer": "^6.9.13",
-		"prettier-plugin-svelte": "^3.2.8",
-		"wow.js": "^1.2.2"
+		"prettier-plugin-svelte": "^3.2.8"
 	}
 }
