@@ -19,7 +19,9 @@
       </ul>
     </div>
     <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-    <span class="block text-sm text-center text-white sm:text-center dark:text-gray-400">© 2024 <a href="https://mikigroup.cz" target="_blank" class="hover:underline">Mikigroup <i class="fa fa-regular fa-hand-spock"></i></a>. Všechny práva vyhrazena - <a href="/#" class="hover:underline">Ver 0.9a</a></span>
+    <span class="block text-sm text-center text-white sm:text-center dark:text-gray-400">© 2024 <a
+      href="https://mikigroup.cz" target="_blank" class="hover:underline">Mikigroup <i
+      class="fa fa-regular fa-hand-spock"></i></a>. Všechny práva vyhrazena - <a href="/#" class="hover:underline">Ver 1.0a</a></span>
   </div>
 </footer>
 
