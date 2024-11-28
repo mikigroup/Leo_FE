@@ -10,7 +10,7 @@
 
 	export let data;
 
-	const RECAPTCHA_KEY = "6LdQr4wqAAAAAOxSBAJIOgZzYMv6MnqLd984kSjs";
+	const RECAPTCHA_KEY = "6LcTuowqAAAAAKnnZP-uso6ArvnEP9_5PCqyACk-";
 	let recaptchaToken = "";
 	let isRecaptchaLoaded = false;
 
