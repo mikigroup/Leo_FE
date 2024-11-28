@@ -15,7 +15,7 @@
 				<p class="leading-relaxed">
 					Zpracováváme pouze nezbytné údaje pro plnění smlouvy (jméno, příjmení,
 					adresa, e-mail, telefon), účetní údaje (fakturační údaje, IČ, DIČ) a s
-					vaším souhlasem e-mail pro marketingové účely.
+					vaším souhlasem e-mail pro analytické účely pomocí Google Analytics.
 				</p>
 			</div>
 
@@ -26,7 +26,7 @@
 				<p class="leading-relaxed">
 					Údaje pro plnění smlouvy uchováváme 4 roky od ukončení smlouvy, účetní
 					údaje 10 let dle zákona, marketingové údaje do odvolání vašeho
-					souhlasu.
+					souhlasu, analytická data (GA4): maximálně 14 měsíců.
 				</p>
 			</div>
 
