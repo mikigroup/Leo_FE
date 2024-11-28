@@ -10,6 +10,26 @@
 
 	export let data;
 
+	const RECAPTCHA_KEY = "6LdQr4wqAAAAAOxSBAJIOgZzYMv6MnqLd984kSjs";
+	let recaptchaToken = "";
+	let isRecaptchaLoaded = false;
+
+	async function verifyRecaptcha() {
+		try {
+			recaptchaToken = await new Promise((resolve) => {
+				grecaptcha.ready(() => {
+					grecaptcha.execute().then((token) => {
+						resolve(token);
+					});
+				});
+			});
+			return recaptchaToken;
+		} catch (error) {
+			console.error('reCAPTCHA error:', error);
+			return null;
+		}
+	}
+
 	$: if ($textStore) {
 		$form.text = $textStore;
 		// Po vložení textu vyčistit store, aby další úpravy už šly jen přes form
@@ -28,7 +48,16 @@
 			validators: zod(schema),
 			dataType: "json",
 			applyAction: true,
-			taintedMessage: null
+			taintedMessage: null,
+			onSubmit: async ({ cancel }) => {
+				const token = await verifyRecaptcha();
+				if (!token) {
+					$message = "Nepodařilo se ověřit reCAPTCHA. Prosím zkuste to znovu.";
+					cancel();
+					return;
+				}
+				$form.recaptchaToken = token;
+			}
 		});
 
 	function formatPhoneNumber(value = "+420") {
@@ -168,6 +197,7 @@
 					<span><CheckBox {form} {errors} {constraints} /></span>
 					<span class="flex">Zaškrtněte pole pro odebírání newsletteru.</span>
 				</div>
+				<div class="g-recaptcha" data-sitekey={RECAPTCHA_KEY} data-size="invisible"></div>
 				<div class="flex">
 					<button
 						class="hover:bg-gray-800 text-2xl font-bold transform transition-transform hover:scale-110 w-52"

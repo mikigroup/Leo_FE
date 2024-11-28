@@ -6,6 +6,8 @@
 
 	export let data;
 
+	const RECAPTCHA_KEY = "6LdQr4wqAAAAAOxSBAJIOgZzYMv6MnqLd984kSjs";
+
 	//Ecomail - https://www.ecomail.cz
 	// api connection
 	/* function fetchData() {
@@ -14,6 +16,11 @@
       .then((data) => console.log(data));
   } */
 </script>
+
+<svelte:head>
+	<title>MalyLeo.cz - Úvod</title>
+	<script src="https://www.google.com/recaptcha/api.js?render={RECAPTCHA_KEY}"></script>
+</svelte:head>
 
 <Header />
 <Spoluprace />
