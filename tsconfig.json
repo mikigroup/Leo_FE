@@ -17,6 +17,7 @@
   },
   "include": [
     ".svelte-kit/types/**/$types.d.ts",
+    ".svelte-kit/ambient.d.ts",
     "vite.config.ts",
     "src/**/*.js",
     "src/**/*.ts",

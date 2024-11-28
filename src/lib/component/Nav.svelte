@@ -53,7 +53,7 @@
 				</p>
 			</div>
 			<div class="tel">
-				<a class="text-nowrap" href="" title="...nebo zavolejte.">+420 733 362 418</a>
+				<a class="text-nowrap" href="tel:00420733362418" title="...nebo zavolejte.">+420 733 362 418</a>
 			</div>
 		</div>
 		<div class="flex justify-end lg:basis-1/3 basis-1/5 items-center pt-5">

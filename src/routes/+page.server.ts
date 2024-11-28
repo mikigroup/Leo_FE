@@ -33,6 +33,6 @@ export const actions = {
      text: `Ahoj, přišla ti nová zpráva.\n\nJméno: ${form.data.first_name}\n Příjmení: ${form.data.last_name}\n Telefon: ${form.data.telephone} \n Mail: ${form.data.email}\n Text:${form.data.text}.\n Newsletter: ${form.data.newsletter ? 'Ano' : 'Ne'}`,
    };
      await transporter.sendMail(mailOptions);
-    return message(form, "Formulář v pořádku odeslán!");
+    return message(form, "Formulář v pořádku odeslán. Děkujeme, ozveme se co nejdříve.");
   },
 } satisfies Actions;
