@@ -41,12 +41,12 @@
 						<h3 class="text-2xl font-semibold mb-2">ROZŠÍŘENÝ BALÍČEK <br>
 							999 Kč/měsíc</h3>
 						<ul>
-							<li>Vše ze základního balíčku</li>
-							<li>Vlastní doména</li>
-							<li>SSL certifikát</li>
-							<li>Pokročilé statistiky</li>
-							<li>Pravidelné zálohy</li>
+							<li>Správa menu</li>
+							<li>Online objednávkový systém</li>
+							<li>Základní statistiky</li>
+							<li>Email notifikace</li>
 							<li>Prioritní podpora</li>
+							<li>Automatizace</li>
 						</ul>
 					</div>
 				</div>

@@ -1,6 +1,20 @@
 <script lang="ts">
 	import { slide } from "svelte/transition";
 	import { onMount } from "svelte";
+	import { spring } from "svelte/motion";
+
+	let rotation = spring(0, {
+		stiffness: 0.1,
+		damping: 0.15
+	});
+
+	onMount(() => {
+		setInterval(() => {
+			rotation.set(1);
+			setTimeout(() => rotation.set(-1), 100);
+			setTimeout(() => rotation.set(0), 200);
+		}, 3000);
+	});
 
 	let menuVisible: boolean = false;
 	let menuElement: HTMLDivElement;
@@ -19,9 +33,9 @@
 				menuVisible = false;
 			}
 		};
-		window.addEventListener('click', handleClickOutside);
+		window.addEventListener("click", handleClickOutside);
 		return () => {
-			window.removeEventListener('click', handleClickOutside);
+			window.removeEventListener("click", handleClickOutside);
 		};
 	});
 </script>
@@ -53,11 +67,20 @@
 				</p>
 			</div>
 			<div class="tel">
-				<a class="text-nowrap" href="tel:00420733362418" title="...nebo zavolejte.">+420 733 362 418</a>
+				<a
+					class="text-nowrap inline-block"
+					style="transform: rotate({$rotation}deg)"
+					href="tel:00420733362418"
+					title="...nebo zavolejte."
+					on:mouseenter={() => rotation.set(0)}>
+					+420 733 362 418
+				</a>
 			</div>
 		</div>
 		<div class="flex justify-end lg:basis-1/3 basis-1/5 items-center pt-5">
-			<div bind:this={menuButton} class="p-2 rounded-3xl cursor-pointer transition-colors duration-300 svgNav">
+			<div
+				bind:this={menuButton}
+				class="p-2 rounded-3xl cursor-pointer transition-colors duration-300 svgNav">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					id="menu-button"
@@ -114,40 +137,40 @@
 		color: vars.$color3;
 	}
 
-  li {
-    font-size: 1.2rem;
-    color: vars.$font-main-color;
-    position: relative;
+	li {
+		font-size: 1.2rem;
+		color: vars.$font-main-color;
+		position: relative;
 
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background-color: vars.$color3;
-      transform: scaleX(0);  // začíná s nulovou šířkou
-      transition: transform 0.3s ease;  // animace trvá 300ms
-    }
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 2px;
+			background-color: vars.$color3;
+			transform: scaleX(0); // začíná s nulovou šířkou
+			transition: transform 0.3s ease; // animace trvá 300ms
+		}
 
-    &::before {
-      top: 0;
-    }
+		&::before {
+			top: 0;
+		}
 
-    &::after {
-      bottom: 0;
-    }
+		&::after {
+			bottom: 0;
+		}
 
-    &:hover {
-      &::before,
-      &::after {
-        transform: scaleX(1);  // roztáhne se na plnou šířku
-      }
-    }
-  }
+		&:hover {
+			&::before,
+			&::after {
+				transform: scaleX(1); // roztáhne se na plnou šířku
+			}
+		}
+	}
 
 	.svgNav:hover {
-    background-color: vars.$color3;
+		background-color: vars.$color3;
 	}
 </style>
