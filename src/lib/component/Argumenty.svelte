@@ -23,7 +23,6 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="lg:w-2/3">
 				<div class="flex flex-col md:flex-row gap-6 justify-center">
 					<div class="approach-card w-full">
