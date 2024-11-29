@@ -2,7 +2,7 @@
 </script>
 
 <section class="py-20 px-5">
-	<div class="max-w-screen-xl mx-auto">
+	<div class="max-w-screen-xl mx-auto mt-10">
 		<div class="flex flex-col lg:flex-row gap-10">
 			<div class="lg:w-1/3 space-y-8">
 				<h2 class="text-4xl font-bold">
