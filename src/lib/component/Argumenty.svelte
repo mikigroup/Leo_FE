@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<section class="py-20 px-5">
+<section class="py-20 px-5" id="proKoho">
 	<div class="max-w-screen-xl mx-auto mt-10">
 		<div class="flex flex-col lg:flex-row gap-10">
 			<div class="lg:w-1/3 space-y-8">
@@ -29,8 +29,8 @@
 						<h3 class="text-2xl font-semibold mb-2">ZÁKLADNÍ BALÍČEK <br>
 							499 Kč/měsíc</h3>
 						<ul>
-							<li>Správa menu</li>
-							<li>Online objednávkový systém</li>
+							<li>Online objednávkový systém pro zákazníky</li>
+							<li><li>Správa položkek, objednávkek, textů</li>
 							<li>Základní statistiky</li>
 							<li>Email notifikace</li>
 							<li>Technická podpora</li>
@@ -40,10 +40,7 @@
 						<h3 class="text-2xl font-semibold mb-2">ROZŠÍŘENÝ BALÍČEK <br>
 							999 Kč/měsíc</h3>
 						<ul>
-							<li>Správa menu</li>
-							<li>Online objednávkový systém</li>
-							<li>Základní statistiky</li>
-							<li>Email notifikace</li>
+							<li>Vše v základním balíčku</li>
 							<li>Prioritní podpora</li>
 							<li>Automatizace</li>
 						</ul>

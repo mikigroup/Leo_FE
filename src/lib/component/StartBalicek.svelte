@@ -33,9 +33,9 @@
 		<div class="text-xl mt-auto flex-shrink-0">
 			<h5 class="pb-5"><strong>Balíček obsahuje:</strong></h5>
 			<ul>
+				<li>- <a class="underline" href="#proKoho">Základní balíček</a></li>
 				<li>- Zajištění domény</li>
 				<li>- SEO optimalizace</li>
-				<li>- 3 měsíce rozšířené podpory</li>
 			</ul>
 		</div>
 		<div class="mt-auto flex justify-end w-full pr-3">
