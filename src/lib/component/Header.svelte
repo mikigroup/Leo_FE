@@ -12,14 +12,9 @@
 			<div
 				class="md:p-8 mx-2 xl:basis-1/2 xl:p-12 headerBanner01 mt-12 lg:mt-16 rounded-2xl">
 				<h1 class="text-4xl font-bold lg:mb-6">
-					Malý Leo - webové řešení pro váš byznys
+					Webová řešení na míru, bez korporátní složitosti
 				</h1>
-				<p class="mb-11 mt-9 text-xl 2xl:text-2xl leading-7">
-					Potřebujete rychlý, moderní a spolehlivý web?
-					<br />
-					Nabízíme tři hlavní benefity.
-				</p>
-				<div class="">
+				<div class="mt-14">
 					<ul
 						class="list-inside flex flex-col lg:flex-row gap-5 lg:gap-5 leading-7 text-sm">
 						<li class="basis-1/3">
@@ -27,7 +22,7 @@
 								class="argumenty1 inline-block px-4 py-2 mr-2 text-md 2xl:text-lg">
 								VÝKON
 							</span>
-							<p class="lg:mt-4 text-lg 2xl:text-xl text-center">
+							<p class="mt-4 text-lg 2xl:text-xl text-center">
 								Optimalizované webové aplikace s rychlým načítáním a plynulým
 								chodem
 							</p>
@@ -37,7 +32,7 @@
 								class="argumenty2 inline-block px-4 py-2 mr-2 text-md 2xl:text-lg">
 								SPOLEHLIVOST
 							</span>
-							<p class="lg:mt-4 text-lg 2xl:text-xl a2 text-center">
+							<p class="mt-4 text-lg 2xl:text-xl a2 text-center">
 								Bezpečný provoz s pravidelnými zálohami dat
 							</p>
 						</li>
@@ -46,7 +41,7 @@
 								class="argumenty3 inline-block px-4 py-2 mr-2 text-md 2xl:text-lg">
 								DESIGN
 							</span>
-							<p class="lg:mt-4 text-lg 2xl:text-xl a3 text-center">
+							<p class="mt-4 text-lg 2xl:text-xl a3 text-center">
 								Přizpůsobitelný Vašim potřebám
 							</p>
 						</li>

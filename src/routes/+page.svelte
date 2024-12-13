@@ -3,6 +3,7 @@
 	import Spoluprace from "$lib/component/Spoluprace.svelte";
 	import Header from "$lib/component/Header.svelte";
 	import StartBalicek from "$lib/component/StartBalicek.svelte";
+	import Argumenty from "$lib/component/Argumenty.svelte";
 
 	export let data;
 
@@ -19,13 +20,38 @@
 
 <svelte:head>
 	<title>MalyLeo.cz - Úvod</title>
-	<script src="https://www.google.com/recaptcha/api.js?render={RECAPTCHA_KEY}"></script>
+	<script
+		src="https://www.google.com/recaptcha/api.js?render={RECAPTCHA_KEY}"></script>
 </svelte:head>
 
+<main>
 <Header />
-<Spoluprace />
 
-<section class="textTechnologie py-20 min-h-80 items-center flex font-bold px-4">
+<Argumenty />
+
+<Spoluprace />
+	Možné zaměření vašeho systému:
+	"Váš vlastní objednávkový systém
+	Bez provizí, bez závislosti na marketplace
+	Vaši zákazníci = vaše data"
+	Konkrétní řešení pro restaurace:
+
+
+	Vlastní branded web pro objednávky
+	Nižší poplatky (fixní měsíční částka vs. procenta z obratu)
+	Přímý kontakt se zákazníky
+	Možnost propojení s vlastním rozvozem
+	Věrnostní program pro přímé zákazníky
+
+
+	Potenciální obchodní model:
+	"Ušetřete na provizích:
+	- Při 100 objednávkách měsíčně á 300 Kč
+	- Damejidlo (30%): 9 000 Kč/měsíc
+	- Malý Leo: 999 Kč/měsíc
+	- Vaše úspora: 8 001 Kč měsíčně"
+<section
+	class="textTechnologie py-20 min-h-80 items-center flex font-bold px-4">
 	<div class="max-w-screen-xl flex flex-col lg:flex-row mx-auto w-full px-4">
 		<div class="basis-1/2 flex justify-center items-center">
 			<p class="text-3xl w-full lg:max-w-md">
@@ -35,8 +61,7 @@
 		</div>
 		<div class="w-px bg-gray-300 mx-4 hidden lg:block"></div>
 		<div class="h-px bg-gray-300 my-10 block"></div>
-		<div
-			class="basis-1/2 flex justify-center items-center lg:pl-20 lg:mt-0">
+		<div class="basis-1/2 flex justify-center items-center lg:pl-20 lg:mt-0">
 			<p class="text-3xl w-full lg:max-w-2xl">
 				MALÝ LEO je vyvíjecí se systém, postavený na nejnovějších technologiích
 				- Svelte a PostgreSQL.<br />
@@ -48,22 +73,18 @@
 
 <StartBalicek />
 
-
 <Form {data} />
-
+</main>
 
 <style lang="scss">
 	@use "$lib/styles/_mixins.scss" as mixins;
 	@use "$lib/styles/_variables.scss" as vars;
 
+	.textTechnologie p {
+		color: vars.$button-bg-main;
+	}
 
-
-  .textTechnologie p {
-    color: vars.$button-bg-main;
-  }
-
-  .textTechnologie {
-    background-color: vars.$color5;
-  }
-
+	.textTechnologie {
+		background-color: vars.$color5;
+	}
 </style>

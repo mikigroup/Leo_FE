@@ -36,6 +36,7 @@
 		"animate.css": "^4.1.1",
 		"js-cookie": "^3.0.5",
 		"nodemailer": "^6.9.13",
+		"normalize.css": "^3.0.3",
 		"prettier-plugin-svelte": "^3.2.8"
 	}
 }
