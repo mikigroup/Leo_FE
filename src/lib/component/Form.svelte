@@ -16,11 +16,22 @@
 
 	async function verifyRecaptcha() {
 		try {
+			if (typeof grecaptcha === 'undefined') {
+				console.error('reCAPTCHA není načtena');
+				return null;
+			}
+
 			recaptchaToken = await new Promise((resolve) => {
 				grecaptcha.ready(() => {
-					grecaptcha.execute().then((token) => {
-						resolve(token);
-					});
+					grecaptcha
+						.execute(RECAPTCHA_KEY)
+						.then((token) => {
+							resolve(token);
+						})
+						.catch((error) => {
+							console.error('Chyba při získávání tokenu:', error);
+							resolve(null);
+						});
 				});
 			});
 			return recaptchaToken;
