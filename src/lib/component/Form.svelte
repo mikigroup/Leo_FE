@@ -99,7 +99,7 @@
 					<div
 						class="status"
 						class:error={$page.status >= 400}
-						class:success={$page.status == 200}>
+						class:success={$page.status === 200}>
 						{$message}
 					</div>
 				{/if}

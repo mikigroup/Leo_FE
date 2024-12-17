@@ -4,6 +4,7 @@
 	import Header from "$lib/component/Header.svelte";
 	import StartBalicek from "$lib/component/StartBalicek.svelte";
 	import Argumenty from "$lib/component/Argumenty.svelte";
+	import Marketing from "$lib/component/Marketing.svelte";
 
 	export let data;
 
@@ -30,26 +31,9 @@
 <Argumenty />
 
 <Spoluprace />
-	Možné zaměření vašeho systému:
-	"Váš vlastní objednávkový systém
-	Bez provizí, bez závislosti na marketplace
-	Vaši zákazníci = vaše data"
-	Konkrétní řešení pro restaurace:
 
+<Marketing />
 
-	Vlastní branded web pro objednávky
-	Nižší poplatky (fixní měsíční částka vs. procenta z obratu)
-	Přímý kontakt se zákazníky
-	Možnost propojení s vlastním rozvozem
-	Věrnostní program pro přímé zákazníky
-
-
-	Potenciální obchodní model:
-	"Ušetřete na provizích:
-	- Při 100 objednávkách měsíčně á 300 Kč
-	- Damejidlo (30%): 9 000 Kč/měsíc
-	- Malý Leo: 999 Kč/měsíc
-	- Vaše úspora: 8 001 Kč měsíčně"
 <section
 	class="textTechnologie py-20 min-h-80 items-center flex font-bold px-4">
 	<div class="max-w-screen-xl flex flex-col lg:flex-row mx-auto w-full px-4">
