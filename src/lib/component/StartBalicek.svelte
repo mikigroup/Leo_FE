@@ -2,7 +2,7 @@
 	import { textStore } from "$lib/stores/formStore";
 	import {goto} from "$app/navigation";
 
-	async function vyplnitText() {
+	const vyplnitText = async () => {
 		$textStore =
 			"Dobrý den, mám zájem o startovací balíček, prosím o zpětné kontaktování pro podrobnější informace...";
 		    await goto("/#form");
