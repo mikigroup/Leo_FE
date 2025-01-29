@@ -2,18 +2,14 @@
 	import { slide } from "svelte/transition";
 	import { onMount } from "svelte";
 	import { spring } from "svelte/motion";
-
-	let rotation = spring(0, {
+	
+	let horizontalPosition = spring(-100, {
 		stiffness: 0.1,
 		damping: 0.15
 	});
 
 	onMount(() => {
-		setInterval(() => {
-			rotation.set(1);
-			setTimeout(() => rotation.set(-1), 100);
-			setTimeout(() => rotation.set(0), 200);
-		}, 3000);
+		horizontalPosition.set(0);
 	});
 
 	let menuVisible: boolean = false;
@@ -69,7 +65,7 @@
 			<div class="tel">
 				<a
 					class="text-nowrap inline-block"
-					style="transform: rotate({$rotation}deg)"
+					style="transform: translateX({$horizontalPosition}%)"
 					href="tel:00420733362418"
 					title="...nebo zavolejte."
 					on:mouseenter={() => rotation.set(0)}>
