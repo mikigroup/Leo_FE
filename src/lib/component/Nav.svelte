@@ -2,7 +2,7 @@
 	import { slide } from "svelte/transition";
 	import { onMount } from "svelte";
 	import { spring } from "svelte/motion";
-	
+
 	let horizontalPosition = spring(-100, {
 		stiffness: 0.1,
 		damping: 0.15
