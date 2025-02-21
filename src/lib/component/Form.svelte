@@ -16,27 +16,16 @@
 
 	async function verifyRecaptcha() {
 		try {
-			if (typeof grecaptcha === 'undefined') {
-				console.error('reCAPTCHA není načtena');
-				return null;
-			}
-
-			recaptchaToken = await new Promise((resolve) => {
+			return await new Promise((resolve, reject) => {
 				grecaptcha.ready(() => {
 					grecaptcha
-						.execute(RECAPTCHA_KEY)
-						.then((token) => {
-							resolve(token);
-						})
-						.catch((error) => {
-							console.error('Chyba při získávání tokenu:', error);
-							resolve(null);
-						});
+						.execute(RECAPTCHA_KEY, { action: 'submit' })
+						.then(resolve)
+						.catch(reject);
 				});
 			});
-			return recaptchaToken;
 		} catch (error) {
-			console.error('reCAPTCHA error:', error);
+			console.error('reCAPTCHA execution error:', error);
 			return null;
 		}
 	}
@@ -61,13 +50,23 @@
 			applyAction: true,
 			taintedMessage: null,
 			onSubmit: async ({ formData, cancel }) => {
-				const token = await verifyRecaptcha();
-				if (!token) {
-					$message = "Nepodařilo se ověřit reCAPTCHA. Prosím zkuste to znovu.";
+				try {
+					const token = await verifyRecaptcha();
+					if (!token) {
+						$message = "Nepodařilo se ověřit reCAPTCHA. Prosím zkuste to znovu.";
+						cancel();
+						return;
+					}
+					formData.append('recaptchaToken', token);
+				} catch (error) {
+					console.error('reCAPTCHA error:', error);
+					$message = "Došlo k chybě při ověřování. Prosím zkuste to znovu.";
 					cancel();
-					return;
 				}
-				formData.append('recaptchaToken', token);
+			},
+			onError: ({ result }) => {
+				console.error('Form submission error:', result);
+				$message = result.error || "Došlo k chybě při odesílání formuláře.";
 			}
 		});
 
