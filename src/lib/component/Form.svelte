@@ -51,22 +51,23 @@
 			taintedMessage: null,
 			onSubmit: async ({ formData, cancel }) => {
 				try {
-					const token = await verifyRecaptcha();
-					if (!token) {
-						$message = "Nepodařilo se ověřit reCAPTCHA. Prosím zkuste to znovu.";
-						cancel();
-						return;
-					}
-					formData.append('recaptchaToken', token);
+					console.log('Form submission started');
+					// další logika...
 				} catch (error) {
-					console.error('reCAPTCHA error:', error);
-					$message = "Došlo k chybě při ověřování. Prosím zkuste to znovu.";
+					console.error('Form submission error:', error);
+					$message = "Došlo k chybě při odesílání formuláře. Prosím zkuste to znovu.";
 					cancel();
 				}
 			},
-			onError: ({ result }) => {
-				console.error('Form submission error:', result);
-				$message = result.error || "Došlo k chybě při odesílání formuláře.";
+			onResult: ({ result }) => {
+				console.log('Form submission result:', result);
+				if (result.type === 'error') {
+					$message = result.error?.message || "Došlo k neočekávané chybě";
+				}
+			},
+			onError: (err) => {
+				console.error('Form submission error:', err);
+				$message = "Došlo k chybě při odesílání formuláře";
 			}
 		});
 

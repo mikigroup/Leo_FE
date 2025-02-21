@@ -3,69 +3,32 @@ import { superValidate, message } from "sveltekit-superforms/server";
 import { zod } from "sveltekit-superforms/adapters";
 import { schema } from "$lib/component/schemaForm";
 import { fail } from "@sveltejs/kit";
-import { PRIVATE_SEZNAM_KEY } from "$env/static/private";
-import { PRIVATE_RECAPTCHA_SECRET_KEY } from "$env/static/private";
+import { PRIVATE_SEZNAM_KEY, PRIVATE_RECAPTCHA_SECRET_KEY } from "$env/static/private";
 import nodemailer from "nodemailer";
 
-
-
-async function verifyRecaptcha(token: string) {
-  try {
-    const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: `secret=${PRIVATE_RECAPTCHA_SECRET_KEY}&response=${token}`,
-    });
-
-    if (!response.ok) {
-      console.error('reCAPTCHA verification failed:', await response.text());
-      return false;
-    }
-
-    const data = await response.json();
-    console.log('reCAPTCHA verification response:', data);
-
-    return data.success && data.score >= 0.5;
-  } catch (error) {
-    console.error('reCAPTCHA verification error:', error);
-    return false;
-  }
-}
-
 export const load = async () => {
-  const form = await superValidate(zod(schema));
-  return { form };
+  try {
+    const form = await superValidate(zod(schema));
+    return { form };
+  } catch (error) {
+    console.error('Load error:', error);
+    throw error;
+  }
 };
 
 export const actions = {
   default: async ({ request }) => {
     try {
+      // Nejdřív zkusíme validovat formulář
       const form = await superValidate(request, zod(schema));
-      if (!form.valid) return fail(400, { form });
+      console.log('Form data received:', form.data);
 
-      // reCAPTCHA verification
-      const formData = await request.formData();
-      const recaptchaToken = formData.get('recaptchaToken');
-
-      if (!recaptchaToken || typeof recaptchaToken !== 'string') {
-        console.error('reCAPTCHA token missing or invalid');
-        return fail(400, {
-          form,
-          error: 'reCAPTCHA verification failed'
-        });
+      if (!form.valid) {
+        console.log('Form validation failed:', form.errors);
+        return fail(400, { form });
       }
 
-      const isHuman = await verifyRecaptcha(recaptchaToken);
-      if (!isHuman) {
-        console.error('reCAPTCHA verification failed');
-        return fail(400, {
-          form,
-          error: 'reCAPTCHA verification failed'
-        });
-      }
-
+      // Vytvoření transportéru pro email
       const transporter = nodemailer.createTransport({
         host: "smtp.seznam.cz",
         port: 465,
@@ -76,6 +39,18 @@ export const actions = {
         },
       });
 
+      // Test připojení k SMTP serveru
+      try {
+        await transporter.verify();
+        console.log('SMTP connection successful');
+      } catch (error) {
+        console.error('SMTP connection failed:', error);
+        return fail(500, {
+          form,
+          error: 'Chyba při připojení k emailovému serveru'
+        });
+      }
+
       const mailOptions = {
         from: '"Formulář - MalýLeo" <info@malyleo.cz>',
         to: "info@malyleo.cz",
@@ -84,14 +59,27 @@ export const actions = {
         text: `Ahoj, přišla ti nová zpráva.\n\nJméno: ${form.data.first_name}\n Příjmení: ${form.data.last_name}\n Telefon: ${form.data.telephone} \n Mail: ${form.data.email}\n Text:${form.data.text}.\n Newsletter: ${form.data.newsletter ? 'Ano' : 'Ne'}`,
       };
 
-      await transporter.sendMail(mailOptions);
+      // Pokus o odeslání emailu
+      try {
+        console.log('Attempting to send email...');
+        await transporter.sendMail(mailOptions);
+        console.log('Email sent successfully');
+      } catch (error) {
+        console.error('Email sending failed:', error);
+        return fail(500, {
+          form,
+          error: 'Chyba při odesílání emailu'
+        });
+      }
+
       return message(form, "Formulář v pořádku odeslán. Děkujeme, ozveme se co nejdříve.");
+
     } catch (error) {
-      console.error('Form submission error:', error);
+      console.error('Server action error:', error);
       return fail(500, {
-        form,
-        error: error instanceof Error ? error.message : 'Interní chyba serveru'
+        form: error.form,
+        error: 'Došlo k neočekávané chybě při zpracování formuláře'
       });
     }
-  },
+  }
 } satisfies Actions;
