@@ -60,14 +60,14 @@
 			dataType: "json",
 			applyAction: true,
 			taintedMessage: null,
-			onSubmit: async ({ cancel }) => {
+			onSubmit: async ({ formData, cancel }) => {
 				const token = await verifyRecaptcha();
 				if (!token) {
 					$message = "Nepodařilo se ověřit reCAPTCHA. Prosím zkuste to znovu.";
 					cancel();
 					return;
 				}
-				$form.recaptchaToken = token;
+				formData.append('recaptchaToken', token);
 			}
 		});
 

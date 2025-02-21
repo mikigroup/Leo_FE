@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Thermalcomfort.cz - GDPR</title>
+	<title>Malyleo.cz - GDPR</title>
 </svelte:head>
 
 <section class="py-20 px-5 gdpr-section">
