@@ -1,6 +1,5 @@
 <script lang="ts">
 </script>
-
 <section class="py-20 px-5" id="proKoho">
 	<div class="max-w-screen-xl mx-auto mt-10">
 		<div class="flex flex-col lg:flex-row gap-10">
@@ -21,6 +20,10 @@
 						<div class="dot"></div>
 						<p class="text-lg">Lokální podniky s potřebou vlastního řešení</p>
 					</div>
+					<div class="flex items-center gap-4">
+						<div class="dot"></div>
+						<p class="text-lg">Rostoucí firmy hledající škálovatelné řešení</p>
+					</div>
 				</div>
 			</div>
 			<div class="lg:w-2/3">
@@ -30,7 +33,7 @@
 							499 Kč/měsíc</h3>
 						<ul>
 							<li>Online objednávkový systém pro zákazníky</li>
-							<li><li>Správa položkek, objednávkek, textů</li>
+							<li>Správa položek, objednávek, textů</li>
 							<li>Základní statistiky</li>
 							<li>Email notifikace</li>
 							<li>Technická podpora</li>
@@ -42,7 +45,23 @@
 						<ul>
 							<li>Vše v základním balíčku</li>
 							<li>Prioritní podpora</li>
-							<li>Automatizace</li>
+							<li>Automatizace procesů</li>
+							<li>Pokročilé statistiky</li>
+							<li>Možnost integrace s účetními systémy</li>
+						</ul>
+					</div>
+					<div class="approach-card w-full premium-card">
+						<div class="premium-tag">NEJOBLÍBENĚJŠÍ</div>
+						<h3 class="text-2xl font-semibold mb-2">BUSINESS BALÍČEK <br>
+							1 790 Kč/měsíc</h3>
+						<ul>
+							<li>Vše v rozšířeném balíčku</li>
+							<li>VIP podpora 24/7</li>
+							<li>Kompletní administrace</li>
+							<li>Platební brána</li>
+							<li>Integrace s externími systémy</li>
+							<li>Premium hosting a zabezpečení</li>
+							<li>Pravidelné zálohy dat</li>
 						</ul>
 					</div>
 				</div>
@@ -50,7 +69,6 @@
 		</div>
 	</div>
 </section>
-
 <style lang="scss">
   @use "$lib/styles/variables" as vars;
 
@@ -70,6 +88,7 @@
     border-radius: 1.2rem;
     background-color: vars.$form-bg-color;
     border: 1px solid white;
+    position: relative;
 
     h3 {
       color: vars.$button-bg-main;
@@ -78,5 +97,29 @@
     p {
       color: vars.$font-main-color;
     }
+
+    ul li {
+      margin-bottom: 0.5rem;
+      color: vars.$font-main-color;
+    }
+  }
+
+  .premium-card {
+    background-color: lighten(vars.$form-bg-color, 5%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-0.5rem);
+    border: 2px solid vars.$color3;
+  }
+
+  .premium-tag {
+    position: absolute;
+    top: -12px;
+    right: 1rem;
+    background-color: vars.$color3;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
   }
 </style>
