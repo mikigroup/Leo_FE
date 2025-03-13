@@ -1,4 +1,5 @@
-<section class="p-4 min-h-[500px] max-w-screen-2xl mx-auto">
+<section class="bg-gray-50">
+	<div class="p-4 min-h-[500px] max-w-screen-2xl mx-auto ">
 	<h2 class="text-4xl lg:px-10 my-10 font-medium">Jak probíhá spolupráce?</h2>
 	<div class="flex flex-col w-full py-10 mt-24 xl:flex-row uppercase gap-5">
 		<div class="flex items-end rounded-xl karta1 w-full justify-center">
@@ -81,6 +82,7 @@
 		<div class="flex items-end rounded-xl karta5 w-full justify-center">
 			<p class="text-2xl">Předání</p>
 		</div>
+	</div>
 	</div>
 </section>
 

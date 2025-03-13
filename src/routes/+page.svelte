@@ -27,8 +27,8 @@
 
 <main>
 	<Header />
-	<Promo />
 	<Argumenty />
+	<Promo />
 	<Spoluprace />
 	<section
 		class="textTechnologie py-20 min-h-80 items-center flex font-bold px-4">
