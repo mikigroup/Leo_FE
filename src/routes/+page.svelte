@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-	<title>MalyLeo.cz - Úvod</title>
+	<title>Objednávkový systém na míru | Malý Leo</title>
 	<script
 		src="https://www.google.com/recaptcha/api.js?render={RECAPTCHA_KEY}"></script>
 </svelte:head>

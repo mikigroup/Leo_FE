@@ -53,6 +53,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>FAQ | Malý Leo</title>
+</svelte:head>
+
 <section class="faq-section py-20 px-5" id="faq">
 	<div class="max-w-screen-xl mx-auto">
 		<h2 class="text-4xl font-bold mb-10 text-white">Často kladené otázky</h2>

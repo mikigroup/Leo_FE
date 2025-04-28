@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Malyleo.cz - GDPR</title>
+	<title>GDPR | Malý Leo</title>
 </svelte:head>
 
 <section class="py-20 px-5 gdpr-section">
