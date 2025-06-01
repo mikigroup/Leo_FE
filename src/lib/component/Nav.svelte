@@ -67,7 +67,8 @@
 					class="text-nowrap inline-block"
 					style="transform: translateX({$horizontalPosition}%)"
 					href="tel:00420733362418"
-					title="...nebo zavolejte.">
+					title="...nebo zavolejte."
+					on:mouseenter={() => rotation.set(0)}>
 					+420 733 362 418
 				</a>
 			</div>
@@ -80,14 +81,10 @@
 					xmlns="http://www.w3.org/2000/svg"
 					id="menu-button"
 					on:click={() => (menuVisible = !menuVisible)}
-					on:keydown={(e) => e.key === 'Enter' && (menuVisible = !menuVisible)}
 					class="w-8"
 					fill="none"
 					viewBox="0 0 24 24"
-					stroke="currentColor"
-					role="button"
-					tabindex="0"
-					aria-label="Toggle menu">
+					stroke="currentColor">
 					<path
 						stroke-linecap="round"
 						stroke-linejoin="round"

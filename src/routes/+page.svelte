@@ -5,23 +5,10 @@
 	import StartBalicek from "$lib/component/StartBalicek.svelte";
 	import Argumenty from "$lib/component/Argumenty.svelte";
 	import Promo from "$lib/component/Promo.svelte";
-	import { onMount } from 'svelte';
 
 	export let data;
 
 	const RECAPTCHA_KEY = "6LcTuowqAAAAAKnnZP-uso6ArvnEP9_5PCqyACk-";
-
-	// Dynamické načtení reCAPTCHA
-	onMount(() => {
-		// Kontrola jestli už není reCAPTCHA načtená
-		if (!(window as any).grecaptcha) {
-			const script = document.createElement('script');
-			script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_KEY}`;
-			script.async = true;
-			script.defer = true;
-			document.head.appendChild(script);
-		}
-	});
 
 	//Ecomail - https://www.ecomail.cz
 	// api connection
@@ -34,6 +21,8 @@
 
 <svelte:head>
 	<title>Objednávkový systém na míru | Malý Leo</title>
+	<script
+		src="https://www.google.com/recaptcha/api.js?render={RECAPTCHA_KEY}"></script>
 </svelte:head>
 
 <main>
@@ -46,15 +35,17 @@
 		<div class="max-w-screen-xl flex flex-col lg:flex-row mx-auto w-full px-4">
 			<div class="basis-1/2 flex justify-center items-center">
 				<p class="text-3xl w-full lg:max-w-md">
-					Neděláme věci složitě. Prostě vytvoříme web, který funguje a vypadá dobře.
+					Měníme tradiční přístup, nabízíme přímější a efektivnější způsob
+					tvorby webových aplikací.
 				</p>
 			</div>
 			<div class="w-px bg-gray-300 mx-4 hidden lg:block"></div>
 			<div class="h-px bg-gray-300 my-10 block"></div>
 			<div class="basis-1/2 flex justify-center items-center lg:pl-20 lg:mt-0">
 				<p class="text-3xl w-full lg:max-w-2xl">
-					Používáme moderní technologie Svelte a PostgreSQL. 
-					Vaše data jsou v bezpečí díky automatickým zálohám.
+					MALÝ LEO je vyvíjecí se systém, postavený na nejnovějších
+					technologiích - Svelte a PostgreSQL.<br />
+					Pravidelné zálohy.
 				</p>
 			</div>
 		</div>

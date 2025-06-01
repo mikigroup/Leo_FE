@@ -18,7 +18,7 @@
 		}
 	}} />
 
-<script lang="ts">
+<script>
 	import Cookies from "js-cookie";
 	import { validate } from "./util.js";
 	import { fade } from "svelte/transition";
@@ -29,7 +29,7 @@
 	/**
 	 * @type {string|undefined|null}
 	 */
-	export let cookieName: string | null = null;
+	export let cookieName = null;
 	export let canRejectCookies = false;
 	export let showEditIcon = true;
 
@@ -62,7 +62,7 @@
 	};
 
 	const defaults = {
-		sameSite: "strict" as const
+		sameSite: "strict"
 	};
 	export let choices = {};
 	const choicesDefaults = {
@@ -94,18 +94,18 @@
 		return Object.assign({}, item, { id: Object.keys(choicesMerged)[index] });
 	});
 
-	$: cookieChoices = choicesArr.reduce((result: Record<string, boolean>, item) => {
+	$: cookieChoices = choicesArr.reduce((result, item) => {
 		result[item.id] = item.value ? item.value : false;
 		return result;
-	}, {} as Record<string, boolean>);
+	}, {});
 
-	$: necessaryCookieChoices = choicesArr.reduce((result: Record<string, boolean>, item) => {
+	$: necessaryCookieChoices = choicesArr.reduce((result, item) => {
 		result[item.id] = item.id === "necessary";
 		return result;
-	}, {} as Record<string, boolean>);
+	}, {});
 
 	export function show() {
-		shown = visible ?? false;
+		shown = visible;
 	}
 
 	onMount(() => {
@@ -142,13 +142,13 @@
 		}
 	});
 
-	function setCookie(choices: Record<string, boolean>) {
+	function setCookie(choices) {
 		console.log("Nastavování cookie s preferencemi:", choices);
 		const expires = new Date();
 		expires.setDate(expires.getDate() + 365);
 
 		const options = Object.assign({}, defaults, cookieConfig, { expires });
-		Cookies.set(cookieName!, JSON.stringify({ choices }), options);
+		Cookies.set(cookieName, JSON.stringify({ choices }), options);
 		console.log("Nastavení cookie s těmito možnostmi:", options);
 		console.log(
 			"Volání Cookies.set s:",
@@ -163,25 +163,20 @@
 
 	function removeCookie() {
 		const { path } = cookieConfig;
-		Cookies.remove(cookieName!, Object.assign({}, path ? { path } : {}));
+		Cookies.remove(cookieName, Object.assign({}, path ? { path } : {}));
 	}
 
-	function execute(chosen: Record<string, boolean>) {
+	function execute(chosen) {
 		const types = Object.keys(cookieChoices);
 
 		for (const t of types) {
 			const agreed = chosen[t];
-			if ((choicesMerged as any)[t]) {
-				(choicesMerged as any)[t].value = agreed;
+			if (choicesMerged[t]) {
+				choicesMerged[t].value = agreed;
 			}
 			if (agreed) {
 				dispatch(t);
 				window.dispatchEvent(new CustomEvent(`consent:${t}`));
-				
-				// Speciální handling pro analytics
-				if (t === 'analytics' && (window as any).initGoogleAnalytics) {
-					(window as any).initGoogleAnalytics();
-				}
 			}
 		}
 
@@ -284,7 +279,7 @@
 	<div class="cookieConsentOperations" part="operations" transition:fade>
 		<div class="cookieConsentOperations__List" part="operations--list">
 			{#each choicesArr as choice}
-				{#if Object.hasOwnProperty.call(choicesMerged, choice.id) && (choicesMerged as any)[choice.id]}
+				{#if Object.hasOwnProperty.call(choicesMerged, choice.id) && choicesMerged[choice.id]}
 					<div
 						class="cookieConsentOperations__Item"
 						class:disabled={choice.id === "necessary"}
@@ -293,11 +288,11 @@
 							type="checkbox"
 							id={`gdpr-check-${choice.id}`}
 							part="operations--list-item-input"
-							bind:checked={(choicesMerged as any)[choice.id].value}
+							bind:checked={choicesMerged[choice.id].value}
 							disabled={choice.id === "necessary"} />
 						<label
 							for={`gdpr-check-${choice.id}`}
-							part={`operations--list-item-label ${(choicesMerged as any)[choice.id].value ? "operations--list-item-label--checked" : ""}`}>
+							part={`operations--list-item-label ${choicesMerged[choice.id].value ? "operations--list-item-label--checked" : ""}`}>
 							{choice.label}
 						</label>
 						<span
