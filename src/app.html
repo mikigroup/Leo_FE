@@ -13,13 +13,34 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
 		%sveltekit.head%
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-24DEJ6HE71"></script>
+		<!-- Google Analytics bude načteno až po GDPR souhlasu -->
 		<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', 'G-24DEJ6HE71');
+			
+			// Funkce pro inicializaci Google Analytics
+			window.initGoogleAnalytics = function() {
+				if (!window.gtag.initialized) {
+					// Načteme GA script
+					const script = document.createElement('script');
+					script.async = true;
+					script.src = 'https://www.googletagmanager.com/gtag/js?id=G-24DEJ6HE71';
+					document.head.appendChild(script);
+					
+					script.onload = function() {
+						gtag('js', new Date());
+						gtag('config', 'G-24DEJ6HE71');
+						console.log('Google Analytics inicializovano po souhlasu uživatele');
+					};
+					
+					window.gtag.initialized = true;
+				}
+			};
+			
+			// Nasloucháme consent eventu
+			window.addEventListener('consent:analytics', function() {
+				window.initGoogleAnalytics();
+			});
 		</script>
 		<script type="application/ld+json">
 			{

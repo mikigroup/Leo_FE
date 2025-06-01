@@ -12,7 +12,7 @@
 			<div
 				class="md:p-8 mx-2 xl:basis-1/2 xl:p-12 headerBanner01 mt-12 lg:mt-16 rounded-2xl">
 				<h1 class="text-4xl font-bold lg:mb-6">
-					Webová řešení na míru, bez korporátní složitosti
+					Tvoříme weby jednoduše a bez zbytečností
 				</h1>
 				<div class="mt-14">
 					<ul
@@ -20,29 +20,28 @@
 						<li class="basis-1/3">
 							<span
 								class="argumenty1 inline-block px-4 py-2 mr-2 text-md 2xl:text-lg">
-								VÝKON
+								RYCHLOST
 							</span>
 							<p class="mt-4 text-lg 2xl:text-xl text-center">
-								Optimalizované webové aplikace s rychlým načítáním a plynulým
-								chodem
+								Váš web se načte bleskově a zákazníci se nebudou nudit čekáním
 							</p>
 						</li>
 						<li class="basis-1/3">
 							<span
 								class="argumenty2 inline-block px-4 py-2 mr-2 text-md 2xl:text-lg">
-								SPOLEHLIVOST
+								KLID
 							</span>
 							<p class="mt-4 text-lg 2xl:text-xl a2 text-center">
-								Bezpečný provoz s pravidelnými zálohami dat
+								Nemusíte se bát o svá data - máme pravidelné zálohy
 							</p>
 						</li>
 						<li class="basis-1/3">
 							<span
 								class="argumenty3 inline-block px-4 py-2 mr-2 text-md 2xl:text-lg">
-								DESIGN
+								VÁŠE BARVY
 							</span>
 							<p class="mt-4 text-lg 2xl:text-xl a3 text-center">
-								Přizpůsobitelný Vašim potřebám
+								Děláme web přesně podle vašich představ a stylu
 							</p>
 						</li>
 					</ul>
