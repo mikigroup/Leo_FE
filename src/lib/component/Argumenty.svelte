@@ -71,6 +71,7 @@
 </section>
 <style lang="scss">
   @use "$lib/styles/variables" as vars;
+  @use "sass:color";
 
   h2, p {
     color: vars.$font-main-color;
@@ -105,7 +106,7 @@
   }
 
   .premium-card {
-    background-color: lighten(vars.$form-bg-color, 5%);
+    background-color: color.adjust(vars.$form-bg-color, $lightness: 5%);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transform: translateY(-0.5rem);
     border: 2px solid vars.$color3;

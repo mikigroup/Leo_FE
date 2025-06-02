@@ -6,5 +6,13 @@ export default defineConfig({
 	plugins: [sveltekit(), enhancedImages()],
 	define: {
 		SUPERFORMS_LEGACY: true
+	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				api: 'modern',
+				silenceDeprecations: ['legacy-js-api']
+			}
+		}
 	}
 });

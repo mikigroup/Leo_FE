@@ -23,7 +23,7 @@
 								VÝKON
 							</span>
 							<p class="mt-4 text-lg 2xl:text-xl text-center">
-								Optimalizované webové aplikace s rychlým načítáním a plynulým
+								Optimalizovaná webová aplikace s rychlým a plynulým
 								chodem
 							</p>
 						</li>

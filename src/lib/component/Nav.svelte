@@ -89,7 +89,16 @@
 					class="w-8"
 					fill="none"
 					viewBox="0 0 24 24"
-					stroke="currentColor">
+					stroke="currentColor"
+					role="button"
+					tabindex="0"
+					aria-label="Toggle navigation menu"
+					on:keydown={(e) => {
+						if (e.key === 'Enter' || e.key === ' ') {
+							e.preventDefault();
+							menuVisible = !menuVisible;
+						}
+					}}>
 					<path
 						stroke-linecap="round"
 						stroke-linejoin="round"
