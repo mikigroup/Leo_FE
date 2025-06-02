@@ -8,6 +8,11 @@
 		damping: 0.15
 	});
 
+	let rotation = spring(0, {
+		stiffness: 0.1,
+		damping: 0.15
+	});
+
 	onMount(() => {
 		horizontalPosition.set(0);
 	});
@@ -36,7 +41,7 @@
 	});
 </script>
 
-<nav class="bg-white w-full px-5 lg:px-10 pb-5 pt-3 shadow-2xl relative">
+<nav class="bg-white w-full px-5 lg:px-10 pb-5 pt-3 shadow-2xl sticky top-0 z-40">
 	<!-- První část zůstává stejná -->
 	<div class="flex flex-row">
 		<div class="lg:basis-1/3 mt-auto">

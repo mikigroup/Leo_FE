@@ -19,25 +19,25 @@ export interface CookieConsentConfig {
 export const defaultCategories: CookieConsentConfig = {
 	necessary: {
 		id: "necessary",
-		label: "Nutné",
+		label: "Nezbytné",
 		description:
-			"Tyto cookies jsou nezbytné pro základní funkce webu a nelze je vypnout.",
+			"Nezbytné pro správné fungování webu Leo.cz",
 		value: true,
 		required: true
 	},
 	preferences: {
 		id: "preferences",
-		label: "Preferenční",
+		label: "Funkční",
 		description:
-			"Cookies pro ukládání vašich preferencí, např. jazyk, velikost písma apod.",
+			"Zlepšují váš zážitek z používání webu",
 		value: false,
 		required: false
 	},
 	statistics: {
 		id: "statistics",
-		label: "Statistické",
+		label: "Analytické",
 		description:
-			"Pomáhají nám pochopit, jak návštěvníci používají náš web prostřednictvím anonymních statistik.",
+			"Pomáhají nám rozumět tomu, jak web používáte",
 		value: false,
 		required: false
 	},
@@ -45,7 +45,7 @@ export const defaultCategories: CookieConsentConfig = {
 		id: "marketing",
 		label: "Marketingové",
 		description:
-			"Používají se pro cílení reklamy a sledování vašich preferencí napříč weby.",
+			"Umožňují zobrazování relevantních reklam",
 		value: false,
 		required: false
 	}

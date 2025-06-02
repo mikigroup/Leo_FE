@@ -6,36 +6,32 @@ import type {
 } from "../services/cookieService";
 
 // Výchozí kategorie cookies
-export const defaultCookieCategories: CookieConsentConfig = {
+const defaultCookieCategories: CookieConsentConfig = {
 	necessary: {
 		id: "necessary",
-		label: "Nutné",
-		description:
-			"Tyto cookies jsou nezbytné pro základní funkce webu a nelze je vypnout.",
+		label: "Nezbytné",
+		description: "Nezbytné pro správné fungování webu Leo.cz",
 		value: true,
 		required: true
 	},
 	preferences: {
 		id: "preferences",
-		label: "Preferenční",
-		description:
-			"Cookies pro ukládání vašich preferencí, např. jazyk, velikost písma apod.",
+		label: "Funkční",
+		description: "Zlepšují váš zážitek z používání webu",
 		value: false,
 		required: false
 	},
 	statistics: {
 		id: "statistics",
-		label: "Statistické",
-		description:
-			"Pomáhají nám pochopit, jak návštěvníci používají náš web prostřednictvím anonymních statistik.",
+		label: "Analytické",
+		description: "Pomáhají nám rozumět tomu, jak web používáte",
 		value: false,
 		required: false
 	},
 	marketing: {
 		id: "marketing",
 		label: "Marketingové",
-		description:
-			"Používají se pro cílení reklamy a sledování vašich preferencí napříč weby.",
+		description: "Umožňují zobrazování relevantních reklam",
 		value: false,
 		required: false
 	}
@@ -209,5 +205,5 @@ export function createCookieStore(
 	};
 }
 
-// Vytvoření hlavního cookie store
-export const cookieStore = createCookieStore();
+// Vytvoření hlavního cookie store pro Leo.cz
+export const cookieStore = createCookieStore("leo_cookies");

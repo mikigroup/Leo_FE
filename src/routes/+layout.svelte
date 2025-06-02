@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import "../style.css";
   import "$lib/component/gdpr/banner.css"
   import Footer from "$lib/component/Footer.svelte";
@@ -14,7 +14,7 @@
 		// Kontrola, zda má uživatel uložený souhlas s cookies
 		showBanner = !cookieStore.hasConsent();
 
-		function preventWidows(selector) {
+		function preventWidows(selector: string) {
 			const elements = document.querySelectorAll(selector);
 
 			elements.forEach(element => {
@@ -29,7 +29,7 @@
 <slot />
 <Footer />
 <GDPR
-	cookieName="stastne_srdce_cookies"
+	cookieName="leo_cookies"
 	visible={showBanner}
 	showEditIcon={true}
 	on:show={() => {}}
