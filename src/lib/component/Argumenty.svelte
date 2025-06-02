@@ -30,7 +30,7 @@
 				<div class="flex flex-col md:flex-row gap-6 justify-center">
 					<div class="approach-card w-full">
 						<h3 class="text-2xl font-semibold mb-2">ZÁKLADNÍ BALÍČEK <br>
-							499 Kč/měsíc</h3>
+							490 Kč/měsíc</h3>
 						<ul>
 							<li>Online objednávkový systém pro zákazníky</li>
 							<li>Správa položek, objednávek, textů</li>
@@ -41,13 +41,13 @@
 					</div>
 					<div class="approach-card w-full">
 						<h3 class="text-2xl font-semibold mb-2">ROZŠÍŘENÝ BALÍČEK <br>
-							999 Kč/měsíc</h3>
+							990 Kč/měsíc</h3>
 						<ul>
 							<li>Vše v základním balíčku</li>
 							<li>Prioritní podpora</li>
 							<li>Automatizace procesů</li>
 							<li>Pokročilé statistiky</li>
-							<li>Možnost integrace s účetními systémy</li>
+							<li>Možnost integrace s účetními systémy</li>							
 						</ul>
 					</div>
 					<div class="approach-card w-full premium-card">
@@ -58,8 +58,7 @@
 							<li>Vše v rozšířeném balíčku</li>
 							<li>VIP podpora 24/7</li>
 							<li>Kompletní administrace</li>
-							<li>Platební brána</li>
-							<li>Integrace s externími systémy</li>
+							<li>Platební brána</li>							
 							<li>Premium hosting a zabezpečení</li>
 							<li>Pravidelné zálohy dat</li>
 						</ul>
