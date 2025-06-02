@@ -12,7 +12,7 @@
 			<div
 				class="md:p-8 mx-2 xl:basis-1/2 xl:p-12 headerBanner01 mt-12 lg:mt-16 rounded-2xl">
 				<h1 class="text-4xl font-bold lg:mb-6">
-					Webová řešení na míru, bez korporátní složitosti
+					Online objednávkový systém pro vaši restauraci
 				</h1>
 				<div class="mt-14">
 					<ul

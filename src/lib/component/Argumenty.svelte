@@ -10,19 +10,19 @@
 				<div class="space-y-4">
 					<div class="flex items-center gap-4">
 						<div class="dot"></div>
-						<p class="text-lg">Menší firmy hledající spolehlivý online systém</p>
+						<p class="text-lg">Vývařovny a menší restaurace s denním menu</p>
 					</div>
 					<div class="flex items-center gap-4">
 						<div class="dot"></div>
-						<p class="text-lg">Živnostníci, kteří chtějí automatizovat své procesy</p>
+						<p class="text-lg">Podniky unavené z vysokých provizí</p>
 					</div>
 					<div class="flex items-center gap-4">
 						<div class="dot"></div>
-						<p class="text-lg">Lokální podniky s potřebou vlastního řešení</p>
+						<p class="text-lg">Restaurace potřebující vlastní online objednávkový systém</p>
 					</div>
 					<div class="flex items-center gap-4">
 						<div class="dot"></div>
-						<p class="text-lg">Rostoucí firmy hledající škálovatelné řešení</p>
+						<p class="text-lg">Firmy se speciálními požadavky (alergie, diety, eco obaly)</p>
 					</div>
 				</div>
 			</div>
