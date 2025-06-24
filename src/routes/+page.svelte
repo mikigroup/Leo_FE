@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-	<title>Objednávkový systém na míru | Malý Leo</title>
+	<title>Online objednávkový systém pro jídla | Malý Leo</title>
 	<script
 		src="https://www.google.com/recaptcha/api.js?render={RECAPTCHA_KEY}"></script>
 </svelte:head>

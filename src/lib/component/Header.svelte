@@ -15,37 +15,37 @@
 					Online objednávkový systém pro Vaše jídla
 				</h1>
 				<div class="mt-14">
-					<ul
-						class="list-inside flex flex-col lg:flex-row gap-5 lg:gap-5 leading-7 text-sm">
-						<li class="basis-1/3">
-							<span
-								class="argumenty1 inline-block px-4 py-2 mr-2 text-md 2xl:text-lg">
-								VÝKON
-							</span>
-							<p class="mt-4 text-lg 2xl:text-xl text-center">
-								Optimalizovaná webová aplikace s rychlým a plynulým
-								chodem
+					<div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+						<div class="argument-card card1">
+							<div class="icon-wrapper">
+								<span class="icon">⚡</span>
+							</div>
+							<h3 class="argument-title">RYCHLOST</h3>
+							<p class="argument-description">
+								Objednání za pár kliků během několika sekund
 							</p>
-						</li>
-						<li class="basis-1/3">
-							<span
-								class="argumenty2 inline-block px-4 py-2 mr-2 text-md 2xl:text-lg">
-								SPOLEHLIVOST
-							</span>
-							<p class="mt-4 text-lg 2xl:text-xl a2 text-center">
-								Bezpečný provoz s pravidelnými zálohami dat
+						</div>
+						
+						<div class="argument-card card2">
+							<div class="icon-wrapper">
+								<span class="icon">💰</span>
+							</div>
+							<h3 class="argument-title">ÚSPORA</h3>
+							<p class="argument-description">
+								Snížení provozních nákladů až o 30%
 							</p>
-						</li>
-						<li class="basis-1/3">
-							<span
-								class="argumenty3 inline-block px-4 py-2 mr-2 text-md 2xl:text-lg">
-								DESIGN
-							</span>
-							<p class="mt-4 text-lg 2xl:text-xl a3 text-center">
-								Přizpůsobitelný potřebám
+						</div>
+						
+						<div class="argument-card card3">
+							<div class="icon-wrapper">
+								<span class="icon">🚀</span>
+							</div>
+							<h3 class="argument-title">MODERNOST</h3>
+							<p class="argument-description">
+								Nejnovější technologie pro váš úspěch
 							</p>
-						</li>
-					</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -56,40 +56,109 @@
 	@use "$lib/styles/_mixins.scss" as mixins;
 	@use "$lib/styles/_variables.scss" as vars;
 
-  .a2 {
-		color: vars.$color2;
-	};
-
-	.a3 {
-    color: vars.$color3;
-  };
-
-  .argumenty1, .argumenty2, .argumenty3 {
-		width: 100%;
-		padding: 1.5rem;
-		font-size: 1.3rem;
-    text-align: center;
-		color: white;
-		border: 1px solid white;
-    border-radius: 1.8rem;
-	}
-
-  .argumenty1 {
-		background-color: vars.$color1;
-	};
-	.argumenty2 {
-    background-color: vars.$color2;
-	};
-	.argumenty3 {
-    background-color: vars.$color3;
-	};
-
 	.headerBanner01 {
 		background-color: rgba(255, 255, 255, 0.85);
 	}
 
-	h1,
-	p {
+	h1 {
 		color: vars.$font-main-color;
+	}
+
+	.argument-card {
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8));
+		border-radius: 1.5rem;
+		padding: 2rem 1.5rem;
+		text-align: center;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(10px);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		transition: all 0.3s ease;
+		position: relative;
+		overflow: hidden;
+
+		&:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 4px;
+			background: linear-gradient(90deg, var(--card-color), var(--card-color-light));
+		}
+	}
+
+	.card1 {
+		--card-color: #{vars.$color1};
+		--card-color-light: #{lighten(vars.$color1, 20%)};
+	}
+
+	.card2 {
+		--card-color: #{vars.$color2};
+		--card-color-light: #{lighten(vars.$color2, 20%)};
+	}
+
+	.card3 {
+		--card-color: #{vars.$color3};
+		--card-color-light: #{lighten(vars.$color3, 20%)};
+	}
+
+	.icon-wrapper {
+		width: 60px;
+		height: 60px;
+		margin: 0 auto 1.5rem;
+		background: linear-gradient(135deg, var(--card-color), var(--card-color-light));
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	}
+
+	.icon {
+		font-size: 1.8rem;
+		filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+	}
+
+	.argument-title {
+		font-size: 1.2rem;
+		font-weight: 700;
+		color: var(--card-color);
+		margin-bottom: 1rem;
+		letter-spacing: 0.5px;
+	}
+
+	.argument-description {
+		color: vars.$font-main-color;
+		font-size: 1rem;
+		line-height: 1.5;
+		opacity: 0.9;
+	}
+
+	@media (max-width: 768px) {
+		.argument-card {
+			padding: 1.5rem 1rem;
+		}
+		
+		.icon-wrapper {
+			width: 50px;
+			height: 50px;
+		}
+		
+		.icon {
+			font-size: 1.5rem;
+		}
+		
+		.argument-title {
+			font-size: 1.1rem;
+		}
+		
+		.argument-description {
+			font-size: 0.9rem;
+		}
 	}
 </style>

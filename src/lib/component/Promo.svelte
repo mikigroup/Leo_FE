@@ -79,7 +79,7 @@
 					</label>
 				</div>
 
-				<div class="bg-gray-50 p-6 rounded-lg">
+				<div class="bg-gray-50 p-6 rounded-lg	">
 					<div class="space-y-4">
 						<div class="flex justify-between">
 							<span>Poplatky marketplace (30%)</span>
