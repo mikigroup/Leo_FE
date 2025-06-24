@@ -38,45 +38,48 @@
 				<div class="flex flex-col md:flex-row gap-6 justify-center">
 					<div class="approach-card w-full">
 						<h3 class="text-2xl font-semibold mb-2">ZÁKLADNÍ BALÍČEK <br>
-							490 Kč/měsíc</h3>
+							490 Kč / měsíc</h3>
 						<ul>
-							<li> Online objednávkový web s vaším designem</li>
-							<li> Správa menu (20 položek)</li>
+							<li> Online objednávkový web s šablonou</li>
+							<li> Správa menu (60 položek)</li>
 							<li> Email notifikace majiteli i zákazníkům</li>
 							<li> Základní statistiky objednávek</li>
 							<li> SSL certifikát a hosting</li>
-							<li> Technická podpora (pracovní dny)</li>
+							<li> Technická podpora (základní viz. bublina?)</li>
 							<li> Měsíční zálohy dat</li>
 						</ul>
 					</div>
 					<div class="approach-card w-full">
 						<h3 class="text-2xl font-semibold mb-2">ROZŠÍŘENÝ BALÍČEK <br>
-							990 Kč/měsíc</h3>
+							990 Kč / měsíc</h3>
 						<ul>
 							<li>Vše ze Základního balíčku</li>
+              <li> Správa menu (120 položek)</li>
 							<li> Pokročilá evidence alergenů a ingrediencí</li>
 							<li> Automatické dietní profily (vegan, bezlepkové)</li>
 							<li> Integrace s účetními systémy (Pohoda, Money S3)</li>
 							<li> Prioritní podpora (i víkendy)</li>
 							<li> Neomezený počet položek v menu</li>
 							<li> Týdenní zálohy dat + vlastní doména</li>						
+              <li> Technická podpora (základní viz.)</li>
 						</ul>
 					</div>
 					<div class="approach-card w-full premium-card">
 						<div class="premium-tag">NEJOBLÍBENĚJŠÍ</div>
 						<h3 class="text-2xl font-semibold mb-2">BUSINESS BALÍČEK <br>
-							1 790 Kč/měsíc</h3>
+							1 790 Kč / měsíc</h3>
 						<ul>
 							<li> Vše z Rozšířeného balíčku</li>
-							<li> Vlastní platební brána (úspora 30% vs marketplace)</li>
-							<li> VIP podpora 24/7 - telefon i email</li>
+              <li> Váš vlastní design</li>
+							<li> Vlastní platební brána (úspora 30% vs marketplace)</li>							
 							<li> Kompletní white-label řešení</li>							
 							<li> Premium hosting a zabezpečení</li>
 							<li> Denní zálohy + API integrace</li>
 							<li> Věrnostní program pro zákazníky</li>
+              <li> VIP podpora</li>
 						</ul>
 						<div class="savings-note">
-							<small><strong>Při 100 objednávkách/měsíc úspora až 7 210 Kč!</strong></small>
+							<small><strong>Při 100 objednávkách úspora už 7 210 Kč / měsíc !</strong></small>
 						</div>
 					</div>
 				</div>
@@ -122,7 +125,8 @@
 			<div class="fe-option custom-option highlighted">
 				<div class="option-header">
 					<h3 class="text-2xl font-semibold mb-2">Design na míru</h3>
-					<p class="price-badge">+5 900 Kč jednorázově</p>
+          <p class="included-badge">Balíček Business</p>
+					<p class="price-badge">od 25 000 Kč</p>
 				</div>
 				<div class="option-preview">
 					<div class="preview-placeholder custom-preview">
@@ -136,10 +140,9 @@
 						</div>
 					</div>
 				</div>
-				<ul class="feature-list premium">
-					<li>Vlastní grafický manuál</li>
-					<li>Integrace fotek vaší kuchyně</li>
-					<li>UX optimalizace pro vaše zákazníky</li>
+				<ul class="feature-list premium">					
+          <li>Přímá UX/UI optimalizace pro Vaše zákazníky</li>					
+          <li>Tvorba vlastních funkcí</li>
 					<li>Možnost dalších úprav</li>
 				</ul>
 				<button class="cta-button" on:click={poptavatDesigner}>Poptat designéra</button>
@@ -168,7 +171,7 @@
 				<div class="step">
 					<div class="step-number">4</div>
 					<h4>Implementace</h4>
-					<p>Realizace během 2-5 pracovních dnů</p>
+					<p>Realizace 1-6 měsíců, záleží na složitosti</p>
 				</div>
 			</div>
 		</div>
@@ -213,6 +216,15 @@
     background-color: vars.$form-bg-color;
     border: 1px solid white;
     position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(10px);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		transition: all 0.3s ease;				
+
+      &:hover {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
 
     h3 {
       color: vars.$button-bg-main;
