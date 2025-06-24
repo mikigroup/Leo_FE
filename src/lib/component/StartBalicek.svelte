@@ -16,11 +16,11 @@
 		class="flex flex-col max-w-screen-2xl gap-20 lg:flex-row md:mx-auto text-white px-4">
 		<div class="flex flex-col lg:w-1/2 flex-shrink-0">
 			<div class="flex w-full">
-				<h2 class="flex text-4xl font-bold">Startovací balíček</h2>
+				<h2 class="flex text-4xl font-bold tracking-wide">Startovací balíček</h2>
 			</div>
 			<div class="mt-10 text-xl">
 				<p>
-					<strong>VYUŽIJTE</strong> speciální zaváděcí nabídku na 1 měsíc ZDARMA!
+					<span class="tracking-widest"><strong>VYUŽIJTE</strong></span> speciální zaváděcí nabídku na 1 měsíc ZDARMA!
 				</p>
 			</div>
 		</div>
@@ -28,7 +28,7 @@
 			<button
 				on:click={vyplnitText}
 				class="hover:bg-gray-800 text-2xl font-bold ml-12 transform transition-transform hover:scale-110 w-52 flex justify-center items-center">
-				<span>OBJEDNAT</span>
+				<span class="tracking-widest">OBJEDNAT</span>
 			</button>
 		</div>
 	</div>

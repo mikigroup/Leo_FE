@@ -3,7 +3,7 @@
 	let avgOrderValue = 300;
 
 	$: marketplaceFee = orderCount * avgOrderValue * 0.30;
-	$: ourFee = 999;
+	$: ourFee = 1790;
 	$: savings = marketplaceFee - ourFee;
 </script>
 
@@ -28,7 +28,7 @@
 					</svg>
 				</div>
 				<h3 class="text-lg font-semibold text-gray-900">Vlastní branded web</h3>
-				<p class="mt-2 text-gray-600">Objednávkový systém v designu vaší restaurace. Budujte vlastní značku, ne cizí marketplace.</p>
+				<p class="mt-2 text-gray-600">Objednávkový systém v designu Vašeho brandu. Budujte vlastní značku, ne cizí marketplace.</p>
 			</div>
 
 			<div class="p-6 bg-white rounded-lg shadow-lg">
