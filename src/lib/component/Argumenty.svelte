@@ -10,15 +10,11 @@
 				<div class="space-y-4">
 					<div class="flex items-center gap-4">
 						<div class="dot"></div>
-						<p class="text-lg">Vývařovny a menší restaurace s denním menu</p>
-					</div>
-					<div class="flex items-center gap-4">
-						<div class="dot"></div>
 						<p class="text-lg">Podniky unavené z vysokých provizí</p>
-					</div>
+					</div>	
 					<div class="flex items-center gap-4">
 						<div class="dot"></div>
-						<p class="text-lg">Restaurace potřebující vlastní online objednávkový systém</p>
+						<p class="text-lg">Vývařovny potřebující vlastní online objednávkový systém pro své zákazníky</p>
 					</div>
 					<div class="flex items-center gap-4">
 						<div class="dot"></div>

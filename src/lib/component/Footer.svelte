@@ -11,6 +11,9 @@
     <div class="flex md:justify-end">
       <ul class="flex flex-col items-center w-full text-sm font-medium text-center text-white md:flex-row sm:mb-0 md:w-auto">
         <li>
+          <a href="/manifest" class="hover:underline md:mr-6">MANIFEST</a>
+        </li>
+        <li>
           <a href="/faq" class="hover:underline md:mr-6">FAQ</a>
         </li>
         <li>
@@ -22,7 +25,7 @@
     <span class="block text-sm text-center text-white sm:text-center dark:text-gray-400">Lokální řešení pro váš digitální růst |
       Vyvinuto v Česku<i
       class="fa fa-regular fa-hand-spock"></i>. © 2023 - 2025 Všechny práva vyhrazena - <a href="/#"
-                                                                                    class="hover:underline">Ver 1.0b</a></span>
+                                                                                    class="hover:underline">Ver 1.0c</a></span>
   </div>
 </footer>
 
