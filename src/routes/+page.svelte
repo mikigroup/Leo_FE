@@ -28,8 +28,8 @@
 <main>
 	<Header />
 	<Argumenty />
-	<Promo />
-	<Spoluprace />
+	<StartBalicek />
+	<Promo />	
 	<section
 		class="textTechnologie py-20 min-h-80 items-center flex font-bold px-4">
 		<div class="max-w-screen-xl flex flex-col lg:flex-row mx-auto w-full px-4">
@@ -50,8 +50,6 @@
 			</div>
 		</div>
 	</section>
-
-	<StartBalicek />
 
 	<Form {data} />
 </main>

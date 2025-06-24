@@ -20,23 +20,9 @@
 			</div>
 			<div class="mt-10 text-xl">
 				<p>
-					<strong>Získejte</strong> svůj objednávkový systém s Malým Leem zcela
-					<strong>ZDARMA!</strong> Využijte speciální zaváděcí nabídku.
-				</p>
-				<p class="pt-5">
-					<strong
-						>Zeptejte se na cokoliv, společně najdeme ideální řešení pro Vaše
-						podnikání.</strong>
+					<strong>VYUŽIJTE</strong> speciální zaváděcí nabídku na 1 měsíc ZDARMA!
 				</p>
 			</div>
-		</div>
-		<div class="text-xl mt-auto flex-shrink-0">
-			<h5 class="pb-5"><strong>Balíček obsahuje:</strong></h5>
-			<ul>
-				<li>- <a class="underline" href="#proKoho">Základní balíček</a></li>
-				<li>- Zajištění domény</li>
-				<li>- SEO optimalizace</li>
-			</ul>
 		</div>
 		<div class="mt-auto flex justify-end w-full pr-3">
 			<button

@@ -92,7 +92,7 @@
 	class="max-w-screen-2xl md:mx-auto scroll-mt-16 lg:scroll-mt-32 xl:scroll-mt-56">
 	<form class="p-4 mt-10 flex px-4" method="POST" id="form" use:enhance>
 		<div class="flex flex-col space-y-6">
-			<h2 class="font-bold pb-10 text-4xl">Zeptejte se</h2>
+			<h2 class="font-bold pb-10 text-4xl">Zeptejte se, společně najdeme ideální řešení</h2>
 			<div>
 				{#if $delayed}<div class="loading loading-dots loading-xs"></div>{/if}
 				{#if $message}
