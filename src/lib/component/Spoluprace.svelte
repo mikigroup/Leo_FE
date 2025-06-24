@@ -1,6 +1,6 @@
-<section class="bg-gray-50 scroll-mt-16 lg:scroll-mt-32 xl:scroll-mt-56" id="spoluprace">
+<section class="bg-gray-50 scroll-mt-24" id="spoluprace">
 	<div class="p-4 min-h-[500px] max-w-screen-2xl mx-auto ">
-	<h2 class="text-4xl lg:px-10 my-10 font-medium">Jak probíhá spolupráce?</h2>
+	<h2 class="text-4xl lg:px-10 my-10 font-bold">Jak probíhá spolupráce?</h2>
 	<p class="text-lg lg:px-10 mb-10 text-gray-600">Od prvního kontaktu po spuštění vašeho objednávkového systému</p>
 	<div class="flex flex-col w-full py-10 mt-16 xl:flex-row uppercase gap-5">
 		<div class="flex items-end rounded-xl karta1 w-full justify-center">
@@ -155,8 +155,8 @@
 	.process-detail {
 		text-align: center;
 		
-		h4 {
-			color: vars.$button-bg-main;
+		h2, h4 {
+			color: vars.$font-main-color;
 		}
 		
 		p {

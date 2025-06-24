@@ -4,7 +4,7 @@
 
 <section class="py-20 px-5 gdpr-section">
 	<div class="max-w-screen-md mx-auto">
-		<h2 class="text-4xl font-bold mb-10 text-white">Ochrana osobních údajů</h2>
+		<h2 class="text-4xl font-bold mb-10">Ochrana osobních údajů</h2>
 
 		<div class="text-white space-y-8">
 			<h3>Správce osobních údajů</h3>
@@ -64,6 +64,10 @@
 
 <style lang="scss">
   @use "$lib/styles/_variables.scss" as vars;
+
+  h2, h3 {
+    color: vars.$font-main-color;
+  }
 
 	.gdpr-section {
 		background: linear-gradient(

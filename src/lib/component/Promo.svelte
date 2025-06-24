@@ -7,13 +7,21 @@
 	$: savings = marketplaceFee - ourFee;
 </script>
 
+<style lang="scss">
+	@use "$lib/styles/_variables.scss" as vars;
+
+	h2, h3 {
+		color: vars.$font-main-color;
+	}
+</style>
+
 <section class="py-16 bg-gray-50 scroll-mt-16 lg:scroll-mt-32 xl:scroll-mt-56" id="promo">
 	<div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
 		<!-- Hlavní nadpis -->
 		<div class="text-center">
-			<h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">
-				Bez provizí, bez závislosti na marketplace. Vaši zákazníci = Vaše data
-			</h2>			
+					<h2 class="text-4xl font-bold mb-4">
+			Bez provizí, bez závislosti na marketplace. Vaši zákazníci = Vaše data
+		</h2>			
 		</div>
 
 		<!-- Grid s výhodami -->
@@ -24,7 +32,7 @@
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
 					</svg>
 				</div>
-				<h3 class="text-lg font-semibold text-gray-900">Vlastní branded web</h3>
+				<h3 class="text-lg font-bold">Vlastní branded web</h3>
 				<p class="mt-2 text-gray-600">Objednávkový systém v designu Vašeho brandu. Budujte vlastní značku, ne cizí marketplace.</p>
 			</div>
 
@@ -34,7 +42,7 @@
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
 					</svg>
 				</div>
-				<h3 class="text-lg font-semibold text-gray-900">Nízké fixní poplatky</h3>
+				<h3 class="text-lg font-bold">Nízké fixní poplatky</h3>
 				<p class="mt-2 text-gray-600">Žádné provize z obratu. Pouze fixní měsíční poplatek bez ohledu na počet objednávek.</p>
 			</div>
 
@@ -44,14 +52,14 @@
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
 					</svg>
 				</div>
-				<h3 class="text-lg font-semibold text-gray-900">Přímý kontakt se zákazníky</h3>
+				<h3 class="text-lg font-bold">Přímý kontakt se zákazníky</h3>
 				<p class="mt-2 text-gray-600">Budujte vlastní databázi zákazníků. Komunikujte přímo, bez prostředníků.</p>
 			</div>
 		</div>
 
 		<!-- Kalkulačka úspor -->
 		<div class="mt-16 p-8 bg-white rounded-lg shadow-lg">
-			<h3 class="text-2xl font-bold text-center mb-8">Spočítejte si měsíční úsporu</h3>
+			<h3 class="text-3xl font-bold text-center mb-8">Spočítejte si měsíční úsporu</h3>
 
 			<div class="grid gap-8 md:grid-cols-2 max-w-3xl mx-auto">
 				<div class="space-y-4">

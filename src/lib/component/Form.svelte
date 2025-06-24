@@ -237,6 +237,10 @@
 		color: vars.$font-main-color;
 	}
 
+	h2 {
+		color: vars.$font-main-color;
+	}
+
 	input,
 	textarea {
 		padding: 1rem 1rem 1rem 1rem;

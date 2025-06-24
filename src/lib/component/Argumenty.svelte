@@ -107,9 +107,9 @@
 </section>
 
 <!-- Nová sekce pro možnosti frontendu -->
-<section class="fe-options py-16 bg-gray-50" id="design">
+<section class="fe-options py-16 bg-gray-50 scroll-mt-20" id="design">
 	<div class="max-w-screen-xl mx-auto px-4">
-		<h2 class="text-center text-3xl font-bold mb-8 text-gray-900">Možnosti designu</h2>
+		<h2 class="text-center text-4xl font-bold mb-8">Možnosti designu</h2>
 		<p class="text-center text-xl text-gray-600 mb-12">Vyberte si, jak má vypadat váš objednávkový web</p>
 		
 		<div class="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
@@ -169,7 +169,7 @@
 
 		<!-- Proces vytvoření custom FE -->
 		<div class="process-section mt-16">
-			<h3 class="text-2xl font-bold text-center mb-8 text-gray-900">Proces vytvoření vlastního designu</h3>
+			<h3 class="text-3xl font-bold text-center mb-8">Proces vytvoření vlastního designu</h3>
 			<div class="process-steps">
 				<div class="step">
 					<div class="step-number">1</div>
@@ -217,7 +217,7 @@
   @use "$lib/styles/variables" as vars;
   @use "sass:color";
 
-  h2, p {
+  h2, h3, p {
     color: vars.$font-main-color;
   }
 

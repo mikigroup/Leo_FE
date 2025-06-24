@@ -125,7 +125,7 @@
 					<a class="block py-2 md:p-4" href="/#cenik">Ceník</a>
 				</li>				
 				<li>
-					<a class="block py-2 md:p-4" href="/#argumenty">Design</a>
+					<a class="block py-2 md:p-4" href="/#design">Design</a>
 				</li>				
 				<li>
 					<a class="block py-2 md:p-4" href="/#spoluprace">Jak to funguje</a>

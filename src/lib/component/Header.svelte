@@ -54,7 +54,7 @@
 	<!-- PROBLÉM - nová sekce -->
 	<section class="problem-section py-16 px-5">
 		<div class="max-w-screen-xl mx-auto text-center">
-			<h2 class="text-3xl font-bold mb-8 text-red-600">
+			<h2 class="text-4xl font-bold mb-8">
 				Už vás nebaví platit 30% provize?
 			</h2>
 			<div class="grid md:grid-cols-3 gap-8 mt-12">
@@ -91,7 +91,7 @@
 		background-color: rgba(255, 255, 255, 0.85);
 	}
 
-	h1 {
+	h1, h2, h3 {
 		color: vars.$font-main-color;
 	}
 

@@ -41,7 +41,7 @@
   
       <!-- Beliefs section -->
       <div class="mb-20">
-        <h2 class="text-3xl font-bold text-white mb-8">V čem věříme</h2>
+        		<h2 class="text-4xl font-bold mb-8">V čem věříme</h2>
         
         <div class="grid gap-8 md:grid-cols-2">
           <!-- Belief 1 -->
@@ -108,7 +108,7 @@
   
       <!-- Product section -->
       <div class="mb-20">
-        <h2 class="text-3xl font-bold text-white mb-8">Produkt Malý Leo</h2>
+        		<h2 class="text-4xl font-bold mb-8">Produkt Malý Leo</h2>
         <p class="text-xl text-white mb-8">Proč jsme ho stvořili?</p>
   
         <div class="space-y-10">
@@ -185,7 +185,7 @@
   
       <!-- Company section -->
       <div class="mb-20">
-        <h2 class="text-3xl font-bold text-white mb-8">Firma Malý Leo</h2>
+        		<h2 class="text-4xl font-bold mb-8">Firma Malý Leo</h2>
         <p class="text-xl text-white mb-8"><em>Jsme na stejné lodi</em></p>
   
         <div class="bg-gray-50 p-8 rounded-lg">
@@ -227,7 +227,7 @@
   
       <!-- CTA -->
       <div class="text-center">
-        <h3 class="text-2xl font-bold text-white mb-6">Kýváte hlavou?</h3>
+        			<h3 class="text-3xl font-bold mb-6">Kýváte hlavou?</h3>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <a href="/#form" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
             Objednejte si demo
@@ -239,6 +239,10 @@
 
 <style lang="scss">
   @use "$lib/styles/_variables.scss" as vars;
+
+  h2, h3 {
+    color: vars.$font-main-color;
+  }
 
   .manifest-section {
     background: linear-gradient(

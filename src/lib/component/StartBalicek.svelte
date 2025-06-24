@@ -16,7 +16,7 @@
 		class="flex flex-col max-w-screen-2xl gap-20 lg:flex-row md:mx-auto text-white px-4">
 		<div class="flex flex-col lg:w-1/2 flex-shrink-0">
 			<div class="flex w-full">
-				<h2 class="flex text-4xl font-bold tracking-wide">Získejte první měsíc ZDARMA</h2>
+				<h2 class="flex text-4xl font-bold tracking-wide !text-white">Získejte první měsíc ZDARMA</h2>
 			</div>
 			<div class="mt-10 text-xl space-y-4">
 				<p>
@@ -52,6 +52,10 @@
 			vars.$button-bg-main 30%,
 			vars.$color3 80%
 		);
+	}
+
+	h2 {
+		color: vars.$font-main-color;
 	}
 
 	button {
