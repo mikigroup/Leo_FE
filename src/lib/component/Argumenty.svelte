@@ -8,7 +8,7 @@
 	}
 </script>
 
-<section class="py-20 px-5" id="proKoho">
+<section class="py-20 px-5 scroll-mt-10" id="cenik">
 	<div class="max-w-screen-xl mx-auto mt-10">
 		<div class="flex flex-col lg:flex-row gap-10">
 			<div class="lg:w-1/3 space-y-8">
@@ -35,51 +35,69 @@
 				</div>
 			</div>
 			<div class="lg:w-2/3">
-				<div class="flex flex-col md:flex-row gap-6 justify-center">
+				<div class="grid md:grid-cols-3 gap-6 justify-center">
 					<div class="approach-card w-full">
-						<h3 class="text-2xl font-semibold mb-2">ZÁKLADNÍ BALÍČEK <br>
-							490 Kč / měsíc</h3>
-						<ul>
-							<li> Online objednávkový web s šablonou</li>
-							<li> Správa menu (60 položek)</li>
-							<li> Email notifikace majiteli i zákazníkům</li>
-							<li> Základní statistiky objednávek</li>
-							<li> SSL certifikát a hosting</li>
-							<li> Technická podpora (základní viz. bublina?)</li>
-							<li> Měsíční zálohy dat</li>
-						</ul>
+						<div class="card-content">
+							<h3 class="text-2xl font-semibold mb-2">ZÁKLADNÍ BALÍČEK <br>
+								490 Kč / měsíc</h3>
+							<ul>
+								<li> Online objednávkový web s šablonou</li>
+								<li> Správa menu (60 položek)</li>
+								<li> Email notifikace majiteli i zákazníkům</li>
+								<li> Základní statistiky objednávek</li>
+								<li> SSL certifikát a hosting</li>
+								<li> Základní technická podpora</li>
+								<li> Měsíční zálohy dat</li>
+							</ul>
+						</div>
+						<div class="package-cta">
+							<p class="trial-offer">První měsíc ZDARMA</p>
+							<a href="/#form" class="package-button">Vybrat balíček</a>
+						</div>
 					</div>
 					<div class="approach-card w-full">
-						<h3 class="text-2xl font-semibold mb-2">ROZŠÍŘENÝ BALÍČEK <br>
-							990 Kč / měsíc</h3>
-						<ul>
-							<li>Vše ze Základního balíčku</li>
-              <li> Správa menu (120 položek)</li>
-							<li> Pokročilá evidence alergenů a ingrediencí</li>
-							<li> Automatické dietní profily (vegan, bezlepkové)</li>
-							<li> Integrace s účetními systémy (Pohoda, Money S3)</li>
-							<li> Prioritní podpora (i víkendy)</li>
-							<li> Neomezený počet položek v menu</li>
-							<li> Týdenní zálohy dat + vlastní doména</li>						
-              <li> Technická podpora (základní viz.)</li>
-						</ul>
+						<div class="card-content">
+							<h3 class="text-2xl font-semibold mb-2">ROZŠÍŘENÝ BALÍČEK <br>
+								990 Kč / měsíc</h3>
+							<ul>
+								<li>Vše v základním balíčku</li>
+								<li> Správa menu (120 položek)</li>
+								<li> Pokročilá evidence alergenů a ingrediencí</li>
+								<li> Dietní profily (vegan, bezlepkové)</li>								
+								<li> Prioritní podpora (i víkendy)</li>
+								<li> Neomezený počet položek v menu</li>
+								<li> Týdenní zálohy dat + vlastní doména</li>						
+								<li> Prioritní technická podpora</li>
+							</ul>
+						</div>
+						<div class="package-cta">
+							<p class="trial-offer">První měsíc ZDARMA</p>
+							<a href="/#form" class="package-button">Vybrat balíček</a>
+						</div>
 					</div>
 					<div class="approach-card w-full premium-card">
 						<div class="premium-tag">NEJOBLÍBENĚJŠÍ</div>
-						<h3 class="text-2xl font-semibold mb-2">BUSINESS BALÍČEK <br>
-							1 790 Kč / měsíc</h3>
-						<ul>
-							<li> Vše z Rozšířeného balíčku</li>
-              <li> Váš vlastní design</li>
-							<li> Vlastní platební brána (úspora 30% vs marketplace)</li>							
-							<li> Kompletní white-label řešení</li>							
-							<li> Premium hosting a zabezpečení</li>
-							<li> Denní zálohy + API integrace</li>
-							<li> Věrnostní program pro zákazníky</li>
-              <li> VIP podpora</li>
-						</ul>
-						<div class="savings-note">
-							<small><strong>Při 100 objednávkách úspora už 7 210 Kč / měsíc !</strong></small>
+						<div class="card-content">
+							<h3 class="text-2xl font-semibold mb-2">BUSINESS BALÍČEK <br>
+								1 790 Kč / měsíc</h3>
+							<ul>
+								<li> Vše z Rozšířeného balíčku</li>
+								<li> Váš vlastní design</li>
+								<li> Vlastní platební brána (úspora 30% vs marketplace)</li>							
+								<li> Kompletní white-label řešení</li>							
+								<li> Premium hosting a zabezpečení</li>
+								<li> Denní zálohy + API integrace</li>
+								<li> Věrnostní program pro zákazníky</li>
+                <li> Integrace s účetním systémem <a href="https://www.fakturoid.cz/">Fakturoid</a></li>
+								<li> VIP podpora</li>
+							</ul>
+							<div class="savings-note">
+								<small><strong>Při 100 objednávkách úspora už 7 210 Kč / měsíc !</strong></small>
+							</div>
+						</div>
+						<div class="package-cta">
+							<p class="trial-offer">První měsíc ZDARMA</p>
+							<a href="/#form" class="package-button premium">Vybrat balíček</a>
 						</div>
 					</div>
 				</div>
@@ -126,7 +144,7 @@
 				<div class="option-header">
 					<h3 class="text-2xl font-semibold mb-2">Design na míru</h3>
           <p class="included-badge">Balíček Business</p>
-					<p class="price-badge">od 25 000 Kč</p>
+					<p class="price-badge">5 900 Kč jednorázově</p>
 				</div>
 				<div class="option-preview">
 					<div class="preview-placeholder custom-preview">
@@ -219,7 +237,10 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(10px);
 		border: 1px solid rgba(255, 255, 255, 0.3);
-		transition: all 0.3s ease;				
+		transition: all 0.3s ease;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
 
       &:hover {
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -523,5 +544,51 @@
     font-weight: bold;
     color: vars.$font-main-color;
     align-self: center;
+  }
+
+  // Card content
+  .card-content {
+    flex: 1;
+  }
+
+  // Package CTA styles
+  .package-cta {
+    text-align: center;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .trial-offer {
+    font-size: 0.9rem;
+    color: vars.$color1;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  .package-button {
+    display: inline-block;
+    background-color: vars.$color1;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: color.adjust(vars.$color1, $lightness: -10%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    &.premium {
+      background-color: vars.$color3;
+      
+      &:hover {
+        background-color: color.adjust(vars.$color3, $lightness: -10%);
+      }
+    }
   }
 </style>

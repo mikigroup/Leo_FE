@@ -1,7 +1,8 @@
-<section class="bg-gray-50">
+<section class="bg-gray-50 scroll-mt-16 lg:scroll-mt-32 xl:scroll-mt-56" id="spoluprace">
 	<div class="p-4 min-h-[500px] max-w-screen-2xl mx-auto ">
 	<h2 class="text-4xl lg:px-10 my-10 font-medium">Jak probíhá spolupráce?</h2>
-	<div class="flex flex-col w-full py-10 mt-24 xl:flex-row uppercase gap-5">
+	<p class="text-lg lg:px-10 mb-10 text-gray-600">Od prvního kontaktu po spuštění vašeho objednávkového systému</p>
+	<div class="flex flex-col w-full py-10 mt-16 xl:flex-row uppercase gap-5">
 		<div class="flex items-end rounded-xl karta1 w-full justify-center">
 			<p class="text-2xl text-nowrap">První kontakt</p>
 		</div>
@@ -83,6 +84,32 @@
 			<p class="text-2xl">Předání</p>
 		</div>
 	</div>
+	
+	<!-- Detailní popis procesu -->
+	<div class="process-details mt-16 px-4">
+		<div class="grid md:grid-cols-5 gap-6 max-w-screen-xl mx-auto">
+			<div class="process-detail">
+				<h4 class="font-semibold text-lg mb-2">1. První kontakt</h4>
+				<p class="text-sm text-gray-600">Vyplníte formulář nebo nás zavoláte. Domluvíme si konzultaci a probereme vaše potřeby.</p>
+			</div>
+			<div class="process-detail">
+				<h4 class="font-semibold text-lg mb-2">2. Podklady</h4>
+				<p class="text-sm text-gray-600">Předáte nám menu, logo, kontakty. Pomůžeme s výběrem balíčku a designu.</p>
+			</div>
+			<div class="process-detail">
+				<h4 class="font-semibold text-lg mb-2">3. Vývoj</h4>
+				<p class="text-sm text-gray-600">Vytvoříme váš objednávkový web podle specifikace a vybraného designu.</p>
+			</div>
+			<div class="process-detail">
+				<h4 class="font-semibold text-lg mb-2">4. Testování</h4>
+				<p class="text-sm text-gray-600">Společně otestujeme funkcionalitu a provedeme případné úpravy.</p>
+			</div>
+			<div class="process-detail">
+				<h4 class="font-semibold text-lg mb-2">5. Předání</h4>
+				<p class="text-sm text-gray-600">Spustíme ostrý provoz a předáme vám administraci. Začínáte vydělávat!</p>
+			</div>
+		</div>
+	</div>
 	</div>
 </section>
 
@@ -116,5 +143,31 @@
 	}
 	.karta5 {
 		background-color: vars.$color3;
+	}
+
+	.process-details {
+		background-color: rgba(255, 255, 255, 0.8);
+		border-radius: 1rem;
+		padding: 2rem;
+		margin: 0 1rem;
+	}
+
+	.process-detail {
+		text-align: center;
+		
+		h4 {
+			color: vars.$button-bg-main;
+		}
+		
+		p {
+			line-height: 1.5;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.process-details .grid {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
 	}
 </style>

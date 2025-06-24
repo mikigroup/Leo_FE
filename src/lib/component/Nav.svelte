@@ -122,13 +122,22 @@
 			<ul
 				class="pt-4 text-base text-black flex flex-col md:justify-between md:pt-0 text-center">
 				<li>
-					<a class="block py-2 md:p-4" href="/#cenik">Objednat</a>
+					<a class="block py-2 md:p-4" href="/#cenik">Ceník</a>
+				</li>				
+				<li>
+					<a class="block py-2 md:p-4" href="/#argumenty">Design</a>
+				</li>				
+				<li>
+					<a class="block py-2 md:p-4" href="/#spoluprace">Jak to funguje</a>
 				</li>
 				<li>
-					<a class="block py-2 md:p-4" href="/#form">Zeptejte se</a>
+					<a class="block py-2 md:p-4" href="/#form">Kontakt</a>
 				</li>
 				<li>
 					<a class="block py-2 md:p-4" href="/faq">FAQ</a>
+				</li>
+				<li>
+					<a class="block py-2 md:p-4" href="/manifest">Naše DNA</a>
 				</li>
 			</ul>
 		</div>

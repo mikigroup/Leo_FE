@@ -8,8 +8,10 @@
 
 		<div class="text-white space-y-8">
 			<h3>Správce osobních údajů</h3>
-			<p>Jiri Mika, IČ: 01645803 <br>
-				Bezručova 648, Jeseník 79001<br>
+			<p>Jiří Mika<br>
+				Bezručova 648<br>
+				Jeseník, 79001<br>				
+				IČ: 01645803<br>
 				info@malyleo.cz<br>				
 			<div class="mb-8">
 				<h3 class="text-2xl font-semibold mb-4">

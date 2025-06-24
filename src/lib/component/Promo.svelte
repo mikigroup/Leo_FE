@@ -7,16 +7,13 @@
 	$: savings = marketplaceFee - ourFee;
 </script>
 
-<section class="py-16 bg-gray-50">
+<section class="py-16 bg-gray-50 scroll-mt-16 lg:scroll-mt-32 xl:scroll-mt-56" id="promo">
 	<div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
 		<!-- Hlavní nadpis -->
 		<div class="text-center">
 			<h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">
-				Váš vlastní objednávkový systém
-			</h2>
-			<p class="mt-2 text-xl text-gray-600">
-				Bez provizí, bez závislosti na marketplace. Vaši zákazníci = vaše data
-			</p>
+				Bez provizí, bez závislosti na marketplace. Vaši zákazníci = Vaše data
+			</h2>			
 		</div>
 
 		<!-- Grid s výhodami -->

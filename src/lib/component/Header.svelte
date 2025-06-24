@@ -50,6 +50,37 @@
 			</div>
 		</div>
 	</section>
+	
+	<!-- PROBLÉM - nová sekce -->
+	<section class="problem-section py-16 px-5">
+		<div class="max-w-screen-xl mx-auto text-center">
+			<h2 class="text-3xl font-bold mb-8 text-red-600">
+				Už vás nebaví platit 30% provize?
+			</h2>
+			<div class="grid md:grid-cols-3 gap-8 mt-12">
+				<div class="problem-card">
+					<div class="problem-icon">😤</div>
+					<h3 class="problem-title">Vysoké provize</h3>
+					<p class="problem-text">Marketplace služby si účtují až 30% z každé objednávky</p>
+				</div>
+				<div class="problem-card">
+					<div class="problem-icon">📊</div>
+					<h3 class="problem-title">Ztráta kontroly</h3>
+					<p class="problem-text">Vaše zákaznická data vlastní někdo jiný</p>
+				</div>
+				<div class="problem-card">
+					<div class="problem-icon">🏷️</div>
+					<h3 class="problem-title">Cizí značka</h3>
+					<p class="problem-text">Budujete název marketplace, ne svůj vlastní brand</p>
+				</div>
+			</div>
+			<div class="text-center mt-8">
+				<p class="text-xl font-semibold text-gray-700">
+					Co kdybyste měli <span class="text-blue-600">vlastní řešení</span> bez provizí?
+				</p>
+			</div>
+		</div>
+	</section>
 </header>
 
 <style lang="scss">
@@ -160,5 +191,39 @@
 		.argument-description {
 			font-size: 0.9rem;
 		}
+	}
+
+	// Problem section styles
+	.problem-section {
+		background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+	}
+
+	.problem-card {
+		background: white;
+		padding: 2rem 1.5rem;
+		border-radius: 1rem;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease;
+
+		&:hover {
+			transform: translateY(-5px);
+		}
+	}
+
+	.problem-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.problem-title {
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: vars.$font-main-color;
+		margin-bottom: 0.75rem;
+	}
+
+	.problem-text {
+		color: #6b7280;
+		line-height: 1.5;
 	}
 </style>
