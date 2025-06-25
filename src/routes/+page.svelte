@@ -26,17 +26,18 @@
 </svelte:head>
 
 <main>
-	<!-- 1. HOOK & VALUE PROPOSITION -->
+	
 	<Header />
 	
-	<!-- 2. BALÍČKY & ŘEŠENÍ (spojeno do jedné logické sekce) -->
+	
 	<Cenik />
 
+	<StartBalicek />
 	<Spoluprace />
 
 	<Design />
 
-	<!-- 3. DŮVĚRYHODNOST - Technologie + Proces -->
+
 	<section
 		class="textTechnologie py-20 min-h-80 items-center flex font-bold px-4">
 		<div class="max-w-screen-xl flex flex-col lg:flex-row mx-auto w-full px-4">
@@ -58,15 +59,8 @@
 		</div>
 	</section>
 	
-	
-	
-	<!-- 4. KALKULAČKA (nyní má kontext) -->
 	<Promo />
-	
-	<!-- 5. HLAVNÍ CTA s jasnou nabídkou -->
-	<StartBalicek />
-
-	<!-- 6. KONTAKT & ZAVŘENÍ -->
+		
 	<Form {data} />
 </main>
 

@@ -89,24 +89,24 @@
 	<div class="process-details mt-16 px-4">
 		<div class="grid md:grid-cols-5 gap-6 max-w-screen-xl mx-auto">
 			<div class="process-detail">
-				<h4 class="font-semibold text-lg mb-2">1. První kontakt</h4>
+				<h4 class="font-semibold text-lg mb-2">1.</h4>
 				<p class="text-sm text-gray-600">Vyplníte formulář nebo nás zavoláte. Domluvíme si konzultaci a probereme vaše potřeby.</p>
 			</div>
 			<div class="process-detail">
-				<h4 class="font-semibold text-lg mb-2">2. Podklady</h4>
+				<h4 class="font-semibold text-lg mb-2">2.</h4>
 				<p class="text-sm text-gray-600">Předáte nám menu, logo, kontakty. Pomůžeme s výběrem balíčku a designu.</p>
 			</div>
 			<div class="process-detail">
-				<h4 class="font-semibold text-lg mb-2">3. Vývoj</h4>
+				<h4 class="font-semibold text-lg mb-2">3.</h4>
 				<p class="text-sm text-gray-600">Vytvoříme váš objednávkový web podle specifikace a vybraného designu.</p>
 			</div>
 			<div class="process-detail">
-				<h4 class="font-semibold text-lg mb-2">4. Testování</h4>
+				<h4 class="font-semibold text-lg mb-2">4.</h4>
 				<p class="text-sm text-gray-600">Společně otestujeme funkcionalitu a provedeme případné úpravy.</p>
 			</div>
 			<div class="process-detail">
-				<h4 class="font-semibold text-lg mb-2">5. Předání</h4>
-				<p class="text-sm text-gray-600">Spustíme ostrý provoz a předáme vám administraci. Začínáte vydělávat!</p>
+				<h4 class="font-semibold text-lg mb-2">5.</h4>
+				<p class="text-sm text-gray-600">Spustíme ostrý provoz a předáme vám administraci. Začínáme!</p>
 			</div>
 		</div>
 	</div>
