@@ -66,7 +66,7 @@
   @use "$lib/styles/_variables.scss" as vars;
 
   h2, h3 {
-    color: vars.$font-main-color;
+    color: white;
   }
 
 	.gdpr-section {

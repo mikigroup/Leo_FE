@@ -227,7 +227,7 @@
   
       <!-- CTA -->
       <div class="text-center">
-        			<h3 class="text-3xl font-bold mb-6">Kýváte hlavou?</h3>
+        			<h3 class="text-3xl font-bold mb-6 !text-white">Kýváte hlavou?</h3>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <a href="/#form" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
             Objednejte si demo
