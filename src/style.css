@@ -20,6 +20,7 @@ header {
   padding: 2em 0 2em 0;
   background: url("./lib/bob.avif") no-repeat;
   background-size: 100%;
+  background-position: center 20%;
 }
 
 @media (max-width: 768px) {
