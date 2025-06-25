@@ -1,11 +1,6 @@
 <script lang="ts">
 	import { textStore } from "$lib/stores/formStore";
 	import { goto } from "$app/navigation";
-
-	const poptavatDesigner = async () => {
-		$textStore = "Dobrý den, mám zájem o vlastní design na míru za 5 900 Kč. Prosím o kontaktování pro konzultaci a návrh řešení...";
-		await goto("/#form");
-	}
 </script>
 
 <section class="py-20 px-5 scroll-mt-10" id="cenik">
@@ -13,25 +8,29 @@
 		<div class="flex flex-col lg:flex-row gap-10">
 			<div class="lg:w-1/3 space-y-8">
 				<h2 class="text-4xl font-bold">
-					Pro koho tu jsme
+					Pro jaké klienty tu jsme
 				</h2>
 				<div class="space-y-4">
-					<div class="flex items-center gap-4">
+          <div class="flex items-center gap-4">
 						<div class="dot"></div>
-						<p class="text-lg">Podniky unavené z vysokých marketplace provizí (až 30%)</p>
+						<p class="text-lg">Hledající moderní rychlý systému pro nabídku jídel</p>
 					</div>	
 					<div class="flex items-center gap-4">
 						<div class="dot"></div>
-						<p class="text-lg">Vývařovny potřebující vlastní white-label řešení</p>
+						<p class="text-lg">Unavené z vysokých x% marketplace provizí - <br> <span class="underline">u nás jen fixní poplatky</span></p>
+					</div>	
+					<div class="flex items-center gap-4">
+						<div class="dot"></div>
+						<p class="text-lg">Hledající vlastní white-label řešení</p>
 					</div>
 					<div class="flex items-center gap-4">
 						<div class="dot"></div>
-						<p class="text-lg">Firmy se speciálními požadavky (alergie, diety, integrace)</p>
+						<p class="text-lg">Se speciálními požadavky pro jídla - alergie, diety</p>            
 					</div>
 					<div class="flex items-center gap-4">
 						<div class="dot"></div>
-						<p class="text-lg">Podniky chtějící vlastnit svá zákaznická data</p>
-					</div>
+						<p class="text-lg">Chtějící vlastnit svá zákaznická data</p>
+					</div>         
 				</div>
 			</div>
 			<div class="lg:w-2/3">
@@ -45,8 +44,8 @@
 								<li> Správa menu (60 položek)</li>
 								<li> Email notifikace majiteli i zákazníkům</li>
 								<li> Základní statistiky objednávek</li>
-								<li> SSL certifikát a hosting</li>
-								<li> Základní technická podpora</li>
+								<li> Vlastní doména + SSL certifikát a hosting</li>
+								<li> Základní technická podpora</li>                
 								<li> Měsíční zálohy dat</li>
 							</ul>
 						</div>
@@ -64,8 +63,6 @@
 								<li> Správa menu (120 položek)</li>
 								<li> Pokročilá evidence alergenů a ingrediencí</li>
 								<li> Dietní profily (vegan, bezlepkové)</li>								
-								<li> Prioritní podpora (i víkendy)</li>
-								<li> Neomezený počet položek v menu</li>
 								<li> Týdenní zálohy dat + vlastní doména</li>						
 								<li> Prioritní technická podpora</li>
 							</ul>
@@ -81,14 +78,14 @@
 							<h3 class="text-2xl font-semibold mb-2">BUSINESS BALÍČEK <br>
 								1 790 Kč / měsíc</h3>
 							<ul>
-								<li> Vše z Rozšířeného balíčku</li>
-								<li> Váš vlastní design</li>
-								<li> Vlastní platební brána (úspora 30% vs marketplace)</li>							
-								<li> Kompletní white-label řešení</li>							
+								<li> Vše z Rozšířeného balíčku</li>                
+								<li> Neomezený počet položek v menu</li>
+								<li> Váš vlastní design</li>																					
 								<li> Premium hosting a zabezpečení</li>
-								<li> Denní zálohy + API integrace</li>
+								<li> Denní zálohy</li>                
 								<li> Věrnostní program pro zákazníky</li>
-                <li> Integrace s účetním systémem <a href="https://www.fakturoid.cz/">Fakturoid</a></li>
+                <li> Integrace s účetním systémem <a class="hover:underline" href="https://www.fakturoid.cz/">Fakturoid</a></li>
+                <li> Možnost vlastní API integrace</li>
 								<li> VIP podpora</li>
 							</ul>
 							<div class="savings-note">
@@ -106,113 +103,6 @@
 	</div>
 </section>
 
-<!-- Nová sekce pro možnosti frontendu -->
-<section class="fe-options py-16 bg-gray-50 scroll-mt-20" id="design">
-	<div class="max-w-screen-xl mx-auto px-4">
-		<h2 class="text-center text-4xl font-bold mb-8">Možnosti designu</h2>
-		<p class="text-center text-xl text-gray-600 mb-12">Vyberte si, jak má vypadat váš objednávkový web</p>
-		
-		<div class="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
-			<!-- Předpřipravená šablona -->
-			<div class="fe-option template-option">
-				<div class="option-header">
-					<h3 class="text-2xl font-semibold mb-2">Předpřipravená šablona</h3>
-					<p class="included-badge">Zahrnuto ve všech balíčcích</p>
-				</div>
-				<div class="option-preview">
-					<div class="preview-placeholder template-preview">
-						<div class="preview-content">
-							<div class="preview-header"></div>
-							<div class="preview-body">
-								<div class="preview-item"></div>
-								<div class="preview-item"></div>
-								<div class="preview-item"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<ul class="feature-list">
-					<li>Responzivní design</li>
-					<li>Základní barevné schéma</li>
-					<li>Optimalizace pro mobily</li>
-					<li>Rychlé spuštění (1-2 dny)</li>
-				</ul>
-			</div>
-
-			<!-- Custom design -->
-			<div class="fe-option custom-option highlighted">
-				<div class="option-header">
-					<h3 class="text-2xl font-semibold mb-2">Design na míru</h3>
-          <p class="included-badge">Balíček Business</p>
-					<p class="price-badge">5 900 Kč jednorázově</p>
-				</div>
-				<div class="option-preview">
-					<div class="preview-placeholder custom-preview">
-						<div class="preview-content">
-							<div class="preview-header custom"></div>
-							<div class="preview-body">
-								<div class="preview-item custom"></div>
-								<div class="preview-item custom"></div>
-								<div class="preview-item custom"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<ul class="feature-list premium">					
-          <li>Přímá UX/UI optimalizace pro Vaše zákazníky</li>					
-          <li>Tvorba vlastních funkcí</li>
-					<li>Možnost dalších úprav</li>
-				</ul>
-				<button class="cta-button" on:click={poptavatDesigner}>Poptat designéra</button>
-			</div>
-		</div>
-
-		<!-- Proces vytvoření custom FE -->
-		<div class="process-section mt-16">
-			<h3 class="text-3xl font-bold text-center mb-8">Proces vytvoření vlastního designu</h3>
-			<div class="process-steps">
-				<div class="step">
-					<div class="step-number">1</div>
-					<h4>Konzultace potřeb</h4>
-					<p>Probereme vaše představy a požadavky</p>
-				</div>
-				<div class="step">
-					<div class="step-number">2</div>
-					<h4>Návrh designu</h4>
-					<p>Vytvoříme grafický návrh dle vašich potřeb</p>
-				</div>
-				<div class="step">
-					<div class="step-number">3</div>
-					<h4>Schválení</h4>
-					<p>Společně doladíme finální podobu</p>
-				</div>
-				<div class="step">
-					<div class="step-number">4</div>
-					<h4>Implementace</h4>
-					<p>Realizace 1-6 měsíců, záleží na složitosti</p>
-				</div>
-			</div>
-		</div>
-
-		<!-- Cenové srovnání -->
-		<div class="price-comparison mt-12 p-6 bg-white rounded-lg shadow-lg text-center">
-			<h4 class="text-lg font-semibold mb-4">Cenový přehled</h4>
-			<div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-				<div class="comparison-item">
-					<span class="label">Šablona:</span>
-					<span class="price">0 Kč</span>
-					<span class="note">(zahrnuto v balíčku)</span>
-				</div>
-				<div class="vs">vs.</div>
-				<div class="comparison-item highlighted">
-					<span class="label">Custom design:</span>
-					<span class="price">5 900 Kč</span>
-					<span class="note">(jednorázově)</span>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
 <style lang="scss">
   @use "$lib/styles/variables" as vars;
   @use "sass:color";

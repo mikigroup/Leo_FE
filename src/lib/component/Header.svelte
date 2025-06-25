@@ -31,10 +31,6 @@
 	@use "$lib/styles/_mixins.scss" as mixins;
 	@use "$lib/styles/_variables.scss" as vars;
 
-	.headerBanner01 {
-		
-	}
-
 	h1, h2, h3 {
 		color: vars.$font-main-color;
 	}
@@ -57,7 +53,7 @@
 		
 		&--right {
 			top: 30%;
-			right: -60px;
+			right: -20px;
 			width: 150px;
 			height: 200px;
 			background: linear-gradient(45deg, #f3e8ff 0%, #ddd6fe 50%, #c4b5fd 100%);

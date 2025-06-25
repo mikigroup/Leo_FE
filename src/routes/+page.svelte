@@ -3,9 +3,9 @@
 	import Spoluprace from "$lib/component/Spoluprace.svelte";
 	import Header from "$lib/component/Header.svelte";
 	import StartBalicek from "$lib/component/StartBalicek.svelte";
-	import Argumenty from "$lib/component/Argumenty.svelte";
+	import Cenik from "$lib/component/Cenik.svelte";
 	import Promo from "$lib/component/Promo.svelte";
-
+	import Design from "$lib/component/Design.svelte";
 	export let data;
 
 	const RECAPTCHA_KEY = "6LcTuowqAAAAAKnnZP-uso6ArvnEP9_5PCqyACk-";
@@ -30,8 +30,12 @@
 	<Header />
 	
 	<!-- 2. BALÍČKY & ŘEŠENÍ (spojeno do jedné logické sekce) -->
-	<Argumenty />
-	
+	<Cenik />
+
+	<Spoluprace />
+
+	<Design />
+
 	<!-- 3. DŮVĚRYHODNOST - Technologie + Proces -->
 	<section
 		class="textTechnologie py-20 min-h-80 items-center flex font-bold px-4">
@@ -54,7 +58,7 @@
 		</div>
 	</section>
 	
-	<Spoluprace />
+	
 	
 	<!-- 4. KALKULAČKA (nyní má kontext) -->
 	<Promo />

@@ -240,8 +240,8 @@
 <style lang="scss">
   @use "$lib/styles/_variables.scss" as vars;
 
-  h2, h3 {
-    color: vars.$font-main-color;
+  h2 {
+    color: rgb(213, 213, 213);
   }
 
   .manifest-section {

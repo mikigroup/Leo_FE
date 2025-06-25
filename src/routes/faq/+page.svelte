@@ -8,7 +8,7 @@
 		},
 		{
 			question: "Kolik stojí vytvoření webu s Malým Leem?",
-			answer: "Aktuálně nabízíme speciální zaváděcí nabídku, kde můžete získat základní objednávkový systém ZDARMA. Tento startovací balíček obsahuje zajištění domény, SEO optimalizaci a 3 měsíce rozšířené podpory. Pro specifické požadavky a rozšířené funkce vám rádi připravíme individuální cenovou nabídku."
+			answer: "Aktuálně nabízíme speciální zaváděcí nabídku, kde můžete získat základní objednávkový systém ZDARMA. Tento startovací balíček obsahuje zajištění domény, SEO optimalizaci a 1 měsíce rozšířené podpory. Pro specifické požadavky a rozšířené funkce vám rádi připravíme individuální cenovou nabídku."
 		},
 		{
 			question: "Jak dlouho trvá vytvoření webu?",
@@ -21,7 +21,7 @@
 		{
 			question: "Co když potřebuji změny na webu po jeho spuštění?",
 			answer:
-				"Součástí startovacího balíčku je 3 měsíční rozšířená podpora, během které můžete požadovat úpravy a vylepšení. Po uplynutí této doby nabízíme různé možnosti další spolupráce a podpory."
+				"Součástí startovacího balíčku je 1 měsíční rozšířená podpora, během které můžete požadovat úpravy a vylepšení. Po uplynutí této doby nabízíme různé možnosti další spolupráce a podpory."
 		},
 		{
 			question: "Jak je web optimalizován pro vyhledávače?",
@@ -37,7 +37,7 @@
 		},
 		{
 			question: "Jak je zajištěna technická podpora?",
-			answer: "Během prvních 3 měsíců máte v rámci startovacího balíčku k dispozici rozšířenou podporu, která zahrnuje: technickou pomoc, řešení případných problémů, základní úpravy a vylepšení, konzultace dalšího rozvoje."
+			answer: "Během prvních 1 měsíců máte v rámci startovacího balíčku k dispozici rozšířenou podporu, která zahrnuje: technickou pomoc, řešení případných problémů, základní úpravy a vylepšení, konzultace dalšího rozvoje."
 		},
 		{
 			question: "Je web přizpůsoben pro mobilní zařízení?",
@@ -59,24 +59,24 @@
 
 <section class="faq-section py-20 px-5" id="faq">
 	<div class="max-w-screen-xl mx-auto">
-		<h2 class="text-4xl font-bold mb-10">Často kladené otázky</h2>
+		<h2 class="text-4xl font-bold mb-10 !text-white">Často kladené otázky</h2>
 
 		<div class="faq-container">
 			{#each faqItems as item, index}
 				<div class="faq-item mb-4">
 					<button
-						class="faq-question w-full text-left p-5 flex justify-between items-center text-white hover:bg-gray-800 transition-colors duration-300"
+						class="faq-question w-full text-left p-5 flex justify-between items-center text-white hover:bg-gray-800 transition-colors duration-100"
 						on:click={() => toggleItem(index)}
 					>
 						<span class="text-xl font-semibold">{item.question}</span>
-						<span class="transform transition-transform duration-300" class:rotate-180={activeIndex === index}>
+						<span class="transform transition-transform duration-100" class:rotate-180={activeIndex === index}>
               ▼
             </span>
 					</button>
 
 					{#if activeIndex === index}
 						<div class="faq-answer p-5 text-white bg-opacity-50 bg-gray-800"
-								 transition:slide={{ duration: 300 }}>
+								 transition:slide={{ duration: 100 }}>
 							{item.answer}
 						</div>
 					{/if}
@@ -96,8 +96,8 @@
   .faq-section {
     background: linear-gradient(
                     to right,
-                    vars.$button-bg-main 30%,
-                    vars.$color3 80%
+                    vars.$button-bg-main 10%,
+                    vars.$color1 80%
     );
   }
 
@@ -111,7 +111,7 @@
     background-color: rgba(0, 0, 0, 0.2);
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.1);
     }
   }
 
