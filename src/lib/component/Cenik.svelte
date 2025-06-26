@@ -13,7 +13,7 @@
 				<div class="space-y-4">
           <div class="flex items-center gap-4">
 						<div class="dot"></div>
-						<p class="text-lg">Hledající moderní rychlý systému pro nabídku jídel</p>
+						<p class="text-lg">Hledající moderní rychlý systém</p>
 					</div>	
 					<div class="flex items-center gap-4">
 						<div class="dot"></div>
@@ -21,7 +21,7 @@
 					</div>	
 					<div class="flex items-center gap-4">
 						<div class="dot"></div>
-						<p class="text-lg">Hledající vlastní white-label řešení</p>
+						<p class="text-lg">S vlastním designem - white-label řešení</p>
 					</div>
 					<div class="flex items-center gap-4">
 						<div class="dot"></div>
