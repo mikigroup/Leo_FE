@@ -78,9 +78,9 @@
 							<h3 class="text-2xl font-semibold mb-2">BUSINESS BALÍČEK <br>
 								1 790 Kč / měsíc</h3>
 							<ul>
-								<li> Vše z Rozšířeného balíčku</li>                
-								<li> Neomezený počet položek v menu</li>
-								<li> Váš vlastní design</li>																					
+								<li> Vše v rozšířeného balíčku</li>                
+								<li> Správa menu (neomezený počet)</li>
+								<li> Vlastní design</li>																					
 								<li> Premium hosting a zabezpečení</li>
 								<li> Denní zálohy</li>                
 								<li> Věrnostní program pro zákazníky</li>
