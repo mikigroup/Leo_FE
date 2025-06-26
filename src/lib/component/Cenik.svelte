@@ -29,7 +29,7 @@
 					</div>
 					<div class="flex items-center gap-4">
 						<div class="dot"></div>
-						<p class="text-lg">Chtějící vlastnit svá zákaznická data</p>
+						<p class="text-lg">Mít pod kontrolou vlastní zákaznická data</p>
 					</div>         
 				</div>
 			</div>
