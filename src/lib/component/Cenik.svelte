@@ -29,7 +29,7 @@
 					</div>
 					<div class="flex items-center gap-4">
 						<div class="dot"></div>
-						<p class="text-lg">Mít pod kontrolou vlastní zákaznická data</p>
+						<p class="text-lg">Chtít mít pod kontrolou vlastní zákaznická data</p>
 					</div>         
 				</div>
 			</div>
@@ -78,7 +78,7 @@
 							<h3 class="text-2xl font-semibold mb-2">BUSINESS BALÍČEK <br>
 								1 790 Kč / měsíc</h3>
 							<ul>
-								<li> Vše v rozšířeného balíčku</li>                
+								<li> Vše v rozšířeném balíčku</li>                
 								<li> Správa menu (neomezený počet)</li>
 								<li> Vlastní design</li>																					
 								<li> Premium hosting a zabezpečení</li>
