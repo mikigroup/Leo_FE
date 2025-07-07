@@ -15,7 +15,7 @@
 				Online objednávkový systém <br>
 				 pro Vaše jídla
 				</h1>
-				<img src="/hp_meal_new.webp" alt="Online objednávkový systém pro Vaše jídla" class="meal-image " width="60%">
+				<img src="/meal_hp.webp" alt="Online objednávkový systém pro Vaše jídla" class="meal-image !brightness-95" width="60%">
 			</div>
 			
 			<!-- Nový výtrs kolem headeru -->
@@ -107,7 +107,7 @@
 		border-radius: 20px;
 		box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 4px 20px rgba(0, 0, 0, 0.1);
 		transition: all 0.3s ease;
-		border: 3px solid rgba(61, 61, 61, 0.8);
+		border: 1px solid rgba(61, 61, 61, 0.8);
 		backdrop-filter: blur(10px);
 		filter: contrast(1.05) saturate(1.1) brightness(1.02);		
 	}

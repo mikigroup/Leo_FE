@@ -11,7 +11,7 @@
   <div class="w-full max-w-screen-xl md:mx-auto md:py-8 relative px-5">
     <div class="flex justify-between items-center">
       <div>
-        <img src="/gdpr_N.webp" alt="GDPR" class="w-40">
+        <img src="/gdpr_N.webp" alt="GDPR" class="w-14">
       </div>
       <div class="flex md:justify-end">
       <ul class="flex flex-col items-center w-full text-sm font-medium text-center text-white md:flex-row sm:mb-0 md:w-auto">
@@ -30,8 +30,7 @@
     <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
     <span class="block text-sm text-center text-white sm:text-center dark:text-gray-400">Lokální řešení pro váš digitální růst |
       Vyvinuto v Česku<i
-      class="fa fa-regular fa-hand-spock"></i>. © 2023 - 2025 Všechna práva vyhrazena - <a href="/#"
-                                                                                    class="hover:underline">Ver 1.0c</a></span>
+      class="fa fa-regular fa-hand-spock"></i>. © 2023 - 2025 Všechna práva vyhrazena - <a href="/#" class="hover:underline">Ver 1.0c</a></span>
   </div>
 </footer>
 
