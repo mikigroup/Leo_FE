@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Blokovat přístup k admin a soukromým oblastem
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Sitemaps
+Sitemap: https://malyleo.cz/sitemap.xml
+Sitemap: https://malyleo.cz/sitemap-image.xml
+
+# Crawl-delay pro respektování serveru
+Crawl-delay: 1 
