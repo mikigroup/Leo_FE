@@ -58,7 +58,7 @@
 				</p>
 			</div>
 		</div>
-    <p class="pt-20 text-white flex justify-end">Poslední aktualizace: 24.06.2025</p>
+    <p class="pt-20 text-white flex justify-end">Poslední aktualizace: 25.06.2025</p>
 	</div>
 </section>
 
