@@ -8,11 +8,9 @@
 	const dispatch = createEventDispatcher();
 
 	// Props
-	export let cookieName: string = 'gdpr_consent';
 	export let visible: boolean = true;
 	export let showSettingsButton: boolean = true;
 	export let showEditIcon: boolean = true;
-	export let companyName: string = 'Leo.cz';
 	export let privacyPolicyUrl: string = '/gdpr';
 
 	// Text labels - přizpůsobeno pro Leo.cz brand
@@ -22,7 +20,6 @@
 	export let acceptSelectedLabel: string = 'Uložit nastavení';
 	export let rejectAllLabel: string = 'Odmítnout vše';
 	export let settingsLabel: string = 'Nastavení cookies';
-	export let closeLabel: string = 'Uložit a zavřít';
 	export let editLabel: string = 'Spravovat cookies';
 
 	// Stavy
@@ -142,7 +139,7 @@
 				<div class="cookie-settings">
 					<div class="cookie-header">
 						<h2>Nastavení cookies</h2>
-						<button class="cookie-btn-close" on:click={() => closeSettings(false)}>
+						<button class="cookie-btn-close" on:click={() => closeSettings(false)} aria-label="Zavřít nastavení">
 							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
 							</svg>

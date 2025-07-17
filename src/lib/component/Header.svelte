@@ -31,8 +31,8 @@
 	@use "$lib/styles/_mixins.scss" as mixins;
 	@use "$lib/styles/_variables.scss" as vars;
 
-	h1, h2, h3 {
-		color: vars.$font-main-color;
+	h1 {
+		color: vars.$button-bg-main;
 	}
 
 	// Dekorativní systém kolem headeru

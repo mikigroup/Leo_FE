@@ -155,7 +155,7 @@
 	.process-detail {
 		text-align: center;
 		
-		h2, h4 {
+		h4 {
 			color: vars.$font-main-color;
 		}
 		
